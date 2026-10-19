@@ -29,6 +29,7 @@ bool MetalRenderer::Initialize(SDL_Window* window) {
   void* layer_pointer = SDL_Metal_GetLayer(metal_view_);
   if (layer_pointer == nullptr) {
     SDL_Log("SDL_Metal_GetLayer failed\n");
+    return false;
   }
   metal_layer_ = static_cast<CA::MetalLayer*>(layer_pointer);
 
