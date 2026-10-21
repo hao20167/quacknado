@@ -9,6 +9,14 @@
 namespace quacknado {
 
 MetalRenderer::~MetalRenderer() {
+  if (command_queue_.get()) {
+    auto pool = NS::TransferPtr(NS::AutoreleasePool::alloc()->init());
+    auto buffer = command_queue_->commandBuffer();
+    if (buffer) {
+      buffer->commit();
+      buffer->waitUntilCompleted();
+    }
+  }
   if (metal_view_) {
     SDL_Metal_DestroyView(metal_view_);
     metal_view_ = nullptr;

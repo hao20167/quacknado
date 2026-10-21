@@ -40,10 +40,17 @@ bool TriangleDraw::Initialize(MTL::Device* device, MTL::Library* library, MTL::P
   return true;
 }
 
+float addx = 0.01f, addy = 0.01f;
 void TriangleDraw::Record(MTL::RenderCommandEncoder* encoder) {
   if (!encoder || !pipeline_.get()) {
     return;
   }
+  if (offset_.x + addx >= 1.0f) addx *= -1;
+  if (offset_.y + addy >= 1.0f) addy *= -1;
+  if (offset_.x + addx < 0.0f) addx *= -1;
+  if (offset_.y + addy < 0.0f) addy *= -1;
+  offset_.x += addx;
+  offset_.y += addy;
   encoder->setRenderPipelineState(pipeline_.get());
   encoder->setVertexBytes(&offset_, sizeof offset_, 0);
   encoder->drawPrimitives(MTL::PrimitiveTypeTriangle, NS::UInteger(0), 3);

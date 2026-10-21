@@ -66,7 +66,6 @@ void Application::ProcessEvents() {
     } else if (type == SDL_EVENT_WINDOW_PIXEL_SIZE_CHANGED || type == SDL_EVENT_WINDOW_METAL_VIEW_RESIZED) {
       renderer_->Resize();
     }
-    break;
   }
 }
 

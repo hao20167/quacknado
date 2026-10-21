@@ -4,7 +4,7 @@
 
 struct alignas(8) TriangleOffset {
   float x = 0.5f;
-  float y = 0.5f;
+  float y = 0.0f;
 };
 
 static_assert(sizeof(TriangleOffset) == 8);
