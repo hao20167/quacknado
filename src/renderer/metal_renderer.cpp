@@ -1,11 +1,10 @@
-#include "metal_renderer.hpp"
-#include "Metal/MTLRenderCommandEncoder.hpp"
-#include "Metal/MTLRenderPass.hpp"
-#include "QuartzCore/CAMetalDrawable.hpp"
-
 #include <SDL3/SDL.h>
 #include <CoreGraphics/CoreGraphics.h>
+#include <QuartzCore/QuartzCore.hpp>
 #include <Metal/Metal.hpp>
+
+#include "metal_renderer.hpp"
+#include "renderer/render_module.hpp"
 
 namespace quacknado {
 
@@ -17,21 +16,24 @@ MetalRenderer::~MetalRenderer() {
   }
 }
 
-bool MetalRenderer::Initialize(SDL_Window* window) {
+void MetalRenderer::AddModule(std::unique_ptr<IRenderModule> module) {
+  modules_.push_back(std::move(module));
+}
+
+bool MetalRenderer::Initialize(SDL_Window* window, const std::string& metallib_path) {
   window_ = window;
   
   metal_view_ = SDL_Metal_CreateView(window_);
-  if (metal_view_ == nullptr) {
+  if (!metal_view_) {
     SDL_Log("SDL_Metal_CreateView failed: %s\n", SDL_GetError());
     return false;
   }
 
-  void* layer_pointer = SDL_Metal_GetLayer(metal_view_);
-  if (layer_pointer == nullptr) {
+  metal_layer_ = static_cast<CA::MetalLayer*>(SDL_Metal_GetLayer(metal_view_));
+  if (!metal_layer_) {
     SDL_Log("SDL_Metal_GetLayer failed\n");
     return false;
   }
-  metal_layer_ = static_cast<CA::MetalLayer*>(layer_pointer);
 
   device_ = NS::TransferPtr(MTL::CreateSystemDefaultDevice());
   if (!device_) {
@@ -47,6 +49,26 @@ bool MetalRenderer::Initialize(SDL_Window* window) {
   if (!command_queue_) {
     SDL_Log("Failed to create Metal command queue\n");
     return false;
+  }
+
+  auto autorelease_pool = TransferPtr(NS::AutoreleasePool::alloc()->init());
+
+  NS::Error* error = nullptr;
+  NS::String* path = NS::String::string(metallib_path.c_str(), NS::UTF8StringEncoding);
+  auto library = NS::TransferPtr(device_->newLibrary(path, &error));
+  if (!library.get()) {
+    SDL_Log("Could not load metallib: %s", metallib_path.c_str());
+    if (error) {
+      SDL_Log("%s", error->localizedDescription()->utf8String());
+    }
+
+    return false;
+  }
+
+  for (auto& module: modules_) {
+    if (!module->Initialize(device_.get(), library.get(), metal_layer_->pixelFormat())) {
+      return false;
+    }
   }
 
   Resize();
@@ -74,6 +96,11 @@ void MetalRenderer::Resize() {
     static_cast<CGFloat>(width),
     static_cast<CGFloat>(height)
   };
+  const CGSize old_size = metal_layer_->drawableSize();
+  if (old_size.width == drawable_size.width && old_size.height == drawable_size.height) {
+    return;
+  }
+
   metal_layer_->setDrawableSize(drawable_size);
 }
 
@@ -105,6 +132,11 @@ void MetalRenderer::Render() {
   if (encoder == nullptr) {
     return;
   }
+
+  for (auto& module: modules_) {
+    module->Record(encoder);
+  }
+
   encoder->endEncoding();
 
   command_buffer->presentDrawable(drawable);

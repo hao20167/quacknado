@@ -3,6 +3,7 @@
 #include "app/application.hpp"
 #include "SDL3/SDL_events.h"
 #include "renderer/metal_renderer.hpp"
+#include "draw/triangle_draw.hpp"
 
 namespace quacknado {
 
@@ -37,7 +38,17 @@ bool Application::Initialize() {
   }
 
   renderer_ = std::make_unique<MetalRenderer>();
-  if (!renderer_->Initialize(window_)) {
+
+  renderer_->AddModule(std::make_unique<TriangleDraw>());
+
+  const char* base_path = SDL_GetBasePath(); 
+  if (base_path == nullptr) {
+    SDL_Log("SDL_GetBasePath failed.\n");
+    return false;
+  }
+  std::string metallib_path = std::string(base_path) + "triangle.metallib";
+
+  if (!renderer_->Initialize(window_, metallib_path)) {
     return false;
   }
 
