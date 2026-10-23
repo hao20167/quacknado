@@ -77,6 +77,7 @@ bool MetalRenderer::Initialize(SDL_Window* window, const std::string& metallib_p
 
   auto depth_desc = NS::TransferPtr(MTL::DepthStencilDescriptor::alloc()->init());
   depth_desc->setDepthCompareFunction(MTL::CompareFunctionLess);
+  depth_desc->setDepthWriteEnabled(true);
   depth_state_ = NS::TransferPtr(device_->newDepthStencilState(depth_desc.get()));
 
   for (auto& module: modules_) {
@@ -93,8 +94,8 @@ void MetalRenderer::Resize() {
   if (window_ == nullptr || metal_layer_ == nullptr) return;
 
   int width = 0, height = 0;
-  if (!SDL_GetWindowSize(window_, &width, &height)) {
-    SDL_Log("SDL_GetWindowSize failed: %s\n", SDL_GetError());
+  if (!SDL_GetWindowSizeInPixels(window_, &width, &height)) {
+    SDL_Log("SDL_GetWindowSizeInPixels failed: %s\n", SDL_GetError());
     return;
   }
 
@@ -142,11 +143,8 @@ void MetalRenderer::Render() {
   color->setStoreAction(MTL::StoreActionStore);
   color->setClearColor(MTL::ClearColor(0.05, 0.06, 0.10, 1.0));
 
-  int width = 0, height = 0;
-  if (!SDL_GetWindowSize(window_, &width, &height)) {
-    SDL_Log("SDL_GetWindowSize failed: %s\n", SDL_GetError());
-    return;
-  }
+  const auto width = drawable->texture()->width();
+  const auto height = drawable->texture()->height();
 
   auto* td = MTL::TextureDescriptor::texture2DDescriptor(MTL::PixelFormatDepth32Float, width, height, false);
   td->setUsage(MTL::TextureUsageRenderTarget);
