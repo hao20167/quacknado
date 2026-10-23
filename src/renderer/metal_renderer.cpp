@@ -146,13 +146,15 @@ void MetalRenderer::Render() {
   const auto width = drawable->texture()->width();
   const auto height = drawable->texture()->height();
 
-  auto* td = MTL::TextureDescriptor::texture2DDescriptor(MTL::PixelFormatDepth32Float, width, height, false);
-  td->setUsage(MTL::TextureUsageRenderTarget);
-  td->setStorageMode(MTL::StorageModePrivate);
+  if (!depth_texture_.get() || depth_texture_->width() != width || depth_texture_->height() != height) {
+    auto* td = MTL::TextureDescriptor::texture2DDescriptor(MTL::PixelFormatDepth32Float, width, height, false);
+    td->setUsage(MTL::TextureUsageRenderTarget);
+    td->setStorageMode(MTL::StorageModePrivate);
+    depth_texture_ = NS::TransferPtr(device_->newTexture(td));
+  }
 
   auto* depth = pass->depthAttachment();
-  auto depth_texture = NS::TransferPtr(device_->newTexture(td));
-  depth->setTexture(depth_texture.get());
+  depth->setTexture(depth_texture_.get());
   depth->setLoadAction(MTL::LoadActionClear);
   depth->setStoreAction(MTL::StoreActionDontCare);
   depth->setClearDepth(1.0);

@@ -20,6 +20,7 @@ private:
   NS::SharedPtr<MTL::CommandQueue> command_queue_;
   Extent2D drawable_extent_ {};
   NS::SharedPtr<MTL::DepthStencilState> depth_state_;
+  NS::SharedPtr<MTL::Texture> depth_texture_;
 
 public:
   MetalRenderer() = default;
