@@ -41,7 +41,7 @@ bool TriangleDraw::Initialize(MTL::Device* device, MTL::Library* library, MTL::P
 }
 
 float addx = 0.01f, addy = 0.01f;
-void TriangleDraw::Record(MTL::RenderCommandEncoder* encoder) {
+void TriangleDraw::Record(MTL::RenderCommandEncoder* encoder, int width, int height) {
   if (!encoder || !pipeline_.get()) {
     return;
   }

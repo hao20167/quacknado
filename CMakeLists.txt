@@ -28,32 +28,32 @@ target_include_directories(
 )
 
 
-set(TRIANGLE_SHADER "${CMAKE_SOURCE_DIR}/shaders/triangle.metal")
-set(TRIANGLE_AIR "${CMAKE_CURRENT_BINARY_DIR}/triangle.air")
-set(TRIANGLE_METALLIB "${CMAKE_CURRENT_BINARY_DIR}/triangle.metallib")
+set(SHADER "${CMAKE_SOURCE_DIR}/shaders/cube.metal")
+set(AIR "${CMAKE_CURRENT_BINARY_DIR}/cube.air")
+set(METALLIB "${CMAKE_CURRENT_BINARY_DIR}/cube.metallib")
 add_custom_command(
-  OUTPUT "${TRIANGLE_METALLIB}"
+  OUTPUT "${METALLIB}"
   COMMAND xcrun -sdk macosx metal
-    -c "${TRIANGLE_SHADER}"
-    -o "${TRIANGLE_AIR}"
+    -c "${SHADER}"
+    -o "${AIR}"
   COMMAND xcrun -sdk macosx metallib
-    "${TRIANGLE_AIR}"
-    -o "${TRIANGLE_METALLIB}"
-  DEPENDS "${TRIANGLE_SHADER}"
+    "${AIR}"
+    -o "${METALLIB}"
+  DEPENDS "${SHADER}"
   VERBATIM
 )
 
 set(SHADER_DESTINATION "$<TARGET_FILE_DIR:quacknado>")
 
-add_custom_target(copy_triangle_shader ALL
+add_custom_target(copy_shader ALL
   COMMAND "${CMAKE_COMMAND}" -E copy_if_different
-    "${TRIANGLE_METALLIB}"
-    "$<TARGET_FILE_DIR:quacknado>/triangle.metallib"
-  DEPENDS "${TRIANGLE_METALLIB}"
+    "${METALLIB}"
+    "$<TARGET_FILE_DIR:quacknado>/cube.metallib"
+  DEPENDS "${METALLIB}"
   VERBATIM
 )
 
-add_dependencies(copy_triangle_shader quacknado)
+add_dependencies(copy_shader quacknado)
 
 target_link_libraries(
   quacknado 

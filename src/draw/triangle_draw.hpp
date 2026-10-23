@@ -19,5 +19,5 @@ public:
   ~TriangleDraw() override;
 
   bool Initialize(MTL::Device* device, MTL::Library* library, MTL::PixelFormat color_format) override;
-  void Record(MTL::RenderCommandEncoder* encoder) override;
+  void Record(MTL::RenderCommandEncoder* encoder, int width, int height) override;
 };

@@ -4,6 +4,8 @@
 #include <Metal/Metal.hpp>
 
 #include "metal_renderer.hpp"
+#include "Foundation/NSSharedPtr.hpp"
+#include "Metal/MTLDepthStencil.hpp"
 #include "renderer/render_module.hpp"
 
 namespace quacknado {
@@ -73,6 +75,10 @@ bool MetalRenderer::Initialize(SDL_Window* window, const std::string& metallib_p
     return false;
   }
 
+  auto depth_desc = NS::TransferPtr(MTL::DepthStencilDescriptor::alloc()->init());
+  depth_desc->setDepthCompareFunction(MTL::CompareFunctionLess);
+  depth_state_ = NS::TransferPtr(device_->newDepthStencilState(depth_desc.get()));
+
   for (auto& module: modules_) {
     if (!module->Initialize(device_.get(), library.get(), metal_layer_->pixelFormat())) {
       return false;
@@ -130,19 +136,37 @@ void MetalRenderer::Render() {
   }
 
   MTL::RenderPassDescriptor* pass = MTL::RenderPassDescriptor::renderPassDescriptor();
-  MTL::RenderPassColorAttachmentDescriptor* color_attachment = pass->colorAttachments()->object(0);
-  color_attachment->setTexture(drawable->texture());
-  color_attachment->setLoadAction(MTL::LoadActionClear);
-  color_attachment->setStoreAction(MTL::StoreActionStore);
-  color_attachment->setClearColor(MTL::ClearColor(0.08, 0.12, 0.18, 1.0));
+  MTL::RenderPassColorAttachmentDescriptor* color = pass->colorAttachments()->object(0);
+  color->setTexture(drawable->texture());
+  color->setLoadAction(MTL::LoadActionClear);
+  color->setStoreAction(MTL::StoreActionStore);
+  color->setClearColor(MTL::ClearColor(0.05, 0.06, 0.10, 1.0));
+
+  int width = 0, height = 0;
+  if (!SDL_GetWindowSize(window_, &width, &height)) {
+    SDL_Log("SDL_GetWindowSize failed: %s\n", SDL_GetError());
+    return;
+  }
+
+  auto* td = MTL::TextureDescriptor::texture2DDescriptor(MTL::PixelFormatDepth32Float, width, height, false);
+  td->setUsage(MTL::TextureUsageRenderTarget);
+  td->setStorageMode(MTL::StorageModePrivate);
+
+  auto* depth = pass->depthAttachment();
+  auto depth_texture = NS::TransferPtr(device_->newTexture(td));
+  depth->setTexture(depth_texture.get());
+  depth->setLoadAction(MTL::LoadActionClear);
+  depth->setStoreAction(MTL::StoreActionDontCare);
+  depth->setClearDepth(1.0);
 
   MTL::RenderCommandEncoder* encoder = command_buffer->renderCommandEncoder(pass);
   if (encoder == nullptr) {
     return;
   }
 
+  encoder->setDepthStencilState(depth_state_.get());
   for (auto& module: modules_) {
-    module->Record(encoder);
+    module->Record(encoder, width, height);
   }
 
   encoder->endEncoding();

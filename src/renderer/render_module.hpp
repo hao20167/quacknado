@@ -7,5 +7,5 @@ public:
   virtual ~IRenderModule() = default;
 
   virtual bool Initialize(MTL::Device* device, MTL::Library* library, MTL::PixelFormat color_format) = 0;
-  virtual void Record(MTL::RenderCommandEncoder* encoder) = 0;
+  virtual void Record(MTL::RenderCommandEncoder* encoder, int width, int height) = 0;
 };
