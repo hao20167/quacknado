@@ -1,9 +1,10 @@
+#include "cube_draw.hpp"
+
+#include <vector>
+
 #include <Metal/Metal.hpp>
 #include <Foundation/Foundation.hpp>
 #include <SDL3/SDL.h>
-#include <vector>
-
-#include "draw/cube_draw.hpp"
 
 struct Vertex {
   float pos[4];

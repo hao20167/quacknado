@@ -1,8 +1,8 @@
+#include "triangle_draw.hpp"
+
 #include <Metal/Metal.hpp>
 #include <Foundation/Foundation.hpp>
 #include <SDL3/SDL.h>
-
-#include "draw/triangle_draw.hpp"
 
 TriangleDraw::~TriangleDraw() {
 

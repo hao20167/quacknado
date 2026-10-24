@@ -1,12 +1,11 @@
+#include "metal_renderer.hpp"
+
 #include <SDL3/SDL.h>
 #include <CoreGraphics/CoreGraphics.h>
 #include <QuartzCore/QuartzCore.hpp>
 #include <Metal/Metal.hpp>
 
-#include "metal_renderer.hpp"
-#include "Foundation/NSSharedPtr.hpp"
-#include "Metal/MTLDepthStencil.hpp"
-#include "renderer/render_module.hpp"
+#include "render_module.hpp"
 
 namespace quacknado {
 

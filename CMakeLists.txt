@@ -28,9 +28,9 @@ target_include_directories(
 )
 
 
-set(SHADER "${CMAKE_SOURCE_DIR}/shaders/cube.metal")
-set(AIR "${CMAKE_CURRENT_BINARY_DIR}/cube.air")
-set(METALLIB "${CMAKE_CURRENT_BINARY_DIR}/cube.metallib")
+set(SHADER "${CMAKE_SOURCE_DIR}/shaders/duck.metal")
+set(AIR "${CMAKE_CURRENT_BINARY_DIR}/duck.air")
+set(METALLIB "${CMAKE_CURRENT_BINARY_DIR}/duck.metallib")
 add_custom_command(
   OUTPUT "${METALLIB}"
   COMMAND xcrun -sdk macosx metal
@@ -48,7 +48,7 @@ set(SHADER_DESTINATION "$<TARGET_FILE_DIR:quacknado>")
 add_custom_target(copy_shader ALL
   COMMAND "${CMAKE_COMMAND}" -E copy_if_different
     "${METALLIB}"
-    "$<TARGET_FILE_DIR:quacknado>/cube.metallib"
+    "$<TARGET_FILE_DIR:quacknado>/duck.metallib"
   DEPENDS "${METALLIB}"
   VERBATIM
 )

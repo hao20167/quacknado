@@ -1,9 +1,11 @@
 #pragma once
 
-#include <SDL3/SDL.h>
 #include <memory>
 
+#include <SDL3/SDL.h>
+
 #include "renderer/metal_renderer.hpp"
+#include "simulation/simulation.hpp"
 
 
 namespace quacknado {
@@ -14,6 +16,7 @@ private:
   bool running_ = false;
   SDL_Window* window_ = nullptr;
   std::unique_ptr<MetalRenderer> renderer_;
+  std::unique_ptr<Simulation> simulation_;
 
 public:
   Application() = default;
