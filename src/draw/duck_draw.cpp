@@ -105,7 +105,6 @@ void DuckDraw::Record(MTL::RenderCommandEncoder* encoder, int width, int height)
     return;
   }
 
-  const auto& duck_pos = duck_->position_;
   Uniforms uniforms {
     duck_->orientation_.vector,
     duck_->position_,
