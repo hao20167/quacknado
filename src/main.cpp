@@ -5,7 +5,7 @@
 int main() {
   quacknado::Application app;
   if (!app.Initialize()) {
-    SDL_Log("Ducknado initialization failed!\n");
+    SDL_Log("Quacknado initialization failed!\n");
     return 1;
   }
 

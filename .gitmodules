@@ -4,3 +4,6 @@
 [submodule "external/metal-cpp"]
 	path = external/metal-cpp
 	url = https://github.com/apple/metal-cpp.git
+[submodule "external/JoltPhysics"]
+	path = external/JoltPhysics
+	url = git@github.com:jrouwe/JoltPhysics.git

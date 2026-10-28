@@ -1,11 +1,13 @@
-#include "app/application.hpp"
+#include "application.hpp"
 
 #include <cassert>
 
 #include <SDL3/SDL.h>
 
 #include "renderer/metal_renderer.hpp"
-#include "draw/duck_draw.hpp"
+#include "draw/object_draw.hpp"
+#include "draw/model_draw.hpp"
+#include "draw/tornado_draw.hpp"
 
 namespace quacknado {
 
@@ -45,16 +47,25 @@ bool Application::Initialize() {
   }
 
   simulation_ = std::make_unique<Simulation>();
+  simulation_->set_wind_enabled(true);
   renderer_ = std::make_unique<MetalRenderer>();
-
-  renderer_->AddModule(std::make_unique<DuckDraw>(simulation_->duck_.get()));
 
   const char* base_path = SDL_GetBasePath(); 
   if (base_path == nullptr) {
     SDL_Log("SDL_GetBasePath failed.\n");
     return false;
   }
-  std::string metallib_path = std::string(base_path) + "duck.metallib";
+  std::string metallib_path = std::string(base_path) + "object.metallib";
+
+  for (const auto& object: simulation_->get_objects()) {
+    if (object->name_.empty()) {
+      renderer_->AddModule(std::make_unique<ObjectDraw>(object.get()));
+    } else {
+      renderer_->AddModule(std::make_unique<ModelDraw>(object.get(), std::string(base_path) + "assets/models/" + object->name_ + ".glb"));
+    }
+  }
+
+  renderer_->AddModule(std::make_unique<TornadoDraw>(&simulation_->get_tornado()));
 
   if (!renderer_->Initialize(window_, metallib_path)) {
     return false;
@@ -79,7 +90,6 @@ void Application::ProcessEvents() {
 }
 
 int Application::Run() {
-  // WARN: resolve case where race condition happens in parallel running
   double accumulator {};
   while (running_) { 
     ProcessEvents();
@@ -87,13 +97,24 @@ int Application::Run() {
       break;
     }
 
+    simd_float3 direction {0, 0, 0};
+    if (SDL_GetWindowFlags(window_) & SDL_WINDOW_INPUT_FOCUS) {
+      const bool* keys = SDL_GetKeyboardState(nullptr);
+      direction = {
+        float(keys[SDL_SCANCODE_RIGHT]) - float(keys[SDL_SCANCODE_LEFT]),
+        0.0f,
+        float(keys[SDL_SCANCODE_UP]) - float(keys[SDL_SCANCODE_DOWN])
+      };
+    }
+    simulation_->set_tornado_direction(direction);
+
     Uint64 current_time = SDL_GetTicksNS();
     double frame_time = static_cast<double>(current_time - previous_time) / 1000000000.0;
     previous_time = current_time;
     accumulator += std::min(frame_time, 0.1); // WARN: this might make gametime slower than realtime
 
     while (accumulator >= FIX_DT) {
-      simulation_->update(static_cast<float>(FIX_DT));
+      simulation_->Update(static_cast<float>(FIX_DT));
       accumulator -= FIX_DT;
     }
 

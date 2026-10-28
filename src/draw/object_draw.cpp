@@ -1,4 +1,4 @@
-#include "cube_draw.hpp"
+#include "simulation/objs/obj_module.hpp"
 
 #include <vector>
 
@@ -6,21 +6,26 @@
 #include <Foundation/Foundation.hpp>
 #include <SDL3/SDL.h>
 
+#include "object_draw.hpp"
+
 struct Vertex {
   float pos[4];
   float color[4];
 };
 
-struct Uniforms {
-  float angle;
-  float aspect;
+struct Uniforms { 
+  simd_float4 orientation;
+  simd_float4 offset_aspect;
+  simd_float4 half_extent;
 };
 
-CubeDraw::~CubeDraw() {
-
+ObjectDraw::ObjectDraw(IObjModule* ptr) {
+  obj_ = ptr;
 }
 
-std::vector<Vertex> MakeCube() {
+ObjectDraw::~ObjectDraw() = default;
+
+std::vector<Vertex> MakeObject() {
   static const float p[8][4] = {
     {-1,-1,-1,1}, { 1,-1,-1,1},
     { 1, 1,-1,1}, {-1, 1,-1,1},
@@ -51,7 +56,8 @@ std::vector<Vertex> MakeCube() {
       int n = faces[f][i];
       for (int j = 0; j < 4; j++) {
         v.pos[j] = p[n][j];
-        v.color[j] = colors[f][j];
+        // v.color[j] = colors[f][j];
+        v.color[j] = 1. * (rand() % 10) / 10;
       }
 
       result.push_back(v);
@@ -60,7 +66,7 @@ std::vector<Vertex> MakeCube() {
   return result;
 }
 
-bool CubeDraw::Initialize(MTL::Device* device, MTL::Library* library, MTL::PixelFormat color_format) {
+bool ObjectDraw::Initialize(MTL::Device* device, MTL::Library* library, MTL::PixelFormat color_format) {
   if (device == nullptr || library == nullptr || pipeline_.get()) {
     return false;
   }
@@ -71,7 +77,7 @@ bool CubeDraw::Initialize(MTL::Device* device, MTL::Library* library, MTL::Pixel
     NS::String::string("fragment_main", NS::UTF8StringEncoding)
   ));
   if (!vertex_function.get() || !fragment_function.get()) {
-    SDL_Log("Cube shader functions cannot be initialized.\n");
+    SDL_Log("Object shader functions cannot be initialized.\n");
     return false;
   }
 
@@ -83,7 +89,7 @@ bool CubeDraw::Initialize(MTL::Device* device, MTL::Library* library, MTL::Pixel
   NS::Error* error = nullptr;
   pipeline_ = NS::TransferPtr(device->newRenderPipelineState(descriptor.get(), &error));
   if (!pipeline_.get()) {
-    SDL_Log("Cube Pipeline failed.\n");
+    SDL_Log("Object Pipeline failed.\n");
     if (error) {
       SDL_Log("%s\n", error->localizedDescription()->utf8String());
     }
@@ -91,19 +97,32 @@ bool CubeDraw::Initialize(MTL::Device* device, MTL::Library* library, MTL::Pixel
   }
 
   start_ = SDL_GetTicks();
-  auto vertices = MakeCube();
+  auto vertices = MakeObject();
   buffer_ = NS::TransferPtr(device->newBuffer(vertices.data(), vertices.size() * sizeof(Vertex), MTL::ResourceStorageModeShared));
 
   return true;
 }
 
-void CubeDraw::Record(MTL::RenderCommandEncoder* encoder, int width, int height) {
-  if (!encoder || !pipeline_.get()) {
+void ObjectDraw::Record(MTL::RenderCommandEncoder* encoder, int width, int height) {
+  if (!encoder || !pipeline_.get() || !obj_) {
     return;
   }
 
-  float time = (SDL_GetTicks() - start_) / 1000.0f;
-  Uniforms uniforms {time, float(width) / float(height)};
+  Uniforms uniforms {
+    obj_->orientation_.vector,
+    {
+      obj_->position_.x,
+      obj_->position_.y,
+      obj_->position_.z,
+      float(width) / float(height)
+    },
+    {
+      obj_->half_extent_.x,
+      obj_->half_extent_.y,
+      obj_->half_extent_.z,
+      0
+    }
+  };
 
   encoder->setRenderPipelineState(pipeline_.get());
   encoder->setCullMode(MTL::CullModeNone);
