@@ -51,7 +51,8 @@ Simulation::Simulation(uint64_t seed) : rng_(seed) {
         obj = std::make_unique<DirtBlock>(position);
         break;
       case 4:
-        obj = std::make_unique<Ghast>(position);
+        // obj = std::make_unique<Ghast>(position);
+        obj = std::make_unique<Sheep>(position);
         break;
       case 5:
         obj = std::make_unique<Sheep>(position);

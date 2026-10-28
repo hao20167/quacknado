@@ -10,6 +10,18 @@ float Smoothstep(float low, float high, float value) {
   return t * t * (3.0f - 2.0f * t);
 }
 
+float LiftProfile(float height) {
+  constexpr float heights[] {0.0f, 0.2f, 0.5f, 0.9f, 1.0f};
+  constexpr float strengths[] {0.12f, 0.45f, 1.0f, 0.25f, 0.0f};
+  for (int i = 1; i < 5; ++i) {
+    if (height <= heights[i]) {
+      const float blend = Smoothstep(heights[i - 1], heights[i], height);
+      return strengths[i - 1] + (strengths[i] - strengths[i - 1]) * blend;
+    }
+  }
+  return 0.0f;
+}
+
 }
 
 simd_float3 Tornado::VelocityAt(const simd_float3& position) const {
@@ -33,13 +45,11 @@ simd_float3 Tornado::VelocityAt(const simd_float3& position) const {
   float top_blend = Smoothstep(0.7f, 0.95f, u);
   float radial_speed = -suction_speed_ * (1.0f - top_blend) + outward_speed_ * top_blend;
   float swirl_falloff = t <= 1.0f ? t : 1.0f / t;
-  float ground_lift = 0.25f + 0.75f * Smoothstep(0.0f, 4.0f, h);
 
   simd_float3 rotation = tangent * tangential_speed_ * swirl_falloff * (1.0f - 0.5f * top_blend);
   simd_float3 flow = radial * radial_speed * std::min(t, 1.0f);
-  simd_float3 lift {0, lift_speed_ * ground_lift * std::exp(-t * t) * (1.0f - top_blend), 0};
 
-  return rotation + flow + lift;
+  return rotation + flow;
 }
 
 simd_float3 Tornado::ForceAt(const simd_float3& position, const simd_float3& velocity) const {
@@ -58,5 +68,9 @@ simd_float3 Tornado::ForceAt(const simd_float3& position, const simd_float3& vel
   float influence = side_influence * top_influence;
 
   constexpr float drag = 3.0f;
-  return (VelocityAt(position) - velocity) * drag * influence;
+  simd_float3 force = (VelocityAt(position) - velocity) * drag * influence;
+  const float radial_weight = std::exp(-t * t) * side_influence;
+  force.y = radial_weight * (peak_lift_force_ * LiftProfile(u)
+      - vertical_drag_ * velocity.y * top_influence);
+  return force;
 }
