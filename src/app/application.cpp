@@ -1,4 +1,4 @@
-#include "app/application.hpp"
+#include "application.hpp"
 
 #include <cassert>
 
@@ -6,6 +6,7 @@
 
 #include "renderer/metal_renderer.hpp"
 #include "draw/object_draw.hpp"
+#include "draw/model_draw.hpp"
 
 namespace quacknado {
 
@@ -48,16 +49,20 @@ bool Application::Initialize() {
   simulation_->set_wind_enabled(true);
   renderer_ = std::make_unique<MetalRenderer>();
 
-  for (const auto& object: simulation_->objects()) {
-    renderer_->AddModule(std::make_unique<ObjectDraw>(object.get()));
-  }
-
   const char* base_path = SDL_GetBasePath(); 
   if (base_path == nullptr) {
     SDL_Log("SDL_GetBasePath failed.\n");
     return false;
   }
   std::string metallib_path = std::string(base_path) + "object.metallib";
+
+  for (const auto& object: simulation_->get_objects()) {
+    if (object->name_.empty()) {
+      renderer_->AddModule(std::make_unique<ObjectDraw>(object.get()));
+    } else {
+      renderer_->AddModule(std::make_unique<ModelDraw>(object.get(), std::string(base_path) + "assets/models/" + object->name_ + ".glb"));
+    }
+  }
 
   if (!renderer_->Initialize(window_, metallib_path)) {
     return false;
@@ -82,7 +87,6 @@ void Application::ProcessEvents() {
 }
 
 int Application::Run() {
-  // WARN: resolve case where race condition happens in parallel running
   double accumulator {};
   while (running_) { 
     ProcessEvents();

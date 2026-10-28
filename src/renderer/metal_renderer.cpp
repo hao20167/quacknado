@@ -5,6 +5,7 @@
 #include <QuartzCore/QuartzCore.hpp>
 #include <Metal/Metal.hpp>
 
+#include "Metal/MTLPixelFormat.hpp"
 #include "render_module.hpp"
 
 namespace quacknado {
@@ -51,7 +52,7 @@ bool MetalRenderer::Initialize(SDL_Window* window, const std::string& metallib_p
   }
 
   metal_layer_->setDevice(device_.get());
-  metal_layer_->setPixelFormat(MTL::PixelFormatBGRA8Unorm);
+  metal_layer_->setPixelFormat(MTL::PixelFormatBGRA8Unorm_sRGB);
   metal_layer_->setFramebufferOnly(true);
 
   command_queue_ = NS::TransferPtr(device_->newCommandQueue());

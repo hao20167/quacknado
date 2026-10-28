@@ -1,6 +1,9 @@
 #include "physics_world.hpp"
 #include "Jolt/Physics/EPhysicsUpdateError.h"
 
+#include <algorithm>
+#include <cmath>
+
 #include <SDL3/SDL.h>
 #include <Jolt/Physics/Collision/BroadPhase/BroadPhaseLayerInterfaceTable.h>
 #include <Jolt/Physics/Collision/ObjectLayerPairFilterTable.h>
@@ -9,9 +12,13 @@
 #include <Jolt/Core/JobSystemSingleThreaded.h>
 #include <Jolt/Physics/PhysicsSystem.h>
 #include <Jolt/Physics/Collision/Shape/BoxShape.h>
+#include <Jolt/Physics/Collision/Shape/StaticCompoundShape.h>
+#include <Jolt/Physics/Collision/BroadPhase/BroadPhaseQuery.h>
+#include <Jolt/Geometry/AABox.h>
 #include <Jolt/RegisterTypes.h>
 #include <Jolt/Core/Factory.h>
 #include <Jolt/Physics/Body/BodyCreationSettings.h>
+#include <Jolt/Physics/Body/BodyLock.h>
 #include <Jolt/Physics/Collision/Shape/BoxShape.h>
 
 
@@ -66,12 +73,12 @@ struct PhysicsWorld::Impl {
     }
   }
 
-  JPH::BodyID CreateBox(simd_float3 position, simd_float3 half_extent, bool dynamic, float mass) {
-    JPH::ShapeRefC shape = new JPH::BoxShape(ToVec3(half_extent));
+  JPH::BodyID CreateBody(simd_float3 position, const JPH::Shape* shape, bool dynamic, float mass,
+      simd_quatf orientation = simd_quaternion(0.0f, 0.0f, 0.0f, 1.0f)) {
     JPH::BodyCreationSettings settings(
       shape,
       ToPosition(position),
-      JPH::Quat::sIdentity(),
+      JPH::Quat(orientation.vector.x, orientation.vector.y, orientation.vector.z, orientation.vector.w),
       dynamic ? JPH::EMotionType::Dynamic : JPH::EMotionType::Static,
       dynamic ? DYNAMIC_LAYER : STATIC_LAYER
     );
@@ -89,10 +96,17 @@ struct PhysicsWorld::Impl {
 
     if (id.IsInvalid()) {
       SDL_Log("Create jolt body failed.\n");
+      return id;
     }
 
     bodies.push_back(id);
     return id;
+  }
+
+  JPH::BodyID CreateBox(simd_float3 position, simd_float3 half_extent, bool dynamic, float mass,
+      simd_quatf orientation = simd_quaternion(0.0f, 0.0f, 0.0f, 1.0f)) {
+    JPH::ShapeRefC shape = new JPH::BoxShape(ToVec3(half_extent));
+    return CreateBody(position, shape, dynamic, mass, orientation);
   }
 };
 
@@ -111,8 +125,8 @@ PhysicsWorld::~PhysicsWorld() {
   JPH::Factory::sInstance = nullptr;
 }
 
-JPH::BodyID PhysicsWorld::CreateStaticBox(simd_float3 position, simd_float3 half_extent) {
-  return impl_->CreateBox(position, half_extent, false, 0);
+JPH::BodyID PhysicsWorld::CreateStaticBox(simd_float3 position, simd_float3 half_extent, simd_quatf orientation) {
+  return impl_->CreateBox(position, half_extent, false, 0, orientation);
 }
 
 JPH::BodyID PhysicsWorld::CreateDynamicBox(simd_float3 position, simd_float3 half_extent, float mass) {
@@ -121,6 +135,64 @@ JPH::BodyID PhysicsWorld::CreateDynamicBox(simd_float3 position, simd_float3 hal
     return {};
   }
   return impl_->CreateBox(position, half_extent, true, mass);
+}
+
+JPH::BodyID PhysicsWorld::CreateDynamicCompound(simd_float3 position, std::span<const CollisionBox> boxes, float mass) {
+  return CreateCompound(position, boxes, true, mass);
+}
+
+JPH::BodyID PhysicsWorld::CreateStaticCompound(simd_float3 position, std::span<const CollisionBox> boxes) {
+  return CreateCompound(position, boxes, false, 0);
+}
+
+JPH::BodyID PhysicsWorld::CreateCompound(simd_float3 position, std::span<const CollisionBox> boxes, bool dynamic, float mass) {
+  if (boxes.empty() || (dynamic && (!std::isfinite(mass) || mass <= 0))) {
+    SDL_Log("Invalid compound boxes or mass.");
+    return {};
+  }
+  JPH::StaticCompoundShapeSettings settings;
+  for (const auto& part : boxes) {
+    if (!simd_all(part.half_extent > simd_float3{0, 0, 0})) {
+      SDL_Log("Compound box half extents must be positive.");
+      return {};
+    }
+    JPH::ShapeRefC box = new JPH::BoxShape(ToVec3(part.half_extent));
+    settings.AddShape(ToVec3(part.center), JPH::Quat::sIdentity(), box);
+  }
+  const auto shape = settings.Create();
+  if (shape.HasError()) {
+    SDL_Log("Compound shape failed: %s", shape.GetError().c_str());
+    return {};
+  }
+  return impl_->CreateBody(position, shape.Get(), dynamic, mass);
+}
+
+bool PhysicsWorld::IsSpawnAreaFree(simd_float3 position, simd_float3 half_extent,
+                                 JPH::BodyID ignore, float clearance) const {
+  const auto extent = half_extent + std::max(clearance, 0.0f);
+  const JPH::AABox query(ToVec3(position - extent), ToVec3(position + extent));
+  struct Collector final : JPH::CollideShapeBodyCollector {
+    const JPH::BodyLockInterface& locks;
+    const JPH::AABox& query;
+    JPH::BodyID ignore;
+    bool occupied = false;
+    Collector(const JPH::BodyLockInterface& body_locks, const JPH::AABox& box, JPH::BodyID id)
+        : locks(body_locks), query(box), ignore(id) {}
+    void AddHit(const JPH::BodyID& id) override {
+      if (id == ignore) return;
+      const JPH::BodyLockRead lock(locks, id);
+      if (lock.Succeeded() && lock.GetBody().GetWorldSpaceBounds().Overlaps(query)) {
+        occupied = true;
+        ForceEarlyOut();
+      }
+    }
+  } collector(impl_->system.GetBodyLockInterface(), query, ignore);
+  impl_->system.GetBroadPhaseQuery().CollideAABox(query, collector);
+  return !collector.occupied;
+}
+
+void PhysicsWorld::DeactivateBody(JPH::BodyID id) {
+  impl_->system.GetBodyInterface().DeactivateBody(id);
 }
 
 void PhysicsWorld::ResetBody(JPH::BodyID id, simd_float3 position) {
@@ -150,6 +222,7 @@ BodyState PhysicsWorld::ReadState(JPH::BodyID id) const {
 }
 
 void PhysicsWorld::ApplyForceAt(JPH::BodyID id, simd_float3 force, simd_float3 world_point) {
+  if (impl_->system.GetBodyInterface().GetMotionType(id) == JPH::EMotionType::Static) return;
   impl_->system.GetBodyInterface().AddForce(id, ToVec3(force), ToPosition(world_point));
 }
 

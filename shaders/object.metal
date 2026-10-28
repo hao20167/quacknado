@@ -55,3 +55,59 @@ vertex VertexOut vertex_main(
 fragment float4 fragment_main(VertexOut in [[stage_in]]) {
   return in.color;
 }
+
+
+struct ModelVertex {
+  float4 position;
+  float2 uv;
+};
+
+struct ModelOut {
+  float4 position [[position]];
+  float2 uv;
+};
+
+struct ModelMaterial {
+  float4 base_color;
+  float4 alpha;
+};
+
+vertex ModelOut vertex_model(
+    uint id [[vertex_id]],
+    const device ModelVertex* vertices [[buffer(0)]],
+    constant Uniforms& u [[buffer(1)]]) {
+  float3 world = vertices[id].position.xyz * u.half_extent.xyz;
+  world = RotateByQuaternion(world, u.orientation);
+  world += u.offset_aspect.xyz;
+
+  float3 eye = float3(0, 14, -40);
+  float3 target = float3(0, 6, 0);
+  float3 forward = normalize(target - eye);
+  float3 right = normalize(cross(float3(0, 1, 0), forward));
+  float3 up = cross(forward, right);
+  float3 relative = world - eye;
+  
+  float3 p = float3(dot(relative, right), dot(relative, up), dot(relative, forward));
+
+  float nearZ = 0.1;
+  float farZ = 200.0;
+  float f = 1.78320508;
+  float aspect = u.offset_aspect.w;
+
+  ModelOut out;
+  out.position = float4(p.x * f / aspect, p.y * f, farZ * (p.z - nearZ) / (farZ - nearZ), p.z);
+  out.uv = vertices[id].uv;
+  return out;
+}
+
+fragment float4 fragment_model(
+    ModelOut in [[stage_in]],
+    texture2d<float> base_color [[texture(0)]],
+    constant ModelMaterial& material [[buffer(0)]]) {
+  constexpr sampler pixel_sampler(coord::normalized, address::repeat,
+                                  min_filter::nearest, mag_filter::nearest,
+                                  mip_filter::nearest);
+  float4 color = base_color.sample(pixel_sampler, in.uv) * material.base_color;
+  if (material.alpha.x >= 0 && color.a < material.alpha.x) discard_fragment();
+  return float4(color.rgb, 1);
+}

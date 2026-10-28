@@ -20,12 +20,23 @@ add_subdirectory(external/JoltPhysics/Build ${CMAKE_BINARY_DIR}/jolt-build)
 # target, requirement
 add_executable(quacknado ${SRCS})
 
+# copy assets to build folder
+add_custom_target(copy_models ALL
+  COMMAND "${CMAKE_COMMAND}" -E copy_directory_if_different
+    "${CMAKE_SOURCE_DIR}/assets/models"
+    "$<TARGET_FILE_DIR:quacknado>/assets/models"
+  VERBATIM
+)
+add_dependencies(copy_models quacknado)
+
 # where to lookup for headers
 target_include_directories(
   quacknado
   PRIVATE 
     ${CMAKE_SOURCE_DIR}/external/metal-cpp
     ${CMAKE_SOURCE_DIR}/src
+    ${CMAKE_SOURCE_DIR}/external/cgltf
+    ${CMAKE_SOURCE_DIR}/external/stb
 )
 
 
@@ -35,6 +46,7 @@ set(METALLIB "${CMAKE_CURRENT_BINARY_DIR}/object.metallib")
 add_custom_command(
   OUTPUT "${METALLIB}"
   COMMAND xcrun -sdk macosx metal
+    "-fmodules-cache-path=${CMAKE_CURRENT_BINARY_DIR}/metal-module-cache"
     -c "${SHADER}"
     -o "${AIR}"
   COMMAND xcrun -sdk macosx metallib
@@ -66,3 +78,17 @@ target_link_libraries(
     "-framework QuartzCore"
 )
 
+
+include(CTest)
+if(BUILD_TESTING)
+  add_executable(spawn_tests
+    tests/spawn_tests.cpp
+    src/simulation/simulation.cpp
+    src/simulation/spawn_position.cpp
+    src/simulation/physics/physics_world.cpp
+    src/simulation/env/tornado.cpp
+  )
+  target_include_directories(spawn_tests PRIVATE "${CMAKE_SOURCE_DIR}/src")
+  target_link_libraries(spawn_tests PRIVATE SDL3::SDL3 Jolt)
+  add_test(NAME spawn_tests COMMAND spawn_tests)
+endif()

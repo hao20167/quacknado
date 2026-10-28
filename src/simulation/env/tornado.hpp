@@ -2,8 +2,6 @@
 
 #include <simd/simd.h>
 
-#include "simulation/objs/obj_module.hpp"
-
 class Tornado {
 private:
   simd_float3 center_ {0, 0, 0};
@@ -12,7 +10,7 @@ private:
   float top_radius_ = 30.0f;
   float tangential_speed_ = 50.0f;
   float suction_speed_ = 50.0f;
-  float lift_speed_ = 10.0f;
+  float lift_speed_ = 20.0f;
   float outward_speed_ = 25.0f;
 public:
   [[nodiscard]]
