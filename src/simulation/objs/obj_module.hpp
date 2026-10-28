@@ -175,7 +175,7 @@ public:
   PChair(const simd_float3& position) {
     name_ = "pchair";
     position_ = position;
-    orientation_ = simd_quaternion(0.0f, 1.0f, 0.0f, 0.0f);
+    orientation_ = simd_quaternion(230.0f * 3.14159265f / 180.0f, simd_float3{0.0f, 1.0f, 0.0f});
     visual_height_ = 2.0f;
     half_extent_ = simd_float3{0.67f, 1.0f, 0.73f};
     mass_ = 0;

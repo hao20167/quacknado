@@ -7,6 +7,7 @@
 #include "renderer/metal_renderer.hpp"
 #include "draw/object_draw.hpp"
 #include "draw/model_draw.hpp"
+#include "draw/tornado_draw.hpp"
 
 namespace quacknado {
 
@@ -64,6 +65,8 @@ bool Application::Initialize() {
     }
   }
 
+  renderer_->AddModule(std::make_unique<TornadoDraw>(&simulation_->get_tornado()));
+
   if (!renderer_->Initialize(window_, metallib_path)) {
     return false;
   }
@@ -93,6 +96,17 @@ int Application::Run() {
     if (!running_) {
       break;
     }
+
+    simd_float3 direction {0, 0, 0};
+    if (SDL_GetWindowFlags(window_) & SDL_WINDOW_INPUT_FOCUS) {
+      const bool* keys = SDL_GetKeyboardState(nullptr);
+      direction = {
+        float(keys[SDL_SCANCODE_RIGHT]) - float(keys[SDL_SCANCODE_LEFT]),
+        0.0f,
+        float(keys[SDL_SCANCODE_UP]) - float(keys[SDL_SCANCODE_DOWN])
+      };
+    }
+    simulation_->set_tornado_direction(direction);
 
     Uint64 current_time = SDL_GetTicksNS();
     double frame_time = static_cast<double>(current_time - previous_time) / 1000000000.0;

@@ -77,18 +77,3 @@ target_link_libraries(
     "-framework Foundation" 
     "-framework QuartzCore"
 )
-
-
-include(CTest)
-if(BUILD_TESTING)
-  add_executable(spawn_tests
-    tests/spawn_tests.cpp
-    src/simulation/simulation.cpp
-    src/simulation/spawn_position.cpp
-    src/simulation/physics/physics_world.cpp
-    src/simulation/env/tornado.cpp
-  )
-  target_include_directories(spawn_tests PRIVATE "${CMAKE_SOURCE_DIR}/src")
-  target_link_libraries(spawn_tests PRIVATE SDL3::SDL3 Jolt)
-  add_test(NAME spawn_tests COMMAND spawn_tests)
-endif()

@@ -36,7 +36,7 @@ Simulation::Simulation(uint64_t seed) : rng_(seed) {
   objects_.push_back(std::move(dirt_house));
 
   std::uniform_int_distribution<int> model_distribution(1, 9);
-  for (int i = 0; i < 200; ++i) {
+  for (int i = 0; i < 600; ++i) {
     const int type = model_distribution(rng_);
     const simd_float3 position {0, 0, 0};
     std::unique_ptr<IObjModule> obj;
@@ -108,6 +108,9 @@ void Simulation::ProcessPendingSpawns() {
 }
 
 void Simulation::Update(const float& dt) {
+  constexpr float tornado_move_speed = 5.0f;
+  tornado_->Move(tornado_direction_ * tornado_move_speed * dt);
+
   if (wind_enabled_) {
     for (const auto& obj: objects_) {
       if (obj->is_static_ || obj->awaiting_spawn_ || obj->body_id_.IsInvalid() || !obj->affected_by_wind_) {
