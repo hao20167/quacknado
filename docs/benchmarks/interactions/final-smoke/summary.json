@@ -1,0 +1,19 @@
+{
+  "exact_state_checksum_active_resolution": true,
+  "workers": {
+    "default": [
+      1
+    ],
+    "serial": [
+      0
+    ],
+    "qos1": [
+      1
+    ],
+    "qos2": [
+      2
+    ]
+  },
+  "frames_per_config": 60,
+  "sanitizer_or_validation_failure": false
+}

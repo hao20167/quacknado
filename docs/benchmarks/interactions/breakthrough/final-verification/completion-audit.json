@@ -1,0 +1,31 @@
+{
+  "campaigns": [
+    {
+      "campaign": "windowed",
+      "processes": 18,
+      "rows": 6480,
+      "complete": true,
+      "source_archive_matches_metadata": true,
+      "core_runtime_source_unchanged_after_measurement": true
+    },
+    {
+      "campaign": "dense",
+      "processes": 6,
+      "rows": 2160,
+      "complete": true,
+      "source_archive_matches_metadata": true,
+      "core_runtime_source_unchanged_after_measurement": true
+    }
+  ],
+  "all_three_builds_33_tests_pass": true,
+  "full_state_scope": "2 seeds x N100/600/1000 x 120 steps x serial/1/2/4/QoS1/QoS2",
+  "debug_gpu_smoke": "4x60 frames, ASan/UBSan+Metal Validation; vendor exceptions apply",
+  "default_rebuilt_path_verified": true,
+  "breakthrough_evidence": "Dense median 44.391 to 1.872 ms, p99 47.043 to 2.570 ms; realtime >33.33 ms frames 373/900 to 1/900.",
+  "limitations": [
+    "Cross-build checksums differ; no bitwise trajectory claim",
+    "Realtime runs progress through different tick counts",
+    "No pinned thermal/frequency/affinity or universal FPS/latency guarantee",
+    "Optional fresh Unoptimized rebuild recipe has not been run end-to-end in this campaign"
+  ]
+}

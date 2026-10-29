@@ -1,0 +1,3 @@
+PASS Release Metal validation: 12 cases / 36 frame comparisons.
+PASS same pixels and draw counts in instrumented executable.
+NOT CLEAN UBSan: 6 runtime error reports in metal-cpp null member calls; see sanitized-validation.log. Exit zero is insufficient for sanitizer success.

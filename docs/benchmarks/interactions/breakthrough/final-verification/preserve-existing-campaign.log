@@ -1,0 +1,3 @@
+usage: benchmark_dense_contacts.py [-h] [--output OUTPUT] [--before BEFORE]
+                                   [--after AFTER]
+benchmark_dense_contacts.py: error: Campaign output exists: docs/benchmarks/interactions/breakthrough/dense/metadata.json; choose --output with a new path

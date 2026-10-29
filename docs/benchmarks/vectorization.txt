@@ -1,0 +1,313 @@
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:13:2: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   13 |  for(size_t i=0;i<ref.size();++i)for(int k=0;k<3;++k)
+      |  ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:35:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   35 |   for(int i=0;i<60;++i)sim.Update(1.f/60);
+      |   ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:37:4: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]
+   37 |    for(auto& o:sim.get_objects())if(!o->awaiting_spawn_&&!o->body_id_.IsInvalid())++placed;
+      |    ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:37:4: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:3:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/algorithm:1810:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/for_each.h:16:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/movable_box.h:23:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1294:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/memory:939:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/shared_ptr.h:33:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:265:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  265 |     if (__tmp)
+      |         ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:3:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/spatial.hpp:2:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.hpp:7:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/../Jolt/Jolt.h:15:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/../Jolt/Math/Vec4.h:326:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/../Jolt/Math/Vec4.inl:6:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/../Jolt/Math/Vec3.h:317:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/../Jolt/Math/Vec3.inl:10:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/random:1703:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/mersenne_twister_engine.h:652:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  652 |   for (size_t __i = 1; __i < __n; ++__i)
+      |   ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:45:33: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   45 |  std::vector<bench::Sample>a(n);for(auto& s:a){
+      |                                 ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:52:2: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   52 |  for(size_t i=0;i<std::min(n,std::size(edges));++i)a[i].p=edges[i];
+      |  ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:24:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   24 |   for(size_t i=0;i<a.size();++i) out[i]=ref?t.ReferenceForceAt(a[i].p,a[i].v):t.ForceAt(a[i].p,a[i].v);
+      |   ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:24:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:24:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:24:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:24:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:20:16: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   20 |   double sum=0;for(auto v:out)sum+=v.x+v.y+v.z;sink=sum;
+      |                ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:24:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   24 |   for(size_t i=0;i<a.size();++i) out[i]=ref?t.ReferenceForceAt(a[i].p,a[i].v):t.ForceAt(a[i].p,a[i].v);
+      |   ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:24:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:24:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:24:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:24:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:24:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:20:16: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   20 |   double sum=0;for(auto v:out)sum+=v.x+v.y+v.z;sink=sum;
+      |                ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:24:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   24 |   for(size_t i=0;i<a.size();++i) out[i]=ref?t.ReferenceForceAt(a[i].p,a[i].v):t.ForceAt(a[i].p,a[i].v);
+      |   ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:24:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:27:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   27 |   for(size_t i=0;i<out.size();++i) out[i]=t.ForceAt({a.x[i],a.y[i],a.z[i]},{a.vx[i],a.vy[i],a.vz[i]});
+      |   ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:27:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:27:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:27:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:20:16: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   20 |   double sum=0;for(auto v:out)sum+=v.x+v.y+v.z;sink=sum;
+      |                ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:27:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   27 |   for(size_t i=0;i<out.size();++i) out[i]=t.ForceAt({a.x[i],a.y[i],a.z[i]},{a.vx[i],a.vy[i],a.vz[i]});
+      |   ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:20:16: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   20 |   double sum=0;for(auto v:out)sum+=v.x+v.y+v.z;sink=sum;
+      |                ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:19:2: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   19 |  for(int r=0;r<reps;++r){auto begin=Clock::now();double gpu=fn();auto end=Clock::now();
+      |  ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:19:2: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:20:16: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   20 |   double sum=0;for(auto v:out)sum+=v.x+v.y+v.z;sink=sum;
+      |                ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:20:16: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:19:2: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   19 |  for(int r=0;r<reps;++r){auto begin=Clock::now();double gpu=fn();auto end=Clock::now();
+      |  ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:20:16: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   20 |   double sum=0;for(auto v:out)sum+=v.x+v.y+v.z;sink=sum;
+      |                ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:19:2: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   19 |  for(int r=0;r<reps;++r){auto begin=Clock::now();double gpu=fn();auto end=Clock::now();
+      |  ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:55:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   55 |   for(auto s:a){auto f=t.ReferenceForceAt(s.p,s.v);std::printf("%.9g,%.9g,%.9g,%.9g,%.9g,%.9g,%.9g,%.9g,%.9g\n",s.p.x,s.p.y,s.p.z,s.v.x,s.v.y,s.v.z,f.x,f.y,f.z);}return 0;
+      |   ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:3:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/spatial.hpp:2:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.hpp:7:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/../Jolt/Jolt.h:15:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/../Jolt/Math/Vec4.h:326:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/../Jolt/Math/Vec4.inl:6:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/../Jolt/Math/Vec3.h:317:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/../Jolt/Math/Vec3.inl:10:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/random:1703:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/mersenne_twister_engine.h:652:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  652 |   for (size_t __i = 1; __i < __n; ++__i)
+      |   ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:3:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/algorithm:1810:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/for_each.h:16:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/movable_box.h:23:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1294:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/memory:937:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/ranges_uninitialized_algorithms.h:22:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/uninitialized_algorithms.h:14:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/move.h:41:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   41 |     while (__first != __last) {
+      |     ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/move.h:41:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:3:
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/spatial.hpp:32:64: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   32 |  std::vector<bool> expected;for(auto q:queries){bool hit=false;for(auto b:boxes)if(overlaps(q,b)){hit=true;break;}expected.push_back(hit);}
+      |                                                                ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:6:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/functional:526:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/boyer_moore_searcher.h:26:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_map:592:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__hash_table:1108:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+ 1108 |   while (__np != nullptr) {
+      |   ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:3:
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/spatial.hpp:37:4: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   37 |    for(size_t i=0;i<queries.size();++i){auto q=queries[i];bool hit=false;
+      |    ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/spatial.hpp:37:4: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/spatial.hpp:38:20: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   38 |     if(backend==0){for(auto b:boxes)if(overlaps(q,b)){hit=true;break;}}
+      |                    ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/spatial.hpp:24:103: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   24 |   bool found=false;cells(query,[&](Cell c){if(found)return;auto it=cells_.find(c);if(it!=cells_.end())for(auto i:it->second)if(overlaps(query,boxes[i])){found=true;break;}});return found;
+      |                                                                                                       ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:6:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/functional:526:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/boyer_moore_searcher.h:26:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_map:592:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__hash_table:1747:7: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+ 1747 |       for (__nd = __nd->__next_;
+      |       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__hash_table:1747:7: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__hash_table:1108:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+ 1108 |   while (__np != nullptr) {
+      |   ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:3:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/algorithm:1810:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/for_each.h:16:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/movable_box.h:23:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1294:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/memory:939:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/shared_ptr.h:33:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:265:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  265 |     if (__tmp)
+      |         ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:6:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/functional:526:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/boyer_moore_searcher.h:26:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_map:592:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__hash_table:1108:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+ 1108 |   while (__np != nullptr) {
+      |   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__hash_table:1290:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+ 1290 |     for (size_type __i = 0; __i < __bc; ++__i)
+      |     ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:3:
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/spatial.hpp:22:59: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   22 |  void build(const std::vector<Box>& boxes){cells_.clear();for(size_t i=0;i<boxes.size();++i)cells(boxes[i],[&](Cell c){cells_[c].push_back(i);});}
+      |                                                           ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:3:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/algorithm:1794:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/copy.h:39:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   39 |     while (__first != __last) {
+      |     ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:3:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/algorithm:1810:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/for_each.h:16:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/movable_box.h:23:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1294:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/memory:937:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/ranges_uninitialized_algorithms.h:22:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/uninitialized_algorithms.h:14:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/move.h:41:5: remark: vectorized loop (vectorization width: 2, interleaved count: 4) [-Rpass=loop-vectorize]
+   41 |     while (__first != __last) {
+      |     ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:6:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/functional:526:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/boyer_moore_searcher.h:26:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_map:592:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__hash_table:1486:7: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+ 1486 |       for (__nd = __nd->__next_;
+      |       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__hash_table:1486:7: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__hash_table:1681:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+ 1681 |     for (size_type __i = 0; __i < __nbc; ++__i)
+      |     ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__hash_table:1689:7: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+ 1689 |       for (__pp = __cp, void(), __cp = __cp->__next_; __cp != nullptr; __cp = __pp->__next_) {
+      |       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__hash_table:1689:7: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:3:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/algorithm:1810:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/for_each.h:16:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/movable_box.h:23:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1294:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/memory:937:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/ranges_uninitialized_algorithms.h:22:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/uninitialized_algorithms.h:14:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/move.h:41:5: remark: vectorized loop (vectorization width: 4, interleaved count: 4) [-Rpass=loop-vectorize]
+   41 |     while (__first != __last) {
+      |     ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/move.h:41:5: remark: vectorized loop (vectorization width: 4, interleaved count: 4) [-Rpass=loop-vectorize]
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/move.h:41:5: remark: vectorized loop (vectorization width: 4, interleaved count: 4) [-Rpass=loop-vectorize]
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/move.h:41:5: remark: vectorized loop (vectorization width: 4, interleaved count: 4) [-Rpass=loop-vectorize]
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/move.h:41:5: remark: vectorized loop (vectorization width: 4, interleaved count: 4) [-Rpass=loop-vectorize]
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/move.h:41:5: remark: vectorized loop (vectorization width: 4, interleaved count: 4) [-Rpass=loop-vectorize]
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:50:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   50 |     for(int k=0;k<4;++k) {
+      |     ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:60:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   60 |   for(;i<end;++i) out[i]=tornado.ForceAt({a.x[i],a.y[i],a.z[i]},{a.vx[i],a.vy[i],a.vz[i]});
+      |   ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:70:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   70 |     for(size_t id=0;id<workers;++id) threads_.emplace_back([this,id,workers]{
+      |     ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:79:88: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   79 |     } catch (...) { { std::lock_guard lock(mutex_); stop_=true; } ready_.notify_all(); for(auto& t:threads_)t.join(); throw; }
+      |                                                                                        ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:6:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/functional:526:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/boyer_moore_searcher.h:27:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:925:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  925 |     while (__new_last != __soon_to_be_end)
+      |     ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:3:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/algorithm:1810:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/for_each.h:16:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/movable_box.h:23:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1294:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/memory:937:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/ranges_uninitialized_algorithms.h:22:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/uninitialized_algorithms.h:610:3: remark: vectorized loop (vectorization width: 2, interleaved count: 4) [-Rpass=loop-vectorize]
+  610 |   while (__first1 != __last1) {
+      |   ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:6:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/functional:526:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/boyer_moore_searcher.h:27:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:346:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__split_buffer:326:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  326 |   while (__new_last != __end_)
+      |   ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:5:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/condition_variable:126:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__condition_variable/condition_variable.h:145:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  145 |   while (!__pred())
+      |   ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:6:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/functional:526:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/boyer_moore_searcher.h:27:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:346:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__split_buffer:326:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  326 |   while (__new_last != __end_)
+      |   ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:5:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/condition_variable:126:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__condition_variable/condition_variable.h:145:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  145 |   while (!__pred())
+      |   ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:24:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   24 |   for(size_t i=0;i<a.size();++i) out[i]=ref?t.ReferenceForceAt(a[i].p,a[i].v):t.ForceAt(a[i].p,a[i].v);
+      |   ^
+/Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:82:75: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+   82 |   ~Pool() { {std::lock_guard lock(mutex_);stop_=true;}ready_.notify_all();for(auto& t:threads_)t.join(); }
+      |                                                                           ^
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp:1:
+In file included from /Users/hao20167/PROJ/cpp/quacknado/benchmarks/wind.hpp:6:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/functional:526:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/boyer_moore_searcher.h:27:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:925:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  925 |     while (__new_last != __soon_to_be_end)
+      |     ^

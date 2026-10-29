@@ -1,0 +1,7 @@
+{
+  "src/simulation/physics/physics_world.cpp": true,
+  "src/simulation/physics/physics_world.hpp": true,
+  "src/simulation/simulation.cpp": true,
+  "src/simulation/spawn_position.cpp": true,
+  "src/simulation/spawn_position.hpp": true
+}

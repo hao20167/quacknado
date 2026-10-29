@@ -1,0 +1,27 @@
+{
+  "objects": {
+    "boat": 1169,
+    "chest": 1124,
+    "chicken": 1098,
+    "creeper": 1086,
+    "dirt_block": 1102,
+    "dirt_house": 1,
+    "pchair": 1,
+    "sheep": 2230,
+    "steve": 1087,
+    "villager": 1104
+  },
+  "primitives_per_model": {
+    "pchair": 1,
+    "dirt_house": 3,
+    "chest": 1,
+    "steve": 1,
+    "villager": 1,
+    "chicken": 8,
+    "boat": 3,
+    "dirt_block": 1,
+    "creeper": 1,
+    "sheep": 2
+  },
+  "expected_instance_invocations": 22258
+}

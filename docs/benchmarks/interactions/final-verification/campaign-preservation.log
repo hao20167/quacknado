@@ -1,0 +1,2 @@
+usage: benchmark_physics_qos.py [-h] [--output OUTPUT] [--configs CONFIGS]
+benchmark_physics_qos.py: error: Campaign output exists: docs/benchmarks/interactions/qos-windowed/metadata.json; choose --output with a new path

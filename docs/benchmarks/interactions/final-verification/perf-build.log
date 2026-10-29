@@ -1,0 +1,7 @@
+[0/2] Re-checking globbed directories...
+[1/7] Building CXX object CMakeFiles/physics_workers_tests.dir/tests/physics_workers_tests.cpp.o
+[2/7] Linking CXX executable Release/physics_workers_tests
+[3/7] Building CXX object CMakeFiles/quacknado.dir/src/app/application.cpp.o
+[4/7] Linking CXX executable Release/quacknado
+[5/7] cd /Users/hao20167/PROJ/cpp/quacknado/build/perf && /opt/homebrew/bin/cmake -E copy_if_different /Users/hao20167/PROJ/cpp/quacknado/build/perf/object.metallib /Users/hao20167/PROJ/cpp/quacknado/build/perf/Release/object.metallib
+[6/7] cd /Users/hao20167/PROJ/cpp/quacknado/build/perf && /opt/homebrew/bin/cmake -E copy_directory_if_different /Users/hao20167/PROJ/cpp/quacknado/assets/models /Users/hao20167/PROJ/cpp/quacknado/build/perf/Release/assets/models

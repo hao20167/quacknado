@@ -1,0 +1,2 @@
+usage: check_10k_scene.py [-h] [--output OUTPUT]
+check_10k_scene.py: error: Campaign output exists: docs/benchmarks/spawn-10k/verified/metadata.json; choose --output with a new path

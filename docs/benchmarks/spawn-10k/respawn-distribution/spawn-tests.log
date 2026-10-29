@@ -1,0 +1,8 @@
+2026-10-29 15:41:55.644 spawn_tests[8709:9056484]  >>> Number of objects: 1001
+2026-10-29 15:41:55.657 spawn_tests[8709:9056484]  >>> Number of objects: 600
+2026-10-29 15:41:56.074 spawn_tests[8709:9056484]  >>> Number of objects: 100
+2026-10-29 15:41:56.091 spawn_tests[8709:9056484]  >>> Number of objects: 100
+2026-10-29 15:41:56.106 spawn_tests[8709:9056484]  >>> Number of objects: 100
+2026-10-29 15:41:56.123 spawn_tests[8709:9056484]  >>> Number of objects: 100
+2026-10-29 15:41:56.139 spawn_tests[8709:9056484]  >>> Number of objects: 100
+PASS: fixed props, dynamic dirt house, overlap-free placement, self exclusion, same-tick reservations and deferred retries

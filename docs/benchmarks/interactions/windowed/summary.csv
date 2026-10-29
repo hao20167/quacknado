@@ -1,0 +1,13 @@
+workers,metric,median_ns,median_campaign_p99_ns
+0,cpu_frame_ns,8326021.0,9761500.0
+0,gpu_command_ns,1412750.0,1599375.0
+0,simulation_ns,2026958.0,3679291.0
+0,submission_ns,49333.5,402166.0
+2,cpu_frame_ns,3607708.0,11042792.0
+2,gpu_command_ns,936479.5,1496917.0
+2,simulation_ns,768583.0,5086000.0
+2,submission_ns,54687.5,364708.0
+4,cpu_frame_ns,8315125.5,11795500.0
+4,gpu_command_ns,1412312.5,1698125.0
+4,simulation_ns,921583.5,4975208.0
+4,submission_ns,77229.0,484458.0

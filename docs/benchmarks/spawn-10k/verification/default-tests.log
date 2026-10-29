@@ -1,0 +1,77 @@
+Test project /Users/hao20167/PROJ/cpp/quacknado/build/default
+      Start  1: wind_reference
+ 1/36 Test  #1: wind_reference ......................   Passed    0.48 sec
+      Start  2: wind_aos
+ 2/36 Test  #2: wind_aos ............................   Passed    0.01 sec
+      Start  3: wind_soa
+ 3/36 Test  #3: wind_soa ............................   Passed    0.01 sec
+      Start  4: wind_neon
+ 4/36 Test  #4: wind_neon ...........................   Passed    0.01 sec
+      Start  5: wind_neon_cull
+ 5/36 Test  #5: wind_neon_cull ......................   Passed    0.01 sec
+      Start  6: wind_pool1
+ 6/36 Test  #6: wind_pool1 ..........................   Passed    0.01 sec
+      Start  7: wind_pool2
+ 7/36 Test  #7: wind_pool2 ..........................   Passed    0.01 sec
+      Start  8: wind_pool4
+ 8/36 Test  #8: wind_pool4 ..........................   Passed    0.01 sec
+      Start  9: wind_pool_neon4
+ 9/36 Test  #9: wind_pool_neon4 .....................   Passed    0.01 sec
+      Start 10: spawn_scene
+10/36 Test #10: spawn_scene .........................   Passed    0.66 sec
+      Start 11: wind_pool_lifecycle
+11/36 Test #11: wind_pool_lifecycle .................   Passed    0.27 sec
+      Start 12: benchmark_reject_unknown_backend
+12/36 Test #12: benchmark_reject_unknown_backend ....   Passed    0.01 sec
+      Start 13: allocation_counter_self_test
+13/36 Test #13: allocation_counter_self_test ........   Passed    0.28 sec
+      Start 14: allocation_direct_steady_state
+14/36 Test #14: allocation_direct_steady_state ......   Passed    0.06 sec
+      Start 15: allocation_pool_steady_state
+15/36 Test #15: allocation_pool_steady_state ........   Passed    0.07 sec
+      Start 16: metal_ownership
+16/36 Test #16: metal_ownership .....................   Passed    0.00 sec
+      Start 17: calibrated_kernel
+17/36 Test #17: calibrated_kernel ...................   Passed    0.05 sec
+      Start 18: calibrated_reject_gpu
+18/36 Test #18: calibrated_reject_gpu ...............   Passed    0.01 sec
+      Start 19: replay_reject_invalid_frame_count
+19/36 Test #19: replay_reject_invalid_frame_count ...   Passed    0.30 sec
+      Start 20: perf_gate_policy
+20/36 Test #20: perf_gate_policy ....................   Passed    0.44 sec
+      Start 21: source_evidence_inventory
+21/36 Test #21: source_evidence_inventory ...........   Passed    0.07 sec
+      Start 22: campaign_output_preservation
+22/36 Test #22: campaign_output_preservation ........   Passed    0.05 sec
+      Start 23: tornado_invariants
+23/36 Test #23: tornado_invariants ..................   Passed    0.31 sec
+      Start 24: benchmark_reject_unknown_dataset
+24/36 Test #24: benchmark_reject_unknown_dataset ....   Passed    0.01 sec
+      Start 25: physics_workers_correctness
+25/36 Test #25: physics_workers_correctness .........   Passed    3.94 sec
+      Start 26: reject_invalid_physics_workers
+26/36 Test #26: reject_invalid_physics_workers ......   Passed    0.01 sec
+      Start 27: reject_invalid_physics_qos
+27/36 Test #27: reject_invalid_physics_qos ..........   Passed    0.01 sec
+      Start 28: reject_serial_physics_qos
+28/36 Test #28: reject_serial_physics_qos ...........   Passed    0.01 sec
+      Start 29: fixed_step_catchup
+29/36 Test #29: fixed_step_catchup ..................   Passed    0.00 sec
+      Start 30: reject_invalid_scene_count
+30/36 Test #30: reject_invalid_scene_count ..........   Passed    0.01 sec
+      Start 31: reject_invalid_replay_clock
+31/36 Test #31: reject_invalid_replay_clock .........   Passed    0.01 sec
+      Start 32: reject_invalid_replay_wind
+32/36 Test #32: reject_invalid_replay_wind ..........   Passed    0.01 sec
+      Start 33: dense_collision_invariants
+33/36 Test #33: dense_collision_invariants ..........   Passed    0.62 sec
+      Start 34: large_scene_spawn
+34/36 Test #34: large_scene_spawn ...................   Passed    0.32 sec
+      Start 35: large_scene_second_seed
+35/36 Test #35: large_scene_second_seed .............   Passed    0.02 sec
+      Start 36: scene_full_capacity
+36/36 Test #36: scene_full_capacity .................   Passed    0.03 sec
+
+100% tests passed out of 36
+
+Total Test time (real) =   8.17 sec

@@ -1,3 +1,4 @@
+#include "core/metal_ptr.hpp"
 #include "assets/glb_asset.hpp"
 
 #define CGLTF_IMPLEMENTATION
@@ -24,7 +25,7 @@ void Require(bool condition, const char* message) {
   if (!condition) throw std::runtime_error(message);
 }
 
-NS::SharedPtr<MTL::Texture> LoadTexture(const cgltf_image& image, MTL::Device* device) {
+quacknado::metal::Ptr<MTL::Texture> LoadTexture(const cgltf_image& image, MTL::Device* device) {
   Require(image.buffer_view && !image.uri && image.mime_type &&
               (std::strcmp(image.mime_type, "image/png") == 0 ||
                std::strcmp(image.mime_type, "image/jpeg") == 0),
@@ -42,7 +43,7 @@ NS::SharedPtr<MTL::Texture> LoadTexture(const cgltf_image& image, MTL::Device* d
     throw std::runtime_error(std::string("GLB image decode failed: ") + (reason ? reason : "unknown error"));
   }
   Require(width > 0 && height > 0, "Invalid GLB image dimensions");
-  auto descriptor = NS::TransferPtr(MTL::TextureDescriptor::alloc()->init());
+  auto descriptor = quacknado::metal::adopt(MTL::TextureDescriptor::alloc()->init());
   descriptor->setTextureType(MTL::TextureType2D);
   descriptor->setPixelFormat(MTL::PixelFormatRGBA8Unorm_sRGB);
   descriptor->setWidth(width);
@@ -50,16 +51,16 @@ NS::SharedPtr<MTL::Texture> LoadTexture(const cgltf_image& image, MTL::Device* d
   descriptor->setMipmapLevelCount(1 + static_cast<NS::UInteger>(std::floor(std::log2(std::max(width, height)))));
   descriptor->setStorageMode(MTL::StorageModeShared);
   descriptor->setUsage(MTL::TextureUsageShaderRead);
-  auto texture = NS::TransferPtr(device->newTexture(descriptor.get()));
+  auto texture = quacknado::metal::adopt(device->newTexture(descriptor.get()));
   Require(texture.get(), "GLB texture allocation failed");
   texture->replaceRegion(MTL::Region::Make2D(0, 0, width, height), 0,
                          pixels.get(), static_cast<NS::UInteger>(width) * 4);
   if (texture->mipmapLevelCount() > 1) {
-    auto queue = NS::TransferPtr(device->newCommandQueue());
+    auto queue = quacknado::metal::adopt(device->newCommandQueue());
     Require(queue.get(), "GLB mipmap command queue allocation failed");
-    auto command = NS::RetainPtr(queue->commandBuffer());
+    auto command = quacknado::metal::retain(queue->commandBuffer());
     Require(command.get(), "GLB mipmap command allocation failed");
-    auto encoder = NS::RetainPtr(command->blitCommandEncoder());
+    auto encoder = quacknado::metal::retain(command->blitCommandEncoder());
     Require(encoder.get(), "GLB mipmap encoder allocation failed");
     encoder->generateMipmaps(texture.get());
     encoder->endEncoding();
@@ -91,7 +92,7 @@ GlbAsset LoadGlb(const std::string& path, MTL::Device* device) {
   Require(scene, "GLB has no scene");
 
   GlbAsset result;
-  std::unordered_map<const cgltf_image*, NS::SharedPtr<MTL::Texture>> textures;
+  std::unordered_map<const cgltf_image*, quacknado::metal::Ptr<MTL::Texture>> textures;
   simd_float3 minimum {INFINITY, INFINITY, INFINITY};
   simd_float3 maximum {-INFINITY, -INFINITY, -INFINITY};
   std::vector<bool> visiting(data->nodes_count, false);

@@ -1,0 +1,18 @@
+{
+  "actual_body_count_steps_0_to_360": 10003,
+  "pending_every_step": 0,
+  "gpu_frames_verified": 360,
+  "model_objects_per_frame": 10002,
+  "primitive_instance_invocations_per_frame": 22258,
+  "asset_primitive_counts_from_loader": true,
+  "gpu_pixel_regression_cases": 12,
+  "gpu_pixel_comparisons": 36,
+  "tests_default_perf_check": 36,
+  "full_capacity_initial_placement": 16381,
+  "overcapacity_rejected": 16382,
+  "final_source_delta_from_gpu_measured": [
+    "src/simulation/simulation.cpp"
+  ],
+  "performance_claim": false,
+  "visible_pixel_count_claim": false
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "campaign": 0,
+    "build": "after",
+    "median_update_ms": 9.0820835,
+    "p99_update_ms": 26.060708
+  },
+  {
+    "campaign": 0,
+    "build": "before",
+    "median_update_ms": 20.670541999999998,
+    "p99_update_ms": 76.026667
+  },
+  {
+    "campaign": 1,
+    "build": "after",
+    "median_update_ms": 9.1215835,
+    "p99_update_ms": 32.516125
+  },
+  {
+    "campaign": 1,
+    "build": "before",
+    "median_update_ms": 15.8043545,
+    "p99_update_ms": 59.203
+  },
+  {
+    "campaign": 2,
+    "build": "before",
+    "median_update_ms": 15.8449375,
+    "p99_update_ms": 62.507458
+  },
+  {
+    "campaign": 2,
+    "build": "after",
+    "median_update_ms": 8.761208499999999,
+    "p99_update_ms": 26.39825
+  }
+]

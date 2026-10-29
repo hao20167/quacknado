@@ -1,0 +1,5 @@
+usage: Paired 10k no-wind CPU and real-clock game campaign; refuses to overwrite evidence.
+       [-h] [--output OUTPUT] [--before-game BEFORE_GAME]
+       [--after-game AFTER_GAME] [--before-cpu BEFORE_CPU]
+       [--after-cpu AFTER_CPU] [--campaigns CAMPAIGNS] [--frames FRAMES]
+Paired 10k no-wind CPU and real-clock game campaign; refuses to overwrite evidence.: error: Campaign output exists: docs/benchmarks/collision-pile/paired/metadata.json; choose --output with a new path

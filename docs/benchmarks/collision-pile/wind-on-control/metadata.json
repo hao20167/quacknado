@@ -1,0 +1,16 @@
+{
+  "binary_sha256": {
+    "before": "47b026d86b967e33cdfa09955bcb35239f593a79e5064714fd7fd9321ac1f52c",
+    "after": "b73a5d2a5c370f628f2c120592373244668169c89e2a000095d2c280e16c86fb"
+  },
+  "steps": 600,
+  "warmup": 60,
+  "wind": true,
+  "n": 10000,
+  "workers": {
+    "before": 1,
+    "after": 6
+  },
+  "campaigns": 3,
+  "description": "Same scene/collisions/dt, wind enabled, no profiler/telemetry; verify default policy does not regress wind-on pipeline."
+}

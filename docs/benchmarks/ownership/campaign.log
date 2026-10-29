@@ -1,0 +1,29 @@
+2026-10-29 09:40:29.210 quack_bench[10006:8526580] Loaded assets/models/chicken.glb (8 primitives)
+2026-10-29 09:40:29.359 quack_bench[10010:8526613] Loaded assets/models/creeper.glb (1 primitives)
+2026-10-29 09:40:29.478 quack_bench[10011:8526619] Loaded assets/models/chest.glb (1 primitives)
+2026-10-29 09:40:29.581 quack_bench[10012:8526624] Loaded assets/models/chicken.glb (8 primitives)
+2026-10-29 09:40:29.738 quack_bench[10013:8526628] Loaded assets/models/creeper.glb (1 primitives)
+2026-10-29 09:40:29.858 quack_bench[10014:8526633] Loaded assets/models/chest.glb (1 primitives)
+2026-10-29 09:40:29.960 quack_bench[10015:8526639] Loaded assets/models/chicken.glb (8 primitives)
+2026-10-29 09:40:30.114 quack_bench[10018:8526649] Loaded assets/models/creeper.glb (1 primitives)
+2026-10-29 09:40:30.227 quack_bench[10024:8526678] Loaded assets/models/chest.glb (1 primitives)
+2026-10-29 09:40:30.326 quack_bench[10029:8526697] Loaded assets/models/chicken.glb (8 primitives)
+2026-10-29 09:40:30.483 quack_bench[10030:8526702] Loaded assets/models/creeper.glb (1 primitives)
+2026-10-29 09:40:30.601 quack_bench[10031:8526707] Loaded assets/models/chest.glb (1 primitives)
+2026-10-29 09:40:30.703 quack_bench[10032:8526712] Loaded assets/models/chicken.glb (8 primitives)
+2026-10-29 09:40:30.845 quack_bench[10033:8526721] Loaded assets/models/creeper.glb (1 primitives)
+2026-10-29 09:40:30.957 quack_bench[10034:8526729] Loaded assets/models/chest.glb (1 primitives)
+t kiểm tra null, copy, move, self-copy/self-move, alias assignment, reset và destruction count. GPU regression vẫn so 12 case/36 frame với baseline vòng 8. Lượt GPU chạy ASan/UBSan với halt_on_error=1 cùng Metal API Validation, log không có runtime error/ASan report; pixel/draw counts khớp baseline. Coverage vẫn là ba asset và fixture đã mô tả, không phải chứng minh mọi Metal API.
+
+Đo lại GLB 600 object, 5 process/model, 30 frame sau 3 warmup; không diễn giải đây là speedup riêng của ownership adapter. Individual và instanced đều dùng adapter mới.
+
+| Model | Submission individual (ms) | Submission instanced (ms) | Ratio |
+|---|---:|---:|---:|
+| chicken | 0.7133 | 0.0227 | 31.38× |
+| creeper | 0.0996 | 0.0140 | 7.11× |
+| chest | 0.0922 | 0.0129 | 7.17× |
+
+Release và Debug configuration 16/16 CTest qua; GPU fail-fast chạy riêng vì sandbox GPU access. Vẫn có ngoại lệ đã công bố: quack_alloc dùng replacements riêng, không instrument sanitizer. Log và raw ở ownership/. Finding vòng 8 được giữ nguyên như lịch sử, khắc phục ở vòng này.
+
+Tái lập GPU check: `UBSAN_OPTIONS=halt_on_error=1:print_stacktrace=1 ASAN_OPTIONS=halt_on_error=1 MTL_DEBUG_LAYER=1 ./build/check/Debug/render_regression build/check/Debug/object.metallib`. Sau khi lưu output vào ownership/gpu-results.csv và stderr vào ownership/gpu-validation.log, chạy `python3 scripts/benchmark_ownership.py` để xác minh baseline và đo lại submission. Không tái dùng kết quả nếu renderer fixture đã đổi mà baseline không còn phù hợp.
+

@@ -1,0 +1,9 @@
+{
+  "status": "verifier_failed_due_to_wrong_single_primitive_assumption",
+  "expected_instance_invocations_in_old_verifier": 10004,
+  "observed_instance_invocations": 22258,
+  "observed_placed_every_frame": 10003,
+  "observed_model_objects_every_frame": 10002,
+  "final_verified_artifacts": "verified/",
+  "note": "First raw and source snapshot retained. Current assets have chicken=8, boat=3, sheep=2 primitives; final verifier derives counts from GLB loader logs and per-model census."
+}

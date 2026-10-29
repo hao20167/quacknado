@@ -1,0 +1,58 @@
+Test project /Users/hao20167/PROJ/cpp/quacknado/build/perf
+      Start  1: wind_reference
+ 1/24 Test  #1: wind_reference ......................   Passed    0.49 sec
+      Start  2: wind_aos
+ 2/24 Test  #2: wind_aos ............................   Passed    0.01 sec
+      Start  3: wind_soa
+ 3/24 Test  #3: wind_soa ............................   Passed    0.01 sec
+      Start  4: wind_neon
+ 4/24 Test  #4: wind_neon ...........................   Passed    0.01 sec
+      Start  5: wind_neon_cull
+ 5/24 Test  #5: wind_neon_cull ......................   Passed    0.01 sec
+      Start  6: wind_pool1
+ 6/24 Test  #6: wind_pool1 ..........................   Passed    0.01 sec
+      Start  7: wind_pool2
+ 7/24 Test  #7: wind_pool2 ..........................   Passed    0.01 sec
+      Start  8: wind_pool4
+ 8/24 Test  #8: wind_pool4 ..........................   Passed    0.01 sec
+      Start  9: wind_pool_neon4
+ 9/24 Test  #9: wind_pool_neon4 .....................   Passed    0.01 sec
+      Start 10: spawn_scene
+10/24 Test #10: spawn_scene .........................   Passed    0.38 sec
+      Start 11: wind_pool_lifecycle
+11/24 Test #11: wind_pool_lifecycle .................   Passed    0.02 sec
+      Start 12: benchmark_reject_unknown_backend
+12/24 Test #12: benchmark_reject_unknown_backend ....   Passed    0.01 sec
+      Start 13: allocation_counter_self_test
+13/24 Test #13: allocation_counter_self_test ........   Passed    0.02 sec
+      Start 14: allocation_direct_steady_state
+14/24 Test #14: allocation_direct_steady_state ......   Passed    0.06 sec
+      Start 15: allocation_pool_steady_state
+15/24 Test #15: allocation_pool_steady_state ........   Passed    0.07 sec
+      Start 16: metal_ownership
+16/24 Test #16: metal_ownership .....................   Passed    0.00 sec
+      Start 17: calibrated_kernel
+17/24 Test #17: calibrated_kernel ...................   Passed    0.05 sec
+      Start 18: calibrated_reject_gpu
+18/24 Test #18: calibrated_reject_gpu ...............   Passed    0.01 sec
+      Start 19: replay_reject_invalid_frame_count
+19/24 Test #19: replay_reject_invalid_frame_count ...   Passed    0.01 sec
+      Start 20: perf_gate_policy
+20/24 Test #20: perf_gate_policy ....................   Passed    0.43 sec
+      Start 21: source_evidence_inventory
+21/24 Test #21: source_evidence_inventory ...........   Passed    0.08 sec
+      Start 22: campaign_output_preservation
+22/24 Test #22: campaign_output_preservation ........   Passed    0.06 sec
+      Start 23: tornado_invariants
+23/24 Test #23: tornado_invariants ..................Subprocess aborted***Exception:   0.38 sec
+libc++abi: terminating due to uncaught exception of type std::runtime_error: Tornado invariant failed
+
+      Start 24: benchmark_reject_unknown_dataset
+24/24 Test #24: benchmark_reject_unknown_dataset ....   Passed    0.01 sec
+
+96% tests passed, 1 tests failed out of 24
+
+Total Test time (real) =   2.19 sec
+
+The following tests FAILED:
+	 23 - tornado_invariants (Subprocess aborted)

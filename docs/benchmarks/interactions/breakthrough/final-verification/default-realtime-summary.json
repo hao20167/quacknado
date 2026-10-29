@@ -1,0 +1,15 @@
+{
+  "frames": 360,
+  "warmup": 60,
+  "build": "Release",
+  "path": "build/default/quacknado",
+  "scene_count": 1000,
+  "workers": 1,
+  "clock": "realtime",
+  "median_frame_ns": 16633020.5,
+  "p99_frame_ns": 20655958.0,
+  "frames_over_33_33ms": 0,
+  "six_step_frames": 0,
+  "mean_steps": 1,
+  "note": "Single-run rebuilt-default validation; not a new multi-process speedup claim."
+}

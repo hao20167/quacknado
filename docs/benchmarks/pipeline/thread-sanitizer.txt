@@ -1,0 +1,1 @@
+PASS: standalone worker lifecycle/exception/reuse under ThreadSanitizer; process exit 0. Full Jolt simulation not instrumented with TSan.

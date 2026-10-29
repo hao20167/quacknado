@@ -1,0 +1,39 @@
+2026-10-29 09:36:05.749 render_regression[8585:8518642] Metal API Validation Enabled
+/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp/Metal/../Foundation/NSObject.hpp:112:49: runtime error: member call on null pointer of type 'NS::Referencing<MTL::Texture, MTL::Resource> *'
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp/Metal/../Foundation/NSObject.hpp:112:49 in 
+/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp/Metal/../Foundation/NSObject.hpp:112:49: runtime error: member call on null pointer of type 'NS::Referencing<MTL::CommandBuffer> *'
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp/Metal/../Foundation/NSObject.hpp:112:49 in 
+/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp/Metal/../Foundation/NSObject.hpp:112:49: runtime error: member call on null pointer of type 'NS::Referencing<MTL::RenderPipelineState, MTL::Allocation> *'
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp/Metal/../Foundation/NSObject.hpp:112:49 in 
+/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp/Metal/../Foundation/NSObject.hpp:112:49: runtime error: member call on null pointer of type 'NS::Referencing<MTL::Texture, MTL::Resource> *'
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp/Metal/../Foundation/NSObject.hpp:112:49 in 
+/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp/Metal/../Foundation/NSObject.hpp:112:49: runtime error: member call on null pointer of type 'NS::Referencing<MTL::Texture, MTL::Resource> *'
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp/Metal/../Foundation/NSObject.hpp:112:49 in 
+/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp/Metal/../Foundation/NSObject.hpp:112:49: runtime error: member call on null pointer of type 'NS::Referencing<MTL::Buffer, MTL::Resource> *'
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp/Metal/../Foundation/NSObject.hpp:112:49 in 
+2026-10-29 09:36:05.929 render_regression[8585:8518642] Loaded assets/models/chicken.glb (8 primitives)
+2026-10-29 09:36:05.991 render_regression[8585:8518642] Loaded assets/models/chicken.glb (8 primitives)
+2026-10-29 09:36:06.053 render_regression[8585:8518642] Loaded assets/models/chicken.glb (8 primitives)
+2026-10-29 09:36:06.055 render_regression[8585:8518642] Loaded assets/models/creeper.glb (1 primitives)
+2026-10-29 09:36:06.150 render_regression[8585:8518642] Loaded assets/models/chest.glb (1 primitives)
+2026-10-29 09:36:06.234 render_regression[8585:8518642] Loaded assets/models/chicken.glb (8 primitives)
+2026-10-29 09:36:06.235 render_regression[8585:8518642] Loaded assets/models/creeper.glb (1 primitives)
+2026-10-29 09:36:06.331 render_regression[8585:8518642] Loaded assets/models/chest.glb (1 primitives)
+2026-10-29 09:36:06.414 render_regression[8585:8518642] Loaded assets/models/chicken.glb (8 primitives)
+2026-10-29 09:36:06.416 render_regression[8585:8518642] Loaded assets/models/creeper.glb (1 primitives)
+2026-10-29 09:36:06.513 render_regression[8585:8518642] Loaded assets/models/chest.glb (1 primitives)
+2026-10-29 09:36:06.601 render_regression[8585:8518642] Loaded assets/models/chicken.glb (8 primitives)
+2026-10-29 09:36:06.603 render_regression[8585:8518642] Loaded assets/models/creeper.glb (1 primitives)
+2026-10-29 09:36:06.702 render_regression[8585:8518642] Loaded assets/models/chest.glb (1 primitives)
+2026-10-29 09:36:06.787 render_regression[8585:8518642] Loaded assets/models/chicken.glb (8 primitives)
+2026-10-29 09:36:06.788 render_regression[8585:8518642] Loaded assets/models/creeper.glb (1 primitives)
+2026-10-29 09:36:06.886 render_regression[8585:8518642] Loaded assets/models/chest.glb (1 primitives)
+2026-10-29 09:36:06.971 render_regression[8585:8518642] Loaded assets/models/chicken.glb (8 primitives)
+2026-10-29 09:36:06.973 render_regression[8585:8518642] Loaded assets/models/creeper.glb (1 primitives)
+2026-10-29 09:36:07.072 render_regression[8585:8518642] Loaded assets/models/chest.glb (1 primitives)
+2026-10-29 09:36:07.157 render_regression[8585:8518642] Loaded assets/models/chicken.glb (8 primitives)
+2026-10-29 09:36:07.159 render_regression[8585:8518642] Loaded assets/models/creeper.glb (1 primitives)
+2026-10-29 09:36:07.258 render_regression[8585:8518642] Loaded assets/models/chest.glb (1 primitives)
+2026-10-29 09:36:07.374 render_regression[8585:8518642] Loaded assets/models/chicken.glb (8 primitives)
+2026-10-29 09:36:07.375 render_regression[8585:8518642] Loaded assets/models/creeper.glb (1 primitives)
+2026-10-29 09:36:07.471 render_regression[8585:8518642] Loaded assets/models/chest.glb (1 primitives)

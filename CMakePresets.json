@@ -3,23 +3,86 @@
   "configurePresets": [
     {
       "name": "default",
-      "displayName": "Default Config",
+      "displayName": "Playable Release (existing default executable path)",
       "generator": "Ninja",
-      "binaryDir": "${sourceDir}/build/default"
+      "binaryDir": "${sourceDir}/build/default",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "QUACK_FLAT_OUTPUT": "ON",
+        "QUACK_SANITIZE": "OFF",
+        "BUILD_TESTING": "ON"
+      }
+    },
+    {
+      "name": "perf",
+      "displayName": "Release benchmarks",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/perf",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "QUACK_SANITIZE": "OFF",
+        "BUILD_TESTING": "ON",
+        "QUACK_FLAT_OUTPUT": "OFF"
+      }
+    },
+    {
+      "name": "check",
+      "displayName": "Debug + ASan/UBSan",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/check",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "QUACK_SANITIZE": "ON",
+        "BUILD_TESTING": "ON",
+        "QUACK_FLAT_OUTPUT": "OFF"
+      }
     }
   ],
   "buildPresets": [
     {
       "name": "default",
       "configurePreset": "default"
+    },
+    {
+      "name": "perf",
+      "configurePreset": "perf"
+    },
+    {
+      "name": "check",
+      "configurePreset": "check"
     }
   ],
   "testPresets": [
     {
       "name": "default",
       "configurePreset": "default",
-      "output": {"outputOnFailure": true},
-      "execution": {"noTestsAction": "error", "stopOnFailure": true}
+      "output": {
+        "outputOnFailure": true
+      },
+      "execution": {
+        "noTestsAction": "error",
+        "stopOnFailure": true
+      }
+    },
+    {
+      "name": "perf",
+      "configurePreset": "perf",
+      "output": {
+        "outputOnFailure": true
+      },
+      "execution": {
+        "noTestsAction": "error"
+      }
+    },
+    {
+      "name": "check",
+      "configurePreset": "check",
+      "output": {
+        "outputOnFailure": true
+      },
+      "execution": {
+        "noTestsAction": "error"
+      }
     }
   ],
   "workflowPresets": [

@@ -1,0 +1,56 @@
+[
+  {
+    "campaign": 0,
+    "qos": 0,
+    "median_ms": 8.404729,
+    "p99_ms": 19.598208,
+    "frames_over33": 2,
+    "six_step_frames": 0,
+    "total_steps": "311"
+  },
+  {
+    "campaign": 0,
+    "qos": 1,
+    "median_ms": 8.306354500000001,
+    "p99_ms": 13.417417,
+    "frames_over33": 0,
+    "six_step_frames": 0,
+    "total_steps": "302"
+  },
+  {
+    "campaign": 1,
+    "qos": 0,
+    "median_ms": 8.3177295,
+    "p99_ms": 13.331375,
+    "frames_over33": 0,
+    "six_step_frames": 0,
+    "total_steps": "303"
+  },
+  {
+    "campaign": 1,
+    "qos": 1,
+    "median_ms": 8.469666499999999,
+    "p99_ms": 13.954375,
+    "frames_over33": 0,
+    "six_step_frames": 0,
+    "total_steps": "304"
+  },
+  {
+    "campaign": 2,
+    "qos": 1,
+    "median_ms": 8.5351875,
+    "p99_ms": 14.449167,
+    "frames_over33": 0,
+    "six_step_frames": 0,
+    "total_steps": "303"
+  },
+  {
+    "campaign": 2,
+    "qos": 0,
+    "median_ms": 8.492479,
+    "p99_ms": 15.045834,
+    "frames_over33": 1,
+    "six_step_frames": 0,
+    "total_steps": "306"
+  }
+]

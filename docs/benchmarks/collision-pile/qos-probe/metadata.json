@@ -1,0 +1,11 @@
+{
+  "binary_sha256": "98ca55c7c2c5b0b07be9ea29129f303ed5ba13a384fb14d1ba0438d98a2d9524",
+  "workers": 6,
+  "count": 10000,
+  "wind": false,
+  "frames": 600,
+  "clock": "realtime",
+  "campaigns": 3,
+  "warmup_frames": 60,
+  "description": "Same binary, only QUACK_PHYSICS_QOS differs; sequential shuffled pairs."
+}

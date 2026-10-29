@@ -1,0 +1,25 @@
+{
+  "qos-windowed": {
+    "added": [
+      "scripts/analyze_physics_qos.py",
+      "scripts/validate_physics_replay.py"
+    ],
+    "removed": [],
+    "changed": [
+      "scripts/benchmark_physics_qos.py",
+      "src/app/application.cpp",
+      "tests/physics_workers_tests.cpp"
+    ]
+  },
+  "one-worker-windowed": {
+    "added": [
+      "scripts/analyze_physics_qos.py",
+      "scripts/validate_physics_replay.py"
+    ],
+    "removed": [],
+    "changed": [
+      "src/app/application.cpp",
+      "tests/physics_workers_tests.cpp"
+    ]
+  }
+}

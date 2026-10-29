@@ -1,0 +1,22 @@
+{
+  "campaigns": [
+    {
+      "campaign": "qos-windowed",
+      "processes": 15,
+      "raw_frames": 13500,
+      "paired_states_exact": true,
+      "source_archive_matches_metadata": true
+    },
+    {
+      "campaign": "one-worker-windowed",
+      "processes": 15,
+      "raw_frames": 13500,
+      "paired_states_exact": true,
+      "source_archive_matches_metadata": true
+    }
+  ],
+  "release_tests": 28,
+  "debug_tests": 28,
+  "default_smoke_worker": 1,
+  "note": "Full-state tests are separate. Windowed comparisons use checksum/active/resolution."
+}

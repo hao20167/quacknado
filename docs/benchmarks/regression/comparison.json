@@ -1,0 +1,368 @@
+{
+  "status": "INCONCLUSIVE",
+  "budget": 0.05,
+  "noise_limit": 0.1,
+  "comparisons": [
+    {
+      "backend": "aos",
+      "dataset": "inside",
+      "n": 1000,
+      "latency_ratio": 0.9856784868226308,
+      "lo": 0.9544863707095758,
+      "hi": 1.007977513107951,
+      "max_cv": 0.03119194191189637,
+      "status": "PASS"
+    },
+    {
+      "backend": "aos",
+      "dataset": "inside",
+      "n": 1000000,
+      "latency_ratio": 0.9928880281392376,
+      "lo": 0.9836557989911204,
+      "hi": 1.0006929287940092,
+      "max_cv": 0.007512072564472409,
+      "status": "PASS"
+    },
+    {
+      "backend": "aos",
+      "dataset": "mixed",
+      "n": 1000,
+      "latency_ratio": 0.9968999886415454,
+      "lo": 0.9911272887128221,
+      "hi": 1.0022335213552398,
+      "max_cv": 0.004564952858586812,
+      "status": "PASS"
+    },
+    {
+      "backend": "aos",
+      "dataset": "mixed",
+      "n": 1000000,
+      "latency_ratio": 0.9875440738327175,
+      "lo": 0.9756872711227879,
+      "hi": 0.9956111375378897,
+      "max_cv": 0.011390833952633678,
+      "status": "PASS"
+    },
+    {
+      "backend": "aos",
+      "dataset": "outside",
+      "n": 1000,
+      "latency_ratio": 1.0001139079144379,
+      "lo": 0.996897339654606,
+      "hi": 1.0033445229077556,
+      "max_cv": 0.00308444545687619,
+      "status": "PASS"
+    },
+    {
+      "backend": "aos",
+      "dataset": "outside",
+      "n": 1000000,
+      "latency_ratio": 1.0002211371339464,
+      "lo": 0.9950683757578002,
+      "hi": 1.005564638541892,
+      "max_cv": 0.005919553475254198,
+      "status": "PASS"
+    },
+    {
+      "backend": "neon",
+      "dataset": "inside",
+      "n": 1000,
+      "latency_ratio": 1.0029612350657846,
+      "lo": 0.9966163480622844,
+      "hi": 1.0092191818562883,
+      "max_cv": 0.00669002963224155,
+      "status": "PASS"
+    },
+    {
+      "backend": "neon",
+      "dataset": "inside",
+      "n": 1000000,
+      "latency_ratio": 0.9965842676064411,
+      "lo": 0.9909677864696166,
+      "hi": 1.0015049601474177,
+      "max_cv": 0.005826410580300425,
+      "status": "PASS"
+    },
+    {
+      "backend": "neon",
+      "dataset": "mixed",
+      "n": 1000,
+      "latency_ratio": 1.0013056365766688,
+      "lo": 0.996859778182011,
+      "hi": 1.0061529201702637,
+      "max_cv": 0.004143590010118795,
+      "status": "PASS"
+    },
+    {
+      "backend": "neon",
+      "dataset": "mixed",
+      "n": 1000000,
+      "latency_ratio": 0.981324486143062,
+      "lo": 0.957981802263333,
+      "hi": 1.000693075667078,
+      "max_cv": 0.024940331605356646,
+      "status": "PASS"
+    },
+    {
+      "backend": "neon",
+      "dataset": "outside",
+      "n": 1000,
+      "latency_ratio": 0.9994884148968494,
+      "lo": 0.9939973255575325,
+      "hi": 1.005703280509068,
+      "max_cv": 0.005971594634435425,
+      "status": "PASS"
+    },
+    {
+      "backend": "neon",
+      "dataset": "outside",
+      "n": 1000000,
+      "latency_ratio": 1.0034229668144987,
+      "lo": 0.9964661187441188,
+      "hi": 1.0113205582512652,
+      "max_cv": 0.007493443813113819,
+      "status": "PASS"
+    },
+    {
+      "backend": "neon_cull",
+      "dataset": "inside",
+      "n": 1000,
+      "latency_ratio": 0.9991475928308639,
+      "lo": 0.9936352521058168,
+      "hi": 1.0045591854099238,
+      "max_cv": 0.005812326591243968,
+      "status": "PASS"
+    },
+    {
+      "backend": "neon_cull",
+      "dataset": "inside",
+      "n": 1000000,
+      "latency_ratio": 0.9912405764084816,
+      "lo": 0.9820040475000054,
+      "hi": 0.9992452353311343,
+      "max_cv": 0.009818161862723055,
+      "status": "PASS"
+    },
+    {
+      "backend": "neon_cull",
+      "dataset": "mixed",
+      "n": 1000,
+      "latency_ratio": 0.9294652774036626,
+      "lo": 0.806556533886526,
+      "hi": 0.9992235463414911,
+      "max_cv": 0.15646989673931466,
+      "status": "INCONCLUSIVE"
+    },
+    {
+      "backend": "neon_cull",
+      "dataset": "mixed",
+      "n": 1000000,
+      "latency_ratio": 0.9846659402441758,
+      "lo": 0.9742154440588051,
+      "hi": 0.9961723147599774,
+      "max_cv": 0.011455496547042998,
+      "status": "PASS"
+    },
+    {
+      "backend": "neon_cull",
+      "dataset": "outside",
+      "n": 1000,
+      "latency_ratio": 0.9998189365555801,
+      "lo": 0.9924103479542847,
+      "hi": 1.007282832102411,
+      "max_cv": 0.006679565585658754,
+      "status": "PASS"
+    },
+    {
+      "backend": "neon_cull",
+      "dataset": "outside",
+      "n": 1000000,
+      "latency_ratio": 0.9388218287592226,
+      "lo": 0.8208493045677339,
+      "hi": 1.0087431806773097,
+      "max_cv": 0.14676588425047765,
+      "status": "INCONCLUSIVE"
+    },
+    {
+      "backend": "pool4",
+      "dataset": "inside",
+      "n": 1000,
+      "latency_ratio": 1.0767400166852041,
+      "lo": 0.9683375240798809,
+      "hi": 1.2440672187915558,
+      "max_cv": 0.14868081334131275,
+      "status": "INCONCLUSIVE"
+    },
+    {
+      "backend": "pool4",
+      "dataset": "inside",
+      "n": 1000000,
+      "latency_ratio": 0.9902699618500004,
+      "lo": 0.9657472224673113,
+      "hi": 1.005912633384118,
+      "max_cv": 0.02462435192859728,
+      "status": "PASS"
+    },
+    {
+      "backend": "pool4",
+      "dataset": "mixed",
+      "n": 1000,
+      "latency_ratio": 1.0091724199968986,
+      "lo": 0.9460332920042497,
+      "hi": 1.072815762023226,
+      "max_cv": 0.05671517189886273,
+      "status": "INCONCLUSIVE"
+    },
+    {
+      "backend": "pool4",
+      "dataset": "mixed",
+      "n": 1000000,
+      "latency_ratio": 0.9952393123820685,
+      "lo": 0.9721885299812044,
+      "hi": 1.0129695502467913,
+      "max_cv": 0.022182841717571553,
+      "status": "PASS"
+    },
+    {
+      "backend": "pool4",
+      "dataset": "outside",
+      "n": 1000,
+      "latency_ratio": 0.9705860157087396,
+      "lo": 0.8979637432360418,
+      "hi": 1.0277610606357817,
+      "max_cv": 0.07849136115642343,
+      "status": "PASS"
+    },
+    {
+      "backend": "pool4",
+      "dataset": "outside",
+      "n": 1000000,
+      "latency_ratio": 0.9619193129646831,
+      "lo": 0.9055145504735832,
+      "hi": 1.0090806122469214,
+      "max_cv": 0.06309979803484683,
+      "status": "PASS"
+    },
+    {
+      "backend": "pool_neon4",
+      "dataset": "inside",
+      "n": 1000,
+      "latency_ratio": 0.9599989077954456,
+      "lo": 0.8855516215924424,
+      "hi": 1.0297290412029827,
+      "max_cv": 0.08571623256133286,
+      "status": "PASS"
+    },
+    {
+      "backend": "pool_neon4",
+      "dataset": "inside",
+      "n": 1000000,
+      "latency_ratio": 0.9825398478200423,
+      "lo": 0.9519729134968011,
+      "hi": 1.004447309519472,
+      "max_cv": 0.03235962164265458,
+      "status": "PASS"
+    },
+    {
+      "backend": "pool_neon4",
+      "dataset": "mixed",
+      "n": 1000,
+      "latency_ratio": 0.9825667064462602,
+      "lo": 0.9559412437139455,
+      "hi": 1.0092513097851594,
+      "max_cv": 0.025131991900916147,
+      "status": "PASS"
+    },
+    {
+      "backend": "pool_neon4",
+      "dataset": "mixed",
+      "n": 1000000,
+      "latency_ratio": 0.9809494984689778,
+      "lo": 0.9678466798661942,
+      "hi": 0.9945134403882159,
+      "max_cv": 0.015685950070905168,
+      "status": "PASS"
+    },
+    {
+      "backend": "pool_neon4",
+      "dataset": "outside",
+      "n": 1000,
+      "latency_ratio": 0.9686078671916466,
+      "lo": 0.9065481737968666,
+      "hi": 1.0316184653857357,
+      "max_cv": 0.07201264370702264,
+      "status": "PASS"
+    },
+    {
+      "backend": "pool_neon4",
+      "dataset": "outside",
+      "n": 1000000,
+      "latency_ratio": 0.9879149794194446,
+      "lo": 0.9168213483603127,
+      "hi": 1.0475276695348692,
+      "max_cv": 0.07731661829636986,
+      "status": "PASS"
+    },
+    {
+      "backend": "reference",
+      "dataset": "inside",
+      "n": 1000,
+      "latency_ratio": 1.0126549586059541,
+      "lo": 0.999800759090442,
+      "hi": 1.027862485414414,
+      "max_cv": 0.014225889726734888,
+      "status": "PASS"
+    },
+    {
+      "backend": "reference",
+      "dataset": "inside",
+      "n": 1000000,
+      "latency_ratio": 0.9976674168683843,
+      "lo": 0.9919822667674697,
+      "hi": 1.00458272860093,
+      "max_cv": 0.006256974775953796,
+      "status": "PASS"
+    },
+    {
+      "backend": "reference",
+      "dataset": "mixed",
+      "n": 1000,
+      "latency_ratio": 0.9982022428366902,
+      "lo": 0.9876121927152414,
+      "hi": 1.005815398926072,
+      "max_cv": 0.010378253066980288,
+      "status": "PASS"
+    },
+    {
+      "backend": "reference",
+      "dataset": "mixed",
+      "n": 1000000,
+      "latency_ratio": 0.9768682361528174,
+      "lo": 0.9352290278467599,
+      "hi": 1.0000791399007902,
+      "max_cv": 0.044664625980213854,
+      "status": "PASS"
+    },
+    {
+      "backend": "reference",
+      "dataset": "outside",
+      "n": 1000,
+      "latency_ratio": 1.005170500449022,
+      "lo": 0.9976945019751488,
+      "hi": 1.0131079113554187,
+      "max_cv": 0.008086818532650076,
+      "status": "PASS"
+    },
+    {
+      "backend": "reference",
+      "dataset": "outside",
+      "n": 1000000,
+      "latency_ratio": 0.998518109696574,
+      "lo": 0.9872660122307674,
+      "hi": 1.0079451139251432,
+      "max_cv": 0.01106759111013058,
+      "status": "PASS"
+    }
+  ],
+  "scope": "Descriptive bootstrap on process medians; not calibrated familywise statistical significance."
+}

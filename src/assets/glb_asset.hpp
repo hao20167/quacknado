@@ -1,4 +1,5 @@
 #pragma once
+#include "core/metal_ptr.hpp"
 
 #include <cstdint>
 #include <string>
@@ -16,7 +17,7 @@ static_assert(sizeof(ModelVertex) == 32);
 struct ModelPrimitive {
   std::vector<ModelVertex> vertices;
   std::vector<uint32_t> indices;
-  NS::SharedPtr<MTL::Texture> texture;
+  quacknado::metal::Ptr<MTL::Texture> texture;
   simd_float4 base_color {1, 1, 1, 1};
   float alpha_cutoff = -1;
 };

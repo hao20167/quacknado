@@ -1,0 +1,1 @@
+PASS: 15 paired trajectories, 600 measured steps each; exact position checksum + placed/active occupancy match.

@@ -1,0 +1,22 @@
+2026-10-29 16:04:30.689 quacknado[14175:9095418] Build=Release scene=10000 physics_workers=6
+2026-10-29 16:04:30.800 quacknado[14175:9095418]  >>> Number of objects: 10000
+2026-10-29 16:04:30.829 quacknado[14175:9095418] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/pchair.glb (1 primitives)
+2026-10-29 16:04:30.851 quacknado[14175:9095418] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/dirt_house.glb (3 primitives)
+2026-10-29 16:04:30.859 quacknado[14175:9095418] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/chest.glb (1 primitives)
+2026-10-29 16:04:30.860 quacknado[14175:9095418] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/steve.glb (1 primitives)
+2026-10-29 16:04:30.861 quacknado[14175:9095418] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/villager.glb (1 primitives)
+2026-10-29 16:04:30.861 quacknado[14175:9095418] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/chicken.glb (8 primitives)
+2026-10-29 16:04:30.862 quacknado[14175:9095418] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/boat.glb (3 primitives)
+2026-10-29 16:04:30.868 quacknado[14175:9095418] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/dirt_block.glb (1 primitives)
+2026-10-29 16:04:30.868 quacknado[14175:9095418] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/creeper.glb (1 primitives)
+2026-10-29 16:04:30.869 quacknado[14175:9095418] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/sheep.glb (2 primitives)
+2026-10-29 16:04:30.872 quacknado[14175:9095418] ReplayModel name=boat objects=1169
+2026-10-29 16:04:30.872 quacknado[14175:9095418] ReplayModel name=chest objects=1124
+2026-10-29 16:04:30.872 quacknado[14175:9095418] ReplayModel name=chicken objects=1098
+2026-10-29 16:04:30.872 quacknado[14175:9095418] ReplayModel name=creeper objects=1086
+2026-10-29 16:04:30.872 quacknado[14175:9095418] ReplayModel name=dirt_block objects=1102
+2026-10-29 16:04:30.872 quacknado[14175:9095418] ReplayModel name=dirt_house objects=1
+2026-10-29 16:04:30.872 quacknado[14175:9095418] ReplayModel name=pchair objects=1
+2026-10-29 16:04:30.872 quacknado[14175:9095418] ReplayModel name=sheep objects=2230
+2026-10-29 16:04:30.872 quacknado[14175:9095418] ReplayModel name=steve objects=1087
+2026-10-29 16:04:30.872 quacknado[14175:9095418] ReplayModel name=villager objects=1104

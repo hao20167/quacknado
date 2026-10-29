@@ -1,0 +1,57 @@
+inclusive_ticks,scope
+19243,"EPhysicsUpdateError JPH::PhysicsSystem::Update(float, int, TempAllocator *, JobSystem *)"
+19160,Build Jobs
+17001,"static void JPH::JobSystem::JobHandle::sRemoveDependencies(const JobHandle *, uint, int)"
+10487,FindCollisions
+6214,Island
+4938,"static void JPH::ConvexShape::sCollideConvexVsConvex(const Shape *, const Shape *, Vec3Arg, Vec3Arg, Mat44Arg, Mat44Arg, const SubShapeIDCreator &, const SubShapeIDCreator &, const CollideShapeSettings &, CollideShapeCollector &, const ShapeFilter &)"
+4124,SolveVelocityConstraints
+3371,"bool JPH::ContactConstraintManager::SolveVelocityConstraints(const uint32 *, const uint32 *)"
+3232,"virtual void JPH::BroadPhaseQuadTree::FindCollidingPairs(BodyID *, int, float, const ObjectVsBroadPhaseLayerFilter &, const ObjectLayerPairFilter &, BodyPairCollector &) const"
+3172,Undefined
+2156,SolvePositionConstraints
+1307,UpdateBroadPhasePrepare
+1163,"virtual void JPH::BroadPhaseQuadTree::NotifyBodiesAABBChanged(BodyID *, int, bool)"
+920,"void JPH::ContactConstraintManager::AddContactConstraint(ContactAllocator &, bool &, BodyPairHandle, Body &, Body &, const ContactManifold &)"
+432,Check Sleeping
+401,"bool JPH::ContactConstraintManager::SolvePositionConstraints(const uint32 *, const uint32 *)"
+299,PostIntegrateVelocity
+297,ContactRemovedCallbacks
+289,"void JPH::ContactConstraintManager::FinalizeContactCacheAndCallContactPointRemovedCallbacks(uint, uint)"
+242,"void JPH::ContactConstraintManager::WarmStartVelocityConstraints(const uint32 *, const uint32 *, float, MotionPropertiesCallback &) [MotionPropertiesCallback = JPH::CalculateSolverSteps]"
+229,IntegrateVelocity
+217,ApplyGravity
+201,FinalizeIslands
+193,"void JPH::IslandBuilder::Finalize(const BodyID *, uint32, uint32, TempAllocator *)"
+193,Add Constraint From Cached Manifold
+171,void JPH::ContactConstraintManager::ManifoldCache::ContactPointRemovedCallbacks(ContactListener *)
+115,void JPH::IslandBuilder::SortIslands(TempAllocator *)
+112,void JPH::ContactConstraintManager::ManifoldCache::Clear()
+73,"static void JPH::StaticCompoundShape::sCollideCompoundVsShape(const Shape *, const Shape *, Vec3Arg, Vec3Arg, Mat44Arg, Mat44Arg, const SubShapeIDCreator &, const SubShapeIDCreator &, const CollideShapeSettings &, CollideShapeCollector &, const ShapeFilter &)"
+64,"void JPH::ContactConstraintManager::SortContacts(uint32 *, uint32 *) const"
+52,"void JPH::IslandBuilder::BuildBodyIslands(const BodyID *, uint32, TempAllocator *)"
+49,BodySetIslandIndex
+25,"void JPH::IslandBuilder::BuildConstraintIslands(const uint32 *, uint32, uint32 *&, uint32 *&, TempAllocator *) const"
+18,"static bool JPH::ConstraintManager::sSolveVelocityConstraints(Constraint **, const uint32 *, const uint32 *, float)"
+13,"void JPH::PhysicsSystem::JobSoftBodyPrepare(PhysicsUpdateContext *, PhysicsUpdateContext::Step *)"
+13,SoftBodyPrepare
+8,ResolveCCDContacts
+6,void JPH::MutexArray<JPH::SharedMutex>::UnlockAll() [MutexType = JPH::SharedMutex]
+6,BuildIslandsFromConstraints
+6,Build job barrier
+5,void JPH::MutexArray<JPH::SharedMutex>::LockAll() [MutexType = JPH::SharedMutex]
+5,virtual void JPH::BroadPhaseQuadTree::FrameSync()
+5,"static void JPH::ConstraintManager::sWarmStartVelocityConstraints(Constraint **, const uint32 *, const uint32 *, float, ConstraintCallback &) [ConstraintCallback = JPH::CalculateSolverSteps]"
+4,DetermineActiveConstraints
+3,"void JPH::BodyManager::GetActiveBodies(EBodyType, BodyIDVector &) const"
+2,void JPH::IslandBuilder::ResetIslands(TempAllocator *)
+2,"static bool JPH::ConstraintManager::sSolvePositionConstraints(Constraint **, const uint32 *, const uint32 *, float, float)"
+1,"void JPH::LargeIslandSplitter::Prepare(const IslandBuilder &, uint32, TempAllocator *)"
+1,"static void JPH::ConstraintManager::sSortConstraints(Constraint **, uint32 *, uint32 *)"
+1,"static void JPH::ConstraintManager::sBuildIslands(Constraint **, uint32, IslandBuilder &, BodyManager &)"
+1,UpdateBroadPhaseFinalize
+1,SetupVelocityConstraints
+1,PreIntegrateVelocity
+0,void JPH::LargeIslandSplitter::Reset(TempAllocator *)
+0,"void JPH::IslandBuilder::PrepareNonContactConstraints(uint32, TempAllocator *)"
+0,"void JPH::IslandBuilder::PrepareContactConstraints(uint32, TempAllocator *)"

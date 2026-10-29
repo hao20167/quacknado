@@ -1,0 +1,29 @@
+--- measured/scripts/benchmark_collision_pile.py
++++ final/scripts/benchmark_collision_pile.py
+@@ -6,6 +6,7 @@
+ import json
+ import os
+ from pathlib import Path
++import platform
+ import random
+ import statistics
+ import subprocess
+@@ -44,6 +45,8 @@
+     binaries = {k: Path(getattr(args, k)).resolve() for k in
+                 ('before_game', 'after_game', 'before_cpu', 'after_cpu')}
+     sources = source_hashes()
++    cpu = subprocess.run(['sysctl', '-n', 'machdep.cpu.brand_string'],
++                         capture_output=True, text=True, check=False)
+     assets = {str(p): digest(p) for p in sorted(Path('assets/models').glob('*.glb'))}
+     for label in ('before_game', 'after_game'):
+         base = binaries[label].parent
+@@ -54,7 +57,8 @@
+         'source_sha256': sources, 'asset_sha256': assets,
+         'binary_sha256': {k: digest(v) for k, v in binaries.items()},
+         'binary_paths': {k: str(v) for k, v in binaries.items()},
+-        'cpu': 'Apple M1 Pro, 8 performance + 2 efficiency cores',
++        'cpu': cpu.stdout.strip() or 'unavailable', 'hardware_threads': os.cpu_count(),
++        'platform': platform.platform(),
+         'count': 10000, 'seed': 42, 'cpu_steps': 1200, 'warmup_steps': 60,
+         'frames': args.frames, 'frame_warmup': 60, 'campaigns': args.campaigns,
+         'wind': False, 'game_clock': 'realtime', 'dt': '1/60',

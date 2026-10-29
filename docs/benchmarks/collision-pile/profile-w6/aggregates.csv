@@ -1,0 +1,71 @@
+scope,calls,inclusive_ticks
+Executing Jobs,41,1612532
+SolveVelocityConstraints,7,1049723
+FindCollisions,7,612279
+"bool JPH::ContactConstraintManager::SolveVelocityConstraints(const uint32 *, const uint32 *)",12300,569135
+"EPhysicsUpdateError JPH::PhysicsSystem::Update(float, int, TempAllocator *, JobSystem *)",1,296289
+virtual void JPH::JobSystemWithBarrier::WaitForJobs(Barrier *),1,295909
+"virtual void JPH::BroadPhaseQuadTree::FindCollidingPairs(BodyID *, int, float, const ObjectVsBroadPhaseLayerFilter &, const ObjectLayerPairFilter &, BodyPairCollector &) const",625,291927
+Undefined,1250,289168
+Add Constraint From Cached Manifold,16874,265848
+Execute Jobs,9,260781
+SolvePositionConstraints,7,129371
+"bool JPH::ContactConstraintManager::SolvePositionConstraints(const uint32 *, const uint32 *)",2423,87115
+"static void JPH::ConvexShape::sCollideConvexVsConvex(const Shape *, const Shape *, Vec3Arg, Vec3Arg, Mat44Arg, Mat44Arg, const SubShapeIDCreator &, const SubShapeIDCreator &, const CollideShapeSettings &, CollideShapeCollector &, const ShapeFilter &)",3812,46394
+Island,326,45996
+ContactRemovedCallbacks,1,42952
+"void JPH::ContactConstraintManager::FinalizeContactCacheAndCallContactPointRemovedCallbacks(uint, uint)",1,42930
+void JPH::ContactConstraintManager::ManifoldCache::ContactPointRemovedCallbacks(ContactListener *),1,42838
+"void JPH::ContactConstraintManager::WarmStartVelocityConstraints(const uint32 *, const uint32 *, float, MotionPropertiesCallback &) [MotionPropertiesCallback = JPH::DummyCalculateSolverSteps]",1167,39456
+"void JPH::ContactConstraintManager::AddContactConstraint(ContactAllocator &, bool &, BodyPairHandle, Body &, Body &, const ContactManifold &)",1834,30604
+"virtual void JPH::BroadPhaseQuadTree::NotifyBodiesAABBChanged(BodyID *, int, bool)",235,27874
+"void JPH::ContactConstraintManager::SortContacts(uint32 *, uint32 *) const",84,26960
+UpdateBroadPhasePrepare,1,18389
+"bool JPH::LargeIslandSplitter::SplitIsland(uint32, const IslandBuilder &, const BodyManager &, const ContactConstraintManager &, Constraint **, CalculateSolverSteps &)",1,12314
+ApplyGravity,5,8413
+Check Sleeping,235,6725
+IntegrateVelocity,7,6542
+FinalizeIslands,1,3149
+"void JPH::IslandBuilder::Finalize(const BodyID *, uint32, uint32, TempAllocator *)",1,3009
+"void JPH::IslandBuilder::BuildConstraintIslands(const uint32 *, uint32, uint32 *&, uint32 *&, TempAllocator *) const",2,1866
+"void JPH::IslandBuilder::BuildBodyIslands(const BodyID *, uint32, TempAllocator *)",1,1069
+"virtual void JPH::JobSystemThreadPool::QueueJobs(Job **, uint)",7,906
+"static void JPH::JobSystem::JobHandle::sRemoveDependencies(const JobHandle *, uint, int)",17,885
+BodySetIslandIndex,1,852
+virtual void JPH::JobSystemThreadPool::QueueJob(Job *),10,516
+"void JPH::ContactConstraintManager::WarmStartVelocityConstraints(const uint32 *, const uint32 *, float, MotionPropertiesCallback &) [MotionPropertiesCallback = JPH::CalculateSolverSteps]",83,487
+PreIntegrateVelocity,1,437
+virtual void JPH::JobSystemWithBarrier::BarrierImpl::OnJobFinished(Job *),45,339
+"static bool JPH::ConstraintManager::sSolveVelocityConstraints(Constraint **, const uint32 *, const uint32 *, float)",12300,249
+Build Jobs,1,221
+"virtual void JPH::JobSystemThreadPool::CreateJobs(const char *, ColorArg, const JobFunction &, JobHandle *, uint32, uint32)",7,126
+PostIntegrateVelocity,1,107
+ResolveCCDContacts,1,90
+void JPH::ContactConstraintManager::ManifoldCache::Clear(),1,88
+void JPH::IslandBuilder::SortIslands(TempAllocator *),1,74
+"static void JPH::StaticCompoundShape::sCollideCompoundVsShape(const Shape *, const Shape *, Vec3Arg, Vec3Arg, Mat44Arg, Mat44Arg, const SubShapeIDCreator &, const SubShapeIDCreator &, const CollideShapeSettings &, CollideShapeCollector &, const ShapeFilter &)",3,52
+"virtual JobHandle JPH::JobSystemThreadPool::CreateJob(const char *, ColorArg, const JobFunction &, uint32)",17,51
+"static bool JPH::ConstraintManager::sSolvePositionConstraints(Constraint **, const uint32 *, const uint32 *, float, float)",2423,41
+"static void JPH::ConstraintManager::sWarmStartVelocityConstraints(Constraint **, const uint32 *, const uint32 *, float, ConstraintCallback &) [ConstraintCallback = JPH::DummyCalculateSolverSteps]",1167,37
+SoftBodyPrepare,1,24
+Build job barrier,1,22
+DetermineActiveConstraints,1,21
+"void JPH::PhysicsSystem::JobSoftBodyPrepare(PhysicsUpdateContext *, PhysicsUpdateContext::Step *)",1,21
+"void JPH::BodyManager::GetActiveBodies(EBodyType, BodyIDVector &) const",1,15
+void JPH::MutexArray&lt;JPH::SharedMutex&gt;::UnlockAll() [MutexType = JPH::SharedMutex],1,14
+"virtual void JPH::JobSystemWithBarrier::BarrierImpl::AddJobs(const JobHandle *, uint)",1,13
+void JPH::LargeIslandSplitter::Reset(TempAllocator *),1,10
+UpdateBroadPhaseFinalize,1,8
+BuildIslandsFromConstraints,1,8
+void JPH::MutexArray&lt;JPH::SharedMutex&gt;::LockAll() [MutexType = JPH::SharedMutex],1,6
+"static void JPH::ConstraintManager::sWarmStartVelocityConstraints(Constraint **, const uint32 *, const uint32 *, float, ConstraintCallback &) [ConstraintCallback = JPH::CalculateSolverSteps]",83,5
+virtual void JPH::BroadPhaseQuadTree::FrameSync(),1,4
+void JPH::IslandBuilder::ResetIslands(TempAllocator *),1,4
+"static void JPH::ConstraintManager::sSortConstraints(Constraint **, uint32 *, uint32 *)",84,4
+"void JPH::LargeIslandSplitter::Prepare(const IslandBuilder &, uint32, TempAllocator *)",1,4
+SetupVelocityConstraints,1,2
+"void JPH::IslandBuilder::PrepareNonContactConstraints(uint32, TempAllocator *)",1,1
+virtual JobSystem::Barrier *JPH::JobSystemWithBarrier::CreateBarrier(),1,0
+"void JPH::IslandBuilder::PrepareContactConstraints(uint32, TempAllocator *)",1,0
+virtual void JPH::JobSystemWithBarrier::DestroyBarrier(Barrier *),1,0
+"static void JPH::ConstraintManager::sBuildIslands(Constraint **, uint32, IslandBuilder &, BodyManager &)",1,0

@@ -1,0 +1,1 @@
+PASS: 6 processes x 210 frames, exact per-frame physics checksum/active/resolution match across modes; one physical resolution across every row. Invalid resize campaign preserved and excluded.

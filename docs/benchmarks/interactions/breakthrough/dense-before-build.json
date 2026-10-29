@@ -1,0 +1,46 @@
+{
+  "compile_argv": [
+    "/usr/bin/c++",
+    "-DJPH_OBJECT_LAYER_BITS=16",
+    "-DJPH_OBJECT_STREAM",
+    "-DJPH_USE_CPU_COMPUTE",
+    "-DJPH_USE_MTL",
+    "-I/Users/hao20167/PROJ/cpp/quacknado/src",
+    "-I/Users/hao20167/PROJ/cpp/quacknado/build/default/external/SDL/include-revision",
+    "-I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include",
+    "-I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/..",
+    "-std=gnu++20",
+    "-arch",
+    "arm64",
+    "-pthread",
+    "-o",
+    "/Users/hao20167/PROJ/cpp/quacknado/build/collision-before/collision_stress.o",
+    "-c",
+    "/Users/hao20167/PROJ/cpp/quacknado/benchmarks/collision_stress.cpp"
+  ],
+  "link_argv": [
+    "/usr/bin/c++",
+    "/Users/hao20167/PROJ/cpp/quacknado/build/collision-before/collision_stress.o",
+    "-o",
+    "/Users/hao20167/PROJ/cpp/quacknado/build/collision-before/collision_stress_bench",
+    "/Users/hao20167/PROJ/cpp/quacknado/build/default/libquack_sim.a",
+    "/Users/hao20167/PROJ/cpp/quacknado/build/collision-before/libSDL3.0.dylib",
+    "/Users/hao20167/PROJ/cpp/quacknado/build/default/jolt-build/libJolt.a",
+    "-pthread",
+    "-Wl,-rpath,/Users/hao20167/PROJ/cpp/quacknado/build/collision-before",
+    "-framework",
+    "Foundation",
+    "-framework",
+    "Metal",
+    "-framework",
+    "MetalKit"
+  ],
+  "description": "Same stress source compiled with original empty-build flags and linked against still-unmodified original unoptimized quack_sim/Jolt archives; SDL runtime copied next to binary.",
+  "sha256": {
+    "/Users/hao20167/PROJ/cpp/quacknado/benchmarks/collision_stress.cpp": "5daec941d52b5fb1a014186a43032eea074800915934b4db17caf4335aaf3919",
+    "/Users/hao20167/PROJ/cpp/quacknado/build/default/libquack_sim.a": "d2025ff62dc5c20d28cbedcfa57096cda1e174cd197957bf51878db86b1fd2de",
+    "/Users/hao20167/PROJ/cpp/quacknado/build/default/jolt-build/libJolt.a": "99a167044defa46497300949fc4b2ac09ef0b8b090b03a7c1a13cfff61aeb250",
+    "/Users/hao20167/PROJ/cpp/quacknado/build/collision-before/collision_stress_bench": "d4da9ddaaa34f42e11720d6da2f25f8dd206dcdb481e73272dcf9aa271248982",
+    "/Users/hao20167/PROJ/cpp/quacknado/build/collision-before/libSDL3.0.dylib": "f3ac3c0f61a0b6225cc03f8023bda4617c33fd48523b2f358c149770beceb474"
+  }
+}

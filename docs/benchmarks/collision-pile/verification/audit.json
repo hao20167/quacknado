@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "requirements": {
+    "measure_actual_no_wind_10k_bottleneck": "baseline-w1.csv, profile-w6/, paired/",
+    "implement_faster_app_default": "src/simulation/physics/worker_policy.hpp; paired/*-game-after.log shows automatic 6 workers",
+    "retain_physics_fidelity": "verification/unchanged-physics.json; 12 full-state comparisons and sleep/wake tests pass in all three builds",
+    "repeat_cpu_and_game_before_after": "paired/verification.json; 3 pairs, raw and metadata",
+    "verify_sustained_dense_game": "long-run/qos0.csv; 2000 frames, >=1000 physics steps, no >33ms or six-step frames",
+    "verify_wind_on_control": "wind-on-control/verification.json; 3 pairs",
+    "retain_raw_log_and_story": "story.md; artifact-sha256.json",
+    "preserve_historical_evidence": "separate campaign paths; output preservation rejection recorded",
+    "current_source_binary_assets_match": "final-source-sha256.json; runtime-unchanged.json; paired binary/asset hash rechecked"
+  },
+  "known_limitations": [
+    "4 existing wind SIMD numerical mismatch tests remain; full suite is 33/37, not all green",
+    "Rare hitch in first 600-frame after run retained; no universal stutter-free/FPS claim",
+    "Performance policy measured on M1 Pro; explicit worker override and serial fallback remain"
+  ]
+}

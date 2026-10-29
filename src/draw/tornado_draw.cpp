@@ -1,3 +1,4 @@
+#include "core/metal_ptr.hpp"
 #include "draw/tornado_draw.hpp"
 
 #include <SDL3/SDL.h>
@@ -14,10 +15,10 @@ static_assert(sizeof(Uniforms) == 32);
 
 bool TornadoDraw::Initialize(MTL::Device* device, MTL::Library* library, MTL::PixelFormat format) {
   if (!device || !library || !tornado_ || pipeline_.get()) return false;
-  auto vertex = NS::TransferPtr(library->newFunction(NS::String::string("vertex_tornado", NS::UTF8StringEncoding)));
-  auto fragment = NS::TransferPtr(library->newFunction(NS::String::string("fragment_tornado", NS::UTF8StringEncoding)));
+  auto vertex = quacknado::metal::adopt(library->newFunction(NS::String::string("vertex_tornado", NS::UTF8StringEncoding)));
+  auto fragment = quacknado::metal::adopt(library->newFunction(NS::String::string("fragment_tornado", NS::UTF8StringEncoding)));
   if (!vertex.get() || !fragment.get()) return false;
-  auto descriptor = NS::TransferPtr(MTL::RenderPipelineDescriptor::alloc()->init());
+  auto descriptor = quacknado::metal::adopt(MTL::RenderPipelineDescriptor::alloc()->init());
   descriptor->setVertexFunction(vertex.get());
   descriptor->setFragmentFunction(fragment.get());
   descriptor->setDepthAttachmentPixelFormat(MTL::PixelFormatDepth32Float);
@@ -29,15 +30,15 @@ bool TornadoDraw::Initialize(MTL::Device* device, MTL::Library* library, MTL::Pi
   color->setSourceAlphaBlendFactor(MTL::BlendFactorOne);
   color->setDestinationAlphaBlendFactor(MTL::BlendFactorOneMinusSourceAlpha);
   NS::Error* error = nullptr;
-  pipeline_ = NS::TransferPtr(device->newRenderPipelineState(descriptor.get(), &error));
+  pipeline_ = quacknado::metal::adopt(device->newRenderPipelineState(descriptor.get(), &error));
   if (!pipeline_.get()) {
     SDL_Log("Tornado marker pipeline failed: %s", error ? error->localizedDescription()->utf8String() : "unknown error");
     return false;
   }
-  auto depth = NS::TransferPtr(MTL::DepthStencilDescriptor::alloc()->init());
+  auto depth = quacknado::metal::adopt(MTL::DepthStencilDescriptor::alloc()->init());
   depth->setDepthCompareFunction(MTL::CompareFunctionLessEqual);
   depth->setDepthWriteEnabled(false);
-  depth_state_ = NS::TransferPtr(device->newDepthStencilState(depth.get()));
+  depth_state_ = quacknado::metal::adopt(device->newDepthStencilState(depth.get()));
   return depth_state_.get() != nullptr;
 }
 

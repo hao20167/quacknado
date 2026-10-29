@@ -1,0 +1,20 @@
+[
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/default",
+    "command": "/usr/bin/c++ -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/default/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -std=gnu++20 -arch arm64 -pthread -o CMakeFiles/quack_sim.dir/src/simulation/simulation.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/simulation.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/simulation.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/default/CMakeFiles/quack_sim.dir/src/simulation/simulation.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/default",
+    "command": "/usr/bin/c++ -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/default/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -std=gnu++20 -arch arm64 -pthread -o CMakeFiles/quack_sim.dir/src/simulation/physics/physics_world.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/default/CMakeFiles/quack_sim.dir/src/simulation/physics/physics_world.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/default",
+    "command": "/usr/bin/c++ -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -std=c++17 -arch arm64 -Wall -Werror -g -fno-rtti -fno-exceptions -ffp-contract=on -faligned-allocation -pthread -Winvalid-pch -Xclang -include-pch -Xclang /Users/hao20167/PROJ/cpp/quacknado/build/default/jolt-build/CMakeFiles/Jolt.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/hao20167/PROJ/cpp/quacknado/build/default/jolt-build/CMakeFiles/Jolt.dir/cmake_pch.hxx -o jolt-build/CMakeFiles/Jolt.dir/__/Jolt/Physics/PhysicsSystem.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Jolt/Physics/PhysicsSystem.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Jolt/Physics/PhysicsSystem.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/default/jolt-build/CMakeFiles/Jolt.dir/__/Jolt/Physics/PhysicsSystem.cpp.o"
+  }
+]

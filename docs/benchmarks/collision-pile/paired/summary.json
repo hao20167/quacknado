@@ -1,0 +1,40 @@
+{
+  "cpu-before": {
+    "median_process_median_ms": 20.522604,
+    "median_process_p99_ms": 26.610291,
+    "process_p99_range_ms": [
+      25.415958,
+      28.966
+    ]
+  },
+  "cpu-after": {
+    "median_process_median_ms": 11.232271,
+    "median_process_p99_ms": 18.7365,
+    "process_p99_range_ms": [
+      16.900875,
+      19.170541
+    ]
+  },
+  "game-before": {
+    "median_process_median_ms": 119.323771,
+    "median_process_p99_ms": 185.620333,
+    "process_p99_range_ms": [
+      145.669917,
+      197.897583
+    ],
+    "frames_over_33ms": 1413,
+    "six_step_frames": 1386,
+    "frames": 1800
+  },
+  "game-after": {
+    "median_process_median_ms": 8.6540625,
+    "median_process_p99_ms": 14.543375,
+    "process_p99_range_ms": [
+      14.496875,
+      59.355292
+    ],
+    "frames_over_33ms": 20,
+    "six_step_frames": 1,
+    "frames": 1800
+  }
+}

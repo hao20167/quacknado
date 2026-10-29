@@ -1,0 +1,1 @@
+PASS: Release/Debug 26 CTest; full-state worker trajectories; collision filtering/floor invariants; threaded Application smoke 30 frames with ASan/UBSan fail-fast + Metal Validation. Performance tails remain unresolved in short windowed sample; no full-Jolt TSan claim.

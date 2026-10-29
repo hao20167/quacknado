@@ -1,79 +1,29 @@
 cmake_minimum_required(VERSION 4.4)
 project(quacknado LANGUAGES CXX)
-
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/$<CONFIG>")
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/$<CONFIG>")
-
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+# An empty single-config build silently leaves the game and Jolt unoptimized.
+# Keep explicit Debug/check builds intact; normal untyped builds should be playable.
+if(NOT CMAKE_CONFIGURATION_TYPES AND NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release CACHE STRING "Build configuration" FORCE)
+endif()
+option(QUACK_FLAT_OUTPUT "Put single-config executables directly in the build directory" OFF)
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+if(QUACK_FLAT_OUTPUT AND NOT CMAKE_CONFIGURATION_TYPES)
+  set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
+  set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
+else()
+  set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/$<CONFIG>")
+  set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/$<CONFIG>")
+endif()
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-file(
-  GLOB_RECURSE 
-  SRCS 
-  CONFIGURE_DEPENDS 
-    "${CMAKE_SOURCE_DIR}/src/*.cpp"
-)
-
+include(CTest)
+option(QUACK_SANITIZE "Enable ASan/UBSan on project code except allocation probe" OFF)
+option(QUACK_GPU_TESTS "Register tests requiring an accessible Metal GPU" OFF)
 add_subdirectory(external/SDL EXCLUDE_FROM_ALL)
 add_subdirectory(external/JoltPhysics/Build ${CMAKE_BINARY_DIR}/jolt-build)
-
-# target, requirement
-add_executable(quacknado ${SRCS})
-
-# copy assets to build folder
-add_custom_target(copy_models ALL
-  COMMAND "${CMAKE_COMMAND}" -E copy_directory_if_different
-    "${CMAKE_SOURCE_DIR}/assets/models"
-    "$<TARGET_FILE_DIR:quacknado>/assets/models"
-  VERBATIM
-)
-add_dependencies(copy_models quacknado)
-
-# where to lookup for headers
-target_include_directories(
-  quacknado
-  PRIVATE 
-    ${CMAKE_SOURCE_DIR}/external/metal-cpp
-    ${CMAKE_SOURCE_DIR}/src
-    ${CMAKE_SOURCE_DIR}/external/cgltf
-    ${CMAKE_SOURCE_DIR}/external/stb
-)
-
-
-set(SHADER "${CMAKE_SOURCE_DIR}/shaders/object.metal")
-set(AIR "${CMAKE_CURRENT_BINARY_DIR}/object.air")
-set(METALLIB "${CMAKE_CURRENT_BINARY_DIR}/object.metallib")
-add_custom_command(
-  OUTPUT "${METALLIB}"
-  COMMAND xcrun -sdk macosx metal
-    "-fmodules-cache-path=${CMAKE_CURRENT_BINARY_DIR}/metal-module-cache"
-    -c "${SHADER}"
-    -o "${AIR}"
-  COMMAND xcrun -sdk macosx metallib
-    "${AIR}"
-    -o "${METALLIB}"
-  DEPENDS "${SHADER}"
-  VERBATIM
-)
-
-set(SHADER_DESTINATION "$<TARGET_FILE_DIR:quacknado>")
-
-add_custom_target(copy_shader ALL
-  COMMAND "${CMAKE_COMMAND}" -E copy_if_different
-    "${METALLIB}"
-    "$<TARGET_FILE_DIR:quacknado>/object.metallib"
-  DEPENDS "${METALLIB}"
-  VERBATIM
-)
-
-add_dependencies(copy_shader quacknado)
-
-target_link_libraries(
-  quacknado 
-  PRIVATE 
-    SDL3::SDL3 
-    Jolt
-    "-framework Metal" 
-    "-framework Foundation" 
-    "-framework QuartzCore"
-)
+include(cmake/QuackTargets.cmake)
+include(cmake/QuackAssets.cmake)
+if(BUILD_TESTING)
+  include(cmake/QuackTests.cmake)
+endif()

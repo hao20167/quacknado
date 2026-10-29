@@ -1,0 +1,12 @@
+{
+  "binary_sha256": "98ca55c7c2c5b0b07be9ea29129f303ed5ba13a384fb14d1ba0438d98a2d9524",
+  "clock": "realtime",
+  "frames": 2000,
+  "wind": false,
+  "count": 10000,
+  "workers": "automatic",
+  "qos": [
+    0,
+    1
+  ]
+}

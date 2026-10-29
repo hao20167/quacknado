@@ -31,7 +31,7 @@ vertex VertexOut vertex_main(
   world = RotateByQuaternion(world, u.orientation);
   world += u.offset_aspect.xyz;
 
-  float3 eye = float3(0, 14, -40);
+  float3 eye = float3(0, 14, -60);
   float3 target = float3(0, 6, 0);
   float3 forward = normalize(target - eye);
   float3 right = normalize(cross(float3(0, 1, 0), forward));
@@ -74,13 +74,15 @@ struct ModelMaterial {
 
 vertex ModelOut vertex_model(
     uint id [[vertex_id]],
+    uint instance [[instance_id]],
     const device ModelVertex* vertices [[buffer(0)]],
-    constant Uniforms& u [[buffer(1)]]) {
+    constant Uniforms* instances [[buffer(1)]]) {
+  constant Uniforms& u=instances[instance];
   float3 world = vertices[id].position.xyz * u.half_extent.xyz;
   world = RotateByQuaternion(world, u.orientation);
   world += u.offset_aspect.xyz;
 
-  float3 eye = float3(0, 14, -40);
+  float3 eye = float3(0, 14, -60);
   float3 target = float3(0, 6, 0);
   float3 forward = normalize(target - eye);
   float3 right = normalize(cross(float3(0, 1, 0), forward));
@@ -130,7 +132,7 @@ vertex TornadoOut vertex_tornado(uint id [[vertex_id]],
   };
   float2 local = corners[id] * (u.center_radius.w * 1.28);
   float3 world = u.center_radius.xyz + float3(local.x, 0, local.y);
-  float3 eye = float3(0, 14, -40);
+  float3 eye = float3(0, 14, -60);
   float3 forward = normalize(float3(0, 6, 0) - eye);
   float3 right = normalize(cross(float3(0, 1, 0), forward));
   float3 up = cross(forward, right);

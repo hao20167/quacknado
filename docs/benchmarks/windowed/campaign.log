@@ -1,0 +1,19 @@
+từng frame. Đây là replay presentation-paced, không dùng tổng runtime làm FPS tương tác hay throughput không giới hạn.
+
+Ba campaign/process mỗi mode, shuffle thứ tự, 210 frames/run, bỏ 30 đầu; raw giữ physical pixel size, active bodies và checksum. Mỗi cặp mode phải khớp trajectory/checksum/active/resolution. Chưa có screenshot regression toàn scene; kiểm tra ảnh vòng 8/9 vẫn là fixture riêng.
+
+| Mode | Metric | Median của campaign median (ms) | Median của campaign p99 (ms) |
+|---|---|---:|---:|
+| individual | cpu_frame_ns | 8.332 | 9.073 |
+| individual | gpu_command_ns | 1.600 | 1.773 |
+| individual | render_call_ns | 7.072 | 8.078 |
+| individual | simulation_ns | 1.203 | 3.432 |
+| individual | submission_ns | 0.266 | 1.280 |
+| instanced | cpu_frame_ns | 8.328 | 9.575 |
+| instanced | gpu_command_ns | 1.405 | 1.589 |
+| instanced | render_call_ns | 7.009 | 7.928 |
+| instanced | simulation_ns | 1.294 | 3.837 |
+| instanced | submission_ns | 0.084 | 0.270 |
+
+P99 từ 180 frame/campaign chỉ là thống kê mô tả ngắn, chưa đủ mô tả rare tail. Window compositor, refresh rate, focus/visibility, power và GPU load không được khóa. NextDrawable/presentation có thể che bớt lợi ích submission; không suy speedup từ microbenchmark thành FPS. Profiling có overhead và bookkeeping; bộ đệm timing được reserve trước run nhưng đây không phải zero-allocation gate. Tái lập: build toàn game Release, chạy `python3 scripts/benchmark_windowed.py` trong desktop session có GPU/window access; cửa sổ mở và tự đóng cho từng process. Không tự bỏ qua lỗi drawable/command hoặc người dùng đóng cửa sổ giữa replay.
+

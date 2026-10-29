@@ -1,0 +1,17 @@
+[
+  {
+    "campaign": 0,
+    "exact_checksum_active": false,
+    "first_checksum_difference_step": 25
+  },
+  {
+    "campaign": 1,
+    "exact_checksum_active": false,
+    "first_checksum_difference_step": 25
+  },
+  {
+    "campaign": 2,
+    "exact_checksum_active": false,
+    "first_checksum_difference_step": 25
+  }
+]
