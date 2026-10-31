@@ -1,0 +1,29 @@
+Test project /Users/hao20167/PROJ/cpp/quacknado/build/perf
+      Start  1: wind_reference
+ 1/12 Test  #1: wind_reference .....................   Passed    0.01 sec
+      Start  2: wind_aos
+ 2/12 Test  #2: wind_aos ...........................   Passed    0.01 sec
+      Start  3: wind_soa
+ 3/12 Test  #3: wind_soa ...........................   Passed    0.01 sec
+      Start  4: wind_neon
+ 4/12 Test  #4: wind_neon ..........................   Passed    0.01 sec
+      Start  5: wind_neon_cull
+ 5/12 Test  #5: wind_neon_cull .....................   Passed    0.01 sec
+      Start  6: wind_pool1
+ 6/12 Test  #6: wind_pool1 .........................   Passed    0.01 sec
+      Start  7: wind_pool2
+ 7/12 Test  #7: wind_pool2 .........................   Passed    0.01 sec
+      Start  8: wind_pool4
+ 8/12 Test  #8: wind_pool4 .........................   Passed    0.01 sec
+      Start  9: wind_pool_neon4
+ 9/12 Test  #9: wind_pool_neon4 ....................   Passed    0.01 sec
+      Start 10: spawn_scene
+10/12 Test #10: spawn_scene ........................   Passed    0.36 sec
+      Start 11: wind_pool_lifecycle
+11/12 Test #11: wind_pool_lifecycle ................   Passed    0.01 sec
+      Start 12: benchmark_reject_unknown_backend
+12/12 Test #12: benchmark_reject_unknown_backend ...   Passed    0.01 sec
+
+100% tests passed out of 12
+
+Total Test time (real) =   0.48 sec

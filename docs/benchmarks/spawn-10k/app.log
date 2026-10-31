@@ -1,0 +1,13 @@
+2026-10-29 14:46:30.648 quacknado[94212:8961400] Build=Release scene=10000 physics_workers=1
+2026-10-29 14:46:30.752 quacknado[94212:8961400] Metal API Validation Enabled
+2026-10-29 14:46:30.764 quacknado[94212:8961400]  >>> Number of objects: 10000
+2026-10-29 14:46:30.796 quacknado[94212:8961400] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/pchair.glb (1 primitives)
+2026-10-29 14:46:30.815 quacknado[94212:8961400] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/dirt_house.glb (3 primitives)
+2026-10-29 14:46:30.824 quacknado[94212:8961400] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/chest.glb (1 primitives)
+2026-10-29 14:46:30.824 quacknado[94212:8961400] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/steve.glb (1 primitives)
+2026-10-29 14:46:30.825 quacknado[94212:8961400] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/villager.glb (1 primitives)
+2026-10-29 14:46:30.826 quacknado[94212:8961400] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/chicken.glb (8 primitives)
+2026-10-29 14:46:30.826 quacknado[94212:8961400] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/boat.glb (3 primitives)
+2026-10-29 14:46:30.832 quacknado[94212:8961400] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/dirt_block.glb (1 primitives)
+2026-10-29 14:46:30.832 quacknado[94212:8961400] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/creeper.glb (1 primitives)
+2026-10-29 14:46:30.833 quacknado[94212:8961400] Loaded /Users/hao20167/PROJ/cpp/quacknado/build/default/assets/models/sheep.glb (2 primitives)

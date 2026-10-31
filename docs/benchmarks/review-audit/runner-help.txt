@@ -1,0 +1,10 @@
+usage: benchmark_windowed.py [-h] [--output OUTPUT]
+
+options:
+  -h, --help       show this help message and exit
+  --output OUTPUT
+usage: benchmark_glb.py [-h] [--output OUTPUT]
+
+options:
+  -h, --help       show this help message and exit
+  --output OUTPUT

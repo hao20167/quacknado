@@ -1,0 +1,1 @@
+PASS: 15 configurations x 4 backends; per-step position checksum and occupancy match.

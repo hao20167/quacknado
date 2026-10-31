@@ -1,0 +1,1 @@
+PASS: 180 process runs, 2160 measurement rows, 36 configurations; calibration records meet target, summary bounds finite/ordered, every source hash matches snapshot.

@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "/Users/hao20167/PROJ/cpp/quacknado/build/collision-pile-before/quacknado"
+  ],
+  "environment": {
+    "QUACK_SCENE_COUNT": "10000",
+    "QUACK_REPLAY_FRAMES": "600",
+    "QUACK_REPLAY_CLOCK": "realtime",
+    "QUACK_REPLAY_WIND": "0",
+    "QUACK_PHYSICS_WORKERS": "1"
+  }
+}

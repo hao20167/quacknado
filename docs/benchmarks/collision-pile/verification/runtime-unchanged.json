@@ -1,0 +1,8 @@
+{
+  "production_sources_unchanged_since_measurement": true,
+  "after_game_binary_matches_campaign": true,
+  "changed_source_files": [
+    "scripts/benchmark_collision_pile.py"
+  ],
+  "note": "Only benchmark metadata CPU/platform detection changed after measurement."
+}

@@ -1,0 +1,187 @@
+[0/2] Re-checking globbed directories...
+[1/2] Re-running CMake...
+-- 
+-- SDL3 was configured with the following options:
+-- 
+-- Platform: Darwin-23.6.0
+-- 64-bit:   TRUE
+-- Compiler: /usr/bin/cc
+-- Revision: SDL-3.5.0-release-3.4.0-1563-g30bbdedde
+-- Vendor:   
+-- 
+-- Subsystems:
+--   Audio:        ON
+--   Video:        ON
+--   GPU:          ON
+--   Render:       ON
+--   Camera:       ON
+--   Joystick:     ON
+--   Haptic:       ON
+--   Hidapi:       ON
+--   Power:        ON
+--   Sensor:       ON
+--   Dialog:       ON
+--   Tray:         ON
+--   Notification: ON
+-- 
+-- Options:
+--   SDL_ALSA                    (Wanted: OFF): OFF
+--   SDL_ALSA_SHARED             (Wanted: OFF): OFF
+--   SDL_ALTIVEC                 (Wanted: OFF): OFF
+--   SDL_ARMNEON                 (Wanted: ON): ON
+--   SDL_ARMSVE2                 (Wanted: ON): OFF
+--   SDL_ASAN                    (Wanted: OFF): OFF
+--   SDL_ASSEMBLY                (Wanted: ON): ON
+--   SDL_ASSERTIONS              (Wanted: auto): auto
+--   SDL_AVX                     (Wanted: OFF): OFF
+--   SDL_AVX2                    (Wanted: OFF): OFF
+--   SDL_AVX512F                 (Wanted: OFF): OFF
+--   SDL_BACKGROUNDING_SIGNAL    (Wanted: OFF): OFF
+--   SDL_CCACHE                  (Wanted: OFF): OFF
+--   SDL_CLANG_TIDY              (Wanted: OFF): OFF
+--   SDL_CLOCK_GETTIME           (Wanted: OFF): OFF
+--   SDL_COCOA                   (Wanted: ON): ON
+--   SDL_DBUS                    (Wanted: OFF): OFF
+--   SDL_DEPS_SHARED             (Wanted: ON): OFF
+--   SDL_DIRECTX                 (Wanted: OFF): OFF
+--   SDL_DISKAUDIO               (Wanted: ON): ON
+--   SDL_DLOPEN_NOTES            (Wanted: OFF): OFF
+--   SDL_DUMMYAUDIO              (Wanted: ON): ON
+--   SDL_DUMMYCAMERA             (Wanted: ON): ON
+--   SDL_DUMMYVIDEO              (Wanted: ON): ON
+--   SDL_EXAMPLES                (Wanted: OFF): OFF
+--   SDL_EXAMPLES_LINK_SHARED    (Wanted: ON): OFF
+--   SDL_FOREGROUNDING_SIGNAL    (Wanted: OFF): OFF
+--   SDL_FRIBIDI                 (Wanted: OFF): OFF
+--   SDL_FRIBIDI_SHARED          (Wanted: OFF): OFF
+--   SDL_GCC_ATOMICS             (Wanted: ON): ON
+--   SDL_GPU_OPENXR              (Wanted: ON): ON
+--   SDL_HIDAPI                  (Wanted: ON): ON
+--   SDL_HIDAPI_JOYSTICK         (Wanted: ON): ON
+--   SDL_HIDAPI_LIBUSB           (Wanted: ON): ON
+--   SDL_HIDAPI_LIBUSB_SHARED    (Wanted: ON): ON
+--   SDL_IBUS                    (Wanted: OFF): OFF
+--   SDL_INSTALL                 (Wanted: OFF): OFF
+--   SDL_INSTALL_TESTS           (Wanted: OFF): OFF
+--   SDL_JACK                    (Wanted: OFF): OFF
+--   SDL_JACK_SHARED             (Wanted: OFF): OFF
+--   SDL_KMSDRM                  (Wanted: OFF): OFF
+--   SDL_KMSDRM_SHARED           (Wanted: OFF): OFF
+--   SDL_LASX                    (Wanted: OFF): OFF
+--   SDL_LEAN_AND_MEAN           (Wanted: OFF): OFF
+--   SDL_LIBC                    (Wanted: ON): ON
+--   SDL_LIBICONV                (Wanted: OFF): OFF
+--   SDL_LIBTHAI                 (Wanted: OFF): OFF
+--   SDL_LIBTHAI_SHARED          (Wanted: OFF): OFF
+--   SDL_LIBUDEV                 (Wanted: OFF): OFF
+--   SDL_LIBUDEV_SHARED          (Wanted: OFF): OFF
+--   SDL_LIBURING                (Wanted: OFF): OFF
+--   SDL_LSX                     (Wanted: OFF): OFF
+--   SDL_METAL                   (Wanted: ON): ON
+--   SDL_MMX                     (Wanted: OFF): OFF
+--   SDL_OFFSCREEN               (Wanted: ON): ON
+--   SDL_OPENGL                  (Wanted: ON): ON
+--   SDL_OPENGLES                (Wanted: ON): ON
+--   SDL_OPENVR                  (Wanted: OFF): OFF
+--   SDL_OSS                     (Wanted: OFF): OFF
+--   SDL_PIPEWIRE                (Wanted: OFF): OFF
+--   SDL_PIPEWIRE_SHARED         (Wanted: OFF): OFF
+--   SDL_PTHREADS                (Wanted: ON): ON
+--   SDL_PTHREADS_SEM            (Wanted: ON): ON
+--   SDL_PULSEAUDIO              (Wanted: OFF): OFF
+--   SDL_PULSEAUDIO_SHARED       (Wanted: OFF): OFF
+--   SDL_RENDER_D3D              (Wanted: OFF): OFF
+--   SDL_RENDER_D3D11            (Wanted: OFF): OFF
+--   SDL_RENDER_D3D12            (Wanted: OFF): OFF
+--   SDL_RENDER_GPU              (Wanted: ON): ON
+--   SDL_RENDER_METAL            (Wanted: ON): ON
+--   SDL_RENDER_VULKAN           (Wanted: ON): ON
+--   SDL_ROCKCHIP                (Wanted: OFF): OFF
+--   SDL_RPATH                   (Wanted: ON): ON
+--   SDL_RPI                     (Wanted: OFF): OFF
+--   SDL_SNDIO                   (Wanted: OFF): OFF
+--   SDL_SNDIO_SHARED            (Wanted: OFF): OFF
+--   SDL_SSE                     (Wanted: OFF): OFF
+--   SDL_SSE2                    (Wanted: OFF): OFF
+--   SDL_SSE3                    (Wanted: OFF): OFF
+--   SDL_SSE4_1                  (Wanted: OFF): OFF
+--   SDL_SSE4_2                  (Wanted: OFF): OFF
+--   SDL_SYSTEM_ICONV            (Wanted: OFF): OFF
+--   SDL_TESTS                   (Wanted: OFF): OFF
+--   SDL_TESTS_LINK_SHARED       (Wanted: ON): OFF
+--   SDL_UNINSTALL               (Wanted: OFF): OFF
+--   SDL_VIRTUAL_JOYSTICK        (Wanted: ON): ON
+--   SDL_VIVANTE                 (Wanted: OFF): OFF
+--   SDL_VULKAN                  (Wanted: ON): ON
+--   SDL_WASAPI                  (Wanted: OFF): OFF
+--   SDL_WAYLAND                 (Wanted: OFF): OFF
+--   SDL_WAYLAND_LIBDECOR        (Wanted: OFF): OFF
+--   SDL_WAYLAND_LIBDECOR_SHARED (Wanted: OFF): OFF
+--   SDL_WAYLAND_SHARED          (Wanted: OFF): OFF
+--   SDL_X11                     (Wanted: OFF): OFF
+--   SDL_X11_SHARED              (Wanted: OFF): OFF
+--   SDL_X11_XCURSOR             (Wanted: OFF): OFF
+--   SDL_X11_XDBE                (Wanted: OFF): OFF
+--   SDL_X11_XFIXES              (Wanted: OFF): OFF
+--   SDL_X11_XINPUT              (Wanted: OFF): OFF
+--   SDL_X11_XRANDR              (Wanted: OFF): OFF
+--   SDL_X11_XSCRNSAVER          (Wanted: OFF): OFF
+--   SDL_X11_XSHAPE              (Wanted: OFF): OFF
+--   SDL_X11_XSYNC               (Wanted: OFF): OFF
+--   SDL_X11_XTEST               (Wanted: OFF): OFF
+--   SDL_XINPUT                  (Wanted: OFF): OFF
+-- 
+--  Build Shared Library: ON
+--  Build Static Library: OFF
+--  Build libraries as Apple Framework: OFF
+-- 
+-- Enabled backends:
+--   Video drivers: cocoa dummy offscreen
+--   Render drivers: gpu metal ogl ogl_es2 vulkan
+--   GPU drivers: metal openxr vulkan
+--   Audio drivers: coreaudio disk dummy
+--   Joystick drivers: hidapi iokit mfi virtual
+--   Camera drivers: coremedia dummy
+-- 
+-- If something was not detected, although the libraries
+-- were installed, then make sure you have set the
+-- CMAKE_C_FLAGS and CMAKE_PREFIX_PATH CMake variables correctly.
+-- 
+Warning: Interprocedural optimizations are not supported for this target, turn off the option INTERPROCEDURAL_OPTIMIZATION to disable this warning
+Application 'dxc' not found. Can't compile compute shaders. Some functionality will be unavailable. You can install it by e.g. installing the Vulkan SDK.
+-- Could NOT find Vulkan (missing: Vulkan_LIBRARY Vulkan_INCLUDE_DIR) (found version "")
+-- Configuring done (0.8s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/hao20167/PROJ/cpp/quacknado/build/check
+[0/4] Re-checking globbed directories...
+[1/34] Building CXX object CMakeFiles/quack_sim.dir/src/simulation/spawn_position.cpp.o
+[2/34] Building CXX object CMakeFiles/quack_sim_alloc.dir/src/simulation/simulation.cpp.o
+[3/34] Building CXX object CMakeFiles/quack_render.dir/src/draw/object_draw.cpp.o
+[4/34] Building CXX object CMakeFiles/quacknado.dir/src/main.cpp.o
+[5/34] Building CXX object CMakeFiles/quack_sim.dir/src/simulation/simulation.cpp.o
+[6/34] Building CXX object CMakeFiles/quack_render.dir/src/draw/model_draw.cpp.o
+[7/34] Linking CXX static library libquack_render.a
+[8/34] Building CXX object CMakeFiles/quack_sim.dir/src/simulation/physics/physics_world.cpp.o
+[9/34] Building CXX object CMakeFiles/quacknado.dir/src/app/application.cpp.o
+[10/34] Linking CXX static library libquack_sim.a
+[11/34] Building CXX object CMakeFiles/quack_sim_alloc.dir/src/simulation/spawn_position.cpp.o
+[12/34] Linking CXX executable Debug/quacknado
+[13/34] cd /Users/hao20167/PROJ/cpp/quacknado/build/check && /opt/homebrew/bin/cmake -E copy_if_different /Users/hao20167/PROJ/cpp/quacknado/build/check/object.metallib /Users/hao20167/PROJ/cpp/quacknado/build/check/Debug/object.metallib
+[14/34] Building CXX object CMakeFiles/quack_alloc.dir/benchmarks/allocations.cpp.o
+[15/34] Linking CXX executable Debug/wind_thread_tests
+[16/34] Building CXX object CMakeFiles/quack_sim_alloc.dir/src/simulation/physics/physics_world.cpp.o
+[17/34] Linking CXX executable Debug/env_tests
+[18/34] cd /Users/hao20167/PROJ/cpp/quacknado/build/check && /opt/homebrew/bin/cmake -E copy_directory_if_different /Users/hao20167/PROJ/cpp/quacknado/assets/models /Users/hao20167/PROJ/cpp/quacknado/build/check/Debug/assets/models
+[19/34] Linking CXX static library libquack_sim_alloc.a
+[20/34] Building CXX object CMakeFiles/quack_bench.dir/benchmarks/glb.cpp.o
+[21/34] Linking CXX executable Debug/quack_alloc
+[22/34] Building CXX object CMakeFiles/interaction_bench.dir/benchmarks/interactions.cpp.o
+[23/34] Linking CXX executable Debug/interaction_bench
+[24/34] Building CXX object CMakeFiles/spawn_tests.dir/tests/spawn_tests.cpp.o
+[25/34] Building CXX object CMakeFiles/physics_workers_tests.dir/tests/physics_workers_tests.cpp.o
+[26/34] Building CXX object CMakeFiles/quack_bench.dir/benchmarks/main.cpp.o
+[27/34] Linking CXX executable Debug/spawn_tests
+[28/34] Linking CXX executable Debug/physics_workers_tests
+[29/34] Linking CXX executable Debug/quack_bench
+[30/34] Building CXX object CMakeFiles/render_regression.dir/tests/render_regression.cpp.o
+[31/34] Linking CXX executable Debug/render_regression

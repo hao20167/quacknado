@@ -11,8 +11,8 @@ float Smoothstep(float low, float high, float value) {
 }
 
 float LiftProfile(float height) {
-  constexpr float heights[] {0.0f, 0.2f, 0.5f, 0.9f, 1.0f};
-  constexpr float strengths[] {0.12f, 0.45f, 1.0f, 0.25f, 0.0f};
+  constexpr float heights[]{0.0f, 0.2f, 0.5f, 0.9f, 1.0f};
+  constexpr float strengths[]{0.12f, 0.45f, 1.0f, 0.25f, 0.0f};
   for (int i = 1; i < 5; ++i) {
     if (height <= heights[i]) {
       const float blend = Smoothstep(heights[i - 1], heights[i], height);
@@ -22,25 +22,28 @@ float LiftProfile(float height) {
   return 0.0f;
 }
 
-}
+} // namespace
 
-simd_float3 Tornado::VelocityAt(const simd_float3& position) const {
+simd_float3 Tornado::VelocityAt(const simd_float3 &position) const {
   float h = position.y - center_.y;
-  if (height_ <= 0.0f || h < 0.0f || h >= height_) return {};
+  if (height_ <= 0.0f || h < 0.0f || h >= height_)
+    return {};
 
   float u = h / height_;
   float cur_radius = bottom_radius_ + (top_radius_ - bottom_radius_) * u;
-  if (cur_radius <= 0.0f) return {};
+  if (cur_radius <= 0.0f)
+    return {};
 
   float dx = position.x - center_.x;
   float dz = position.z - center_.z;
   float r = std::sqrt(dx * dx + dz * dz);
   float t = r / cur_radius;
-  if (t >= 1.5f) return {};
+  if (t >= 1.5f)
+    return {};
 
   float inv_r = r > 1e-5f ? 1.0f / r : 0.0f;
-  simd_float3 radial {dx * inv_r, 0, dz * inv_r};
-  simd_float3 tangent {-radial.z, 0, radial.x};
+  simd_float3 radial{dx * inv_r, 0, dz * inv_r};
+  simd_float3 tangent{-radial.z, 0, radial.x};
 
   float top_blend = Smoothstep(0.7f, 0.95f, u);
   float radial_speed = -suction_speed_ * (1.0f - top_blend) + outward_speed_ * top_blend;
@@ -52,25 +55,38 @@ simd_float3 Tornado::VelocityAt(const simd_float3& position) const {
   return rotation + flow;
 }
 
-simd_float3 Tornado::ForceAt(const simd_float3& position, const simd_float3& velocity) const {
+simd_float3 Tornado::ForceAt(const simd_float3 &position, const simd_float3 &velocity) const {
   float h = position.y - center_.y;
-  if (height_ <= 0.0f || h < 0.0f || h >= height_) return {};
+  if (height_ <= 0.0f || h < 0.0f || h >= height_)
+    return {};
 
   float u = h / height_;
   float cur_radius = bottom_radius_ + (top_radius_ - bottom_radius_) * u;
-  if (cur_radius <= 0.0f) return {};
+  if (cur_radius <= 0.0f)
+    return {};
 
   float dx = position.x - center_.x;
   float dz = position.z - center_.z;
-  float t = std::sqrt(dx * dx + dz * dz) / cur_radius;
+  float r = std::sqrt(dx * dx + dz * dz);
+  float t = r / cur_radius;
+  if (t >= 1.5f)
+    return {};
   float side_influence = 1.0f - Smoothstep(1.0f, 1.5f, t);
   float top_influence = 1.0f - Smoothstep(0.95f, 1.0f, u);
   float influence = side_influence * top_influence;
 
   constexpr float drag = 3.0f;
-  simd_float3 force = (VelocityAt(position) - velocity) * drag * influence;
+  float inv_r = r > 1e-5f ? 1.0f / r : 0.0f;
+  simd_float3 radial{dx * inv_r, 0, dz * inv_r};
+  simd_float3 tangent{-radial.z, 0, radial.x};
+  float top_blend = Smoothstep(0.7f, 0.95f, u);
+  float radial_speed = -suction_speed_ * (1.0f - top_blend) + outward_speed_ * top_blend;
+  float swirl_falloff = t <= 1.0f ? t : 1.0f / t;
+  auto wind = tangent * tangential_speed_ * swirl_falloff * (1.0f - 0.5f * top_blend) +
+              radial * radial_speed * std::min(t, 1.0f);
+  simd_float3 force = (wind - velocity) * drag * influence;
   const float radial_weight = std::exp(-t * t) * side_influence;
-  force.y = radial_weight * (peak_lift_force_ * LiftProfile(u)
-      - vertical_drag_ * velocity.y * top_influence);
+  force.y = radial_weight *
+            (peak_lift_force_ * LiftProfile(u) - vertical_drag_ * velocity.y * top_influence);
   return force;
 }

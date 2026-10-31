@@ -1,0 +1,20 @@
+[
+  {
+    "qos": 0,
+    "median_ms": 8.7969165,
+    "p99_ms": 16.475625,
+    "frames_over33": 0,
+    "six_step_frames": 0,
+    "total_steps": 1018,
+    "max_frame_ms": 30.486583
+  },
+  {
+    "qos": 1,
+    "median_ms": 11.058083,
+    "p99_ms": 22.22275,
+    "frames_over33": 8,
+    "six_step_frames": 2,
+    "total_steps": 1065,
+    "max_frame_ms": 105.581084
+  }
+]

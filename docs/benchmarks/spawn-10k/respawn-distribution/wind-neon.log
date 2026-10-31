@@ -1,0 +1,14 @@
+Test project /Users/hao20167/PROJ/cpp/quacknado/build/default
+    Start 4: wind_neon
+1/1 Test #4: wind_neon ........................***Failed    0.01 sec
+ERROR: Numerical mismatch sample=10 component=0
+backend,dataset,n,repeat,wall_ns,gpu_ns,checksum
+
+
+0% tests passed, 1 tests failed out of 1
+
+Total Test time (real) =   0.02 sec
+
+The following tests FAILED:
+	  4 - wind_neon (Failed)
+Errors while running CTest

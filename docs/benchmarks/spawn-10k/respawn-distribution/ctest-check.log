@@ -1,0 +1,13 @@
+Test project /Users/hao20167/PROJ/cpp/quacknado/build/check
+    Start 10: spawn_scene
+1/4 Test #10: spawn_scene ......................   Passed   15.77 sec
+    Start 34: large_scene_spawn
+2/4 Test #34: large_scene_spawn ................   Passed    1.88 sec
+    Start 35: large_scene_second_seed
+3/4 Test #35: large_scene_second_seed ..........   Passed    0.68 sec
+    Start 36: scene_full_capacity
+4/4 Test #36: scene_full_capacity ..............   Passed    1.40 sec
+
+100% tests passed out of 4
+
+Total Test time (real) =  19.76 sec

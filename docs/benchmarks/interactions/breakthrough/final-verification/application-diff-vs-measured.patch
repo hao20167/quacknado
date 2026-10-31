@@ -1,0 +1,11 @@
+--- measured/src/app/application.cpp
++++ final/src/app/application.cpp
+@@ -94,6 +94,8 @@
+       replay_instancing_ = std::string(mode) == "instanced";
+     }
+   }
++  SDL_Log("Build=%s scene=%zu physics_workers=%d", QUACK_BUILD_TYPE, scene_count_,
++          physics_workers_);
+   if (!SDL_Init(SDL_INIT_VIDEO)) {
+     SDL_Log("SDL_Init failed: %s\n", SDL_GetError());
+     return false;

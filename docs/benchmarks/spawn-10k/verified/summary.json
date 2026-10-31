@@ -1,0 +1,10 @@
+{
+  "frames_checked": 360,
+  "placed_every_frame": 10003,
+  "pending_every_frame": 0,
+  "model_objects_every_frame": 10002,
+  "model_instance_invocations_every_frame": 22258,
+  "respawns": 1341,
+  "gpu_commands_completed_without_error": true,
+  "note": "FinishProfile waits/checks all command buffers before CSV is printed; camera clipping and occlusion can still hide pixels."
+}

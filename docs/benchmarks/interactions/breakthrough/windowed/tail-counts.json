@@ -1,0 +1,200 @@
+[
+  {
+    "campaign": 0,
+    "build": "after",
+    "clock": "fixed",
+    "wind": 1,
+    "frames": 300,
+    "over25ms": 0,
+    "over33ms": 0,
+    "six_or_more_steps": 0,
+    "clamped_seconds": 0
+  },
+  {
+    "campaign": 0,
+    "build": "after",
+    "clock": "realtime",
+    "wind": 0,
+    "frames": 300,
+    "over25ms": 2,
+    "over33ms": 1,
+    "six_or_more_steps": 0,
+    "clamped_seconds": 0
+  },
+  {
+    "campaign": 0,
+    "build": "after",
+    "clock": "realtime",
+    "wind": 1,
+    "frames": 300,
+    "over25ms": 0,
+    "over33ms": 0,
+    "six_or_more_steps": 0,
+    "clamped_seconds": 0
+  },
+  {
+    "campaign": 0,
+    "build": "before",
+    "clock": "fixed",
+    "wind": 1,
+    "frames": 300,
+    "over25ms": 85,
+    "over33ms": 6,
+    "six_or_more_steps": 0,
+    "clamped_seconds": 0
+  },
+  {
+    "campaign": 0,
+    "build": "before",
+    "clock": "realtime",
+    "wind": 0,
+    "frames": 300,
+    "over25ms": 56,
+    "over33ms": 56,
+    "six_or_more_steps": 56,
+    "clamped_seconds": 3.3749508749999997
+  },
+  {
+    "campaign": 0,
+    "build": "before",
+    "clock": "realtime",
+    "wind": 1,
+    "frames": 300,
+    "over25ms": 125,
+    "over33ms": 122,
+    "six_or_more_steps": 100,
+    "clamped_seconds": 1.8552724999999994
+  },
+  {
+    "campaign": 1,
+    "build": "after",
+    "clock": "fixed",
+    "wind": 1,
+    "frames": 300,
+    "over25ms": 0,
+    "over33ms": 0,
+    "six_or_more_steps": 0,
+    "clamped_seconds": 0
+  },
+  {
+    "campaign": 1,
+    "build": "after",
+    "clock": "realtime",
+    "wind": 0,
+    "frames": 300,
+    "over25ms": 1,
+    "over33ms": 0,
+    "six_or_more_steps": 0,
+    "clamped_seconds": 0
+  },
+  {
+    "campaign": 1,
+    "build": "after",
+    "clock": "realtime",
+    "wind": 1,
+    "frames": 300,
+    "over25ms": 0,
+    "over33ms": 0,
+    "six_or_more_steps": 0,
+    "clamped_seconds": 0
+  },
+  {
+    "campaign": 1,
+    "build": "before",
+    "clock": "fixed",
+    "wind": 1,
+    "frames": 300,
+    "over25ms": 84,
+    "over33ms": 6,
+    "six_or_more_steps": 0,
+    "clamped_seconds": 0
+  },
+  {
+    "campaign": 1,
+    "build": "before",
+    "clock": "realtime",
+    "wind": 0,
+    "frames": 300,
+    "over25ms": 58,
+    "over33ms": 58,
+    "six_or_more_steps": 58,
+    "clamped_seconds": 3.6650043329999997
+  },
+  {
+    "campaign": 1,
+    "build": "before",
+    "clock": "realtime",
+    "wind": 1,
+    "frames": 300,
+    "over25ms": 135,
+    "over33ms": 133,
+    "six_or_more_steps": 108,
+    "clamped_seconds": 2.0834590839999994
+  },
+  {
+    "campaign": 2,
+    "build": "after",
+    "clock": "fixed",
+    "wind": 1,
+    "frames": 300,
+    "over25ms": 1,
+    "over33ms": 0,
+    "six_or_more_steps": 0,
+    "clamped_seconds": 0
+  },
+  {
+    "campaign": 2,
+    "build": "after",
+    "clock": "realtime",
+    "wind": 0,
+    "frames": 300,
+    "over25ms": 0,
+    "over33ms": 0,
+    "six_or_more_steps": 0,
+    "clamped_seconds": 0
+  },
+  {
+    "campaign": 2,
+    "build": "after",
+    "clock": "realtime",
+    "wind": 1,
+    "frames": 300,
+    "over25ms": 1,
+    "over33ms": 1,
+    "six_or_more_steps": 0,
+    "clamped_seconds": 0
+  },
+  {
+    "campaign": 2,
+    "build": "before",
+    "clock": "fixed",
+    "wind": 1,
+    "frames": 300,
+    "over25ms": 83,
+    "over33ms": 6,
+    "six_or_more_steps": 0,
+    "clamped_seconds": 0
+  },
+  {
+    "campaign": 2,
+    "build": "before",
+    "clock": "realtime",
+    "wind": 0,
+    "frames": 300,
+    "over25ms": 57,
+    "over33ms": 57,
+    "six_or_more_steps": 57,
+    "clamped_seconds": 3.5643509169999996
+  },
+  {
+    "campaign": 2,
+    "build": "before",
+    "clock": "realtime",
+    "wind": 1,
+    "frames": 300,
+    "over25ms": 120,
+    "over33ms": 118,
+    "six_or_more_steps": 102,
+    "clamped_seconds": 2.1652537499999993
+  }
+]

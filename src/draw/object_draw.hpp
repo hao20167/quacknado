@@ -1,4 +1,5 @@
-#pragma once 
+#pragma once
+#include "core/metal_ptr.hpp"
 
 #include <SDL3/SDL.h>
 
@@ -7,10 +8,10 @@
 
 class ObjectDraw final : public IRenderModule {
 private:
-  NS::SharedPtr<MTL::RenderPipelineState> pipeline_;
+  quacknado::metal::Ptr<MTL::RenderPipelineState> pipeline_;
   SDL_Window* window_;
   UInt64 start_;
-  NS::SharedPtr<MTL::Buffer> buffer_;
+  quacknado::metal::Ptr<MTL::Buffer> buffer_;
   IObjModule* obj_;
 public:
   ObjectDraw() = default;

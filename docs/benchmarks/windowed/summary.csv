@@ -1,0 +1,11 @@
+mode,metric,median_ns,median_campaign_p99_ns
+individual,cpu_frame_ns,8331875.0,9073500.0
+individual,gpu_command_ns,1600416.5,1773250.0
+individual,render_call_ns,7072104.0,8078375.0
+individual,simulation_ns,1202937.5,3432292.0
+individual,submission_ns,265749.5,1280084.0
+instanced,cpu_frame_ns,8328000.0,9575292.0
+instanced,gpu_command_ns,1404562.5,1589125.0
+instanced,render_call_ns,7009229.0,7927750.0
+instanced,simulation_ns,1293854.0,3837291.0
+instanced,submission_ns,84354.0,270333.0

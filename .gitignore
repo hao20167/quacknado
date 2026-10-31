@@ -2,4 +2,11 @@
 
 compile_commands.json
 build/
-docs/
+__pycache__/
+docs/*
+!docs/demo.gif
+!docs/benchmarks/
+!docs/benchmarks/*.md
+!docs/benchmarks/**/*.md
+
+!/README.md

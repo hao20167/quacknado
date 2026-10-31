@@ -1,0 +1,254 @@
+[
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quacknado.dir/src/app/application.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/app/application.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/app/application.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quacknado.dir/src/app/application.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quacknado.dir/src/assets/glb_asset.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/assets/glb_asset.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/assets/glb_asset.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quacknado.dir/src/assets/glb_asset.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quacknado.dir/src/draw/model_draw.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/draw/model_draw.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/draw/model_draw.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quacknado.dir/src/draw/model_draw.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quacknado.dir/src/draw/object_draw.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/draw/object_draw.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/draw/object_draw.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quacknado.dir/src/draw/object_draw.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quacknado.dir/src/draw/tornado_draw.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/draw/tornado_draw.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/draw/tornado_draw.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quacknado.dir/src/draw/tornado_draw.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quacknado.dir/src/main.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/main.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/main.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quacknado.dir/src/main.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quacknado.dir/src/renderer/metal_cpp_impl.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/renderer/metal_cpp_impl.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/renderer/metal_cpp_impl.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quacknado.dir/src/renderer/metal_cpp_impl.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quacknado.dir/src/renderer/metal_renderer.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/renderer/metal_renderer.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/renderer/metal_renderer.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quacknado.dir/src/renderer/metal_renderer.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quacknado.dir/src/simulation/env/tornado.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/env/tornado.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/env/tornado.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quacknado.dir/src/simulation/env/tornado.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quacknado.dir/src/simulation/physics/physics_world.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quacknado.dir/src/simulation/physics/physics_world.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quacknado.dir/src/simulation/simulation.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/simulation.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/simulation.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quacknado.dir/src/simulation/simulation.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quacknado.dir/src/simulation/spawn_position.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/spawn_position.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/spawn_position.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quacknado.dir/src/simulation/spawn_position.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/benchmarks -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_bench.dir/benchmarks/glb.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/benchmarks/glb.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/benchmarks/glb.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quack_bench.dir/benchmarks/glb.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/benchmarks -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_bench.dir/src/draw/model_draw.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/draw/model_draw.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/draw/model_draw.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quack_bench.dir/src/draw/model_draw.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/benchmarks -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_bench.dir/src/assets/glb_asset.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/assets/glb_asset.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/assets/glb_asset.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quack_bench.dir/src/assets/glb_asset.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/benchmarks -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_bench.dir/benchmarks/main.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/benchmarks/main.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quack_bench.dir/benchmarks/main.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/benchmarks -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_bench.dir/benchmarks/gpu.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/benchmarks/gpu.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/benchmarks/gpu.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quack_bench.dir/benchmarks/gpu.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/benchmarks -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_bench.dir/benchmarks/tornado_reference.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/benchmarks/tornado_reference.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/benchmarks/tornado_reference.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quack_bench.dir/benchmarks/tornado_reference.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/benchmarks -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_bench.dir/src/renderer/metal_cpp_impl.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/renderer/metal_cpp_impl.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/renderer/metal_cpp_impl.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quack_bench.dir/src/renderer/metal_cpp_impl.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/benchmarks -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_bench.dir/src/simulation/env/tornado.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/env/tornado.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/env/tornado.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quack_bench.dir/src/simulation/env/tornado.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/benchmarks -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_bench.dir/src/simulation/simulation.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/simulation.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/simulation.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quack_bench.dir/src/simulation/simulation.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/benchmarks -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_bench.dir/src/simulation/spawn_position.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/spawn_position.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/spawn_position.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quack_bench.dir/src/simulation/spawn_position.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/benchmarks -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_bench.dir/src/simulation/physics/physics_world.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quack_bench.dir/src/simulation/physics/physics_world.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/spawn_tests.dir/tests/spawn_tests.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/tests/spawn_tests.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/tests/spawn_tests.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/spawn_tests.dir/tests/spawn_tests.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/spawn_tests.dir/src/simulation/simulation.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/simulation.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/simulation.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/spawn_tests.dir/src/simulation/simulation.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/spawn_tests.dir/src/simulation/spawn_position.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/spawn_position.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/spawn_position.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/spawn_tests.dir/src/simulation/spawn_position.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/spawn_tests.dir/src/simulation/env/tornado.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/env/tornado.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/env/tornado.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/spawn_tests.dir/src/simulation/env/tornado.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/spawn_tests.dir/src/simulation/physics/physics_world.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/spawn_tests.dir/src/simulation/physics/physics_world.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/benchmarks -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/wind_thread_tests.dir/tests/wind_thread_tests.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/tests/wind_thread_tests.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/tests/wind_thread_tests.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/wind_thread_tests.dir/tests/wind_thread_tests.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/benchmarks -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/wind_thread_tests.dir/src/simulation/env/tornado.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/env/tornado.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/env/tornado.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/wind_thread_tests.dir/src/simulation/env/tornado.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/benchmarks -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/wind_thread_tests.dir/benchmarks/tornado_reference.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/benchmarks/tornado_reference.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/benchmarks/tornado_reference.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/wind_thread_tests.dir/benchmarks/tornado_reference.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_alloc.dir/benchmarks/allocations.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/benchmarks/allocations.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/benchmarks/allocations.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quack_alloc.dir/benchmarks/allocations.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_alloc.dir/src/simulation/simulation.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/simulation.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/simulation.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quack_alloc.dir/src/simulation/simulation.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_alloc.dir/src/simulation/spawn_position.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/spawn_position.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/spawn_position.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quack_alloc.dir/src/simulation/spawn_position.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_alloc.dir/src/simulation/env/tornado.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/env/tornado.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/env/tornado.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quack_alloc.dir/src/simulation/env/tornado.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_alloc.dir/src/simulation/physics/physics_world.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quack_alloc.dir/src/simulation/physics/physics_world.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/render_regression.dir/tests/render_regression.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/tests/render_regression.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/tests/render_regression.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/render_regression.dir/tests/render_regression.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/render_regression.dir/src/draw/model_draw.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/draw/model_draw.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/draw/model_draw.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/render_regression.dir/src/draw/model_draw.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/render_regression.dir/src/assets/glb_asset.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/assets/glb_asset.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/assets/glb_asset.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/render_regression.dir/src/assets/glb_asset.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/external/metal-cpp -I/Users/hao20167/PROJ/cpp/quacknado/external/cgltf -I/Users/hao20167/PROJ/cpp/quacknado/external/stb -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/render_regression.dir/src/renderer/metal_cpp_impl.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/renderer/metal_cpp_impl.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/src/renderer/metal_cpp_impl.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/render_regression.dir/src/renderer/metal_cpp_impl.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -I/Users/hao20167/PROJ/cpp/quacknado/src -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/metal_ptr_tests.dir/tests/metal_ptr_tests.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/tests/metal_ptr_tests.cpp",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/tests/metal_ptr_tests.cpp",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/metal_ptr_tests.dir/tests/metal_ptr_tests.cpp.o"
+  },
+  {
+    "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+    "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=c++17 -Wall -Werror -g -fno-rtti -fno-exceptions -ffp-contract=on -faligned-allocation -pthread -Winvalid-pch -Xclang -emit-pch -Xclang -include -Xclang /Users/hao20167/PROJ/cpp/quacknado/build/perf/jolt-build/CMakeFiles/Jolt.dir/cmake_pch.hxx -x c++-header -o jolt-build/CMakeFiles/Jolt.dir/cmake_pch.hxx.pch -c /Users/hao20167/PROJ/cpp/quacknado/build/perf/jolt-build/CMakeFiles/Jolt.dir/cmake_pch.hxx.cxx",
+    "file": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/jolt-build/CMakeFiles/Jolt.dir/cmake_pch.hxx.cxx",
+    "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/jolt-build/CMakeFiles/Jolt.dir/cmake_pch.hxx.pch"
+  }
+]

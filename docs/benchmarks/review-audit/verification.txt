@@ -1,0 +1,1 @@
+PASS final audit: current Release/Debug/clean Release CTest 24/24; current standalone pool TSan exit 0; Python oracle 10003; GPU ASan/UBSan halt-on-error + Metal Validation 12 cases/36 frame comparisons; clean GLB shader path/pixel check; source/doc manifest snapshot verified. Historical limitations remain documented.

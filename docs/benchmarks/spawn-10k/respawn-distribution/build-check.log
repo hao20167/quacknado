@@ -1,0 +1,17 @@
+[0/2] Re-checking globbed directories...
+[1/17] Building CXX object CMakeFiles/quack_sim_alloc.dir/src/simulation/spawn_position.cpp.o
+[2/17] Building CXX object CMakeFiles/quack_sim.dir/src/simulation/spawn_position.cpp.o
+[3/17] Linking CXX static library libquack_sim_alloc.a
+[4/17] Linking CXX static library libquack_sim.a
+[5/17] Linking CXX executable Debug/wind_thread_tests
+[6/17] Linking CXX executable Debug/env_tests
+[7/17] Linking CXX executable Debug/quack_alloc
+[8/17] Linking CXX executable Debug/spawn_tests
+[9/17] Linking CXX executable Debug/physics_workers_tests
+[10/17] Linking CXX executable Debug/interaction_bench
+[11/17] Linking CXX executable Debug/quacknado
+[12/17] Linking CXX executable Debug/quack_bench
+[13/17] cd /Users/hao20167/PROJ/cpp/quacknado/build/check && /opt/homebrew/bin/cmake -E copy_if_different /Users/hao20167/PROJ/cpp/quacknado/build/check/object.metallib /Users/hao20167/PROJ/cpp/quacknado/build/check/Debug/object.metallib
+[14/17] cd /Users/hao20167/PROJ/cpp/quacknado/build/check && /opt/homebrew/bin/cmake -E copy_directory_if_different /Users/hao20167/PROJ/cpp/quacknado/assets/models /Users/hao20167/PROJ/cpp/quacknado/build/check/Debug/assets/models
+[15/17] Linking CXX executable Debug/collision_stress_bench
+[16/17] Linking CXX executable Debug/large_spawn_tests

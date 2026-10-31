@@ -1,3 +1,4 @@
+#include "core/metal_ptr.hpp"
 #include "simulation/objs/obj_module.hpp"
 
 #include <vector>
@@ -70,10 +71,10 @@ bool ObjectDraw::Initialize(MTL::Device* device, MTL::Library* library, MTL::Pix
   if (device == nullptr || library == nullptr || pipeline_.get()) {
     return false;
   }
-  auto vertex_function = NS::TransferPtr(library->newFunction(
+  auto vertex_function = quacknado::metal::adopt(library->newFunction(
     NS::String::string("vertex_main", NS::UTF8StringEncoding)
   ));
-  auto fragment_function = NS::TransferPtr(library->newFunction(
+  auto fragment_function = quacknado::metal::adopt(library->newFunction(
     NS::String::string("fragment_main", NS::UTF8StringEncoding)
   ));
   if (!vertex_function.get() || !fragment_function.get()) {
@@ -81,13 +82,13 @@ bool ObjectDraw::Initialize(MTL::Device* device, MTL::Library* library, MTL::Pix
     return false;
   }
 
-  auto descriptor = NS::TransferPtr(MTL::RenderPipelineDescriptor::alloc()->init());
+  auto descriptor = quacknado::metal::adopt(MTL::RenderPipelineDescriptor::alloc()->init());
   descriptor->setVertexFunction(vertex_function.get());
   descriptor->setFragmentFunction(fragment_function.get());
   descriptor->colorAttachments()->object(0)->setPixelFormat(color_format);
   descriptor->setDepthAttachmentPixelFormat(MTL::PixelFormatDepth32Float);
   NS::Error* error = nullptr;
-  pipeline_ = NS::TransferPtr(device->newRenderPipelineState(descriptor.get(), &error));
+  pipeline_ = quacknado::metal::adopt(device->newRenderPipelineState(descriptor.get(), &error));
   if (!pipeline_.get()) {
     SDL_Log("Object Pipeline failed.\n");
     if (error) {
@@ -98,7 +99,7 @@ bool ObjectDraw::Initialize(MTL::Device* device, MTL::Library* library, MTL::Pix
 
   start_ = SDL_GetTicks();
   auto vertices = MakeObject();
-  buffer_ = NS::TransferPtr(device->newBuffer(vertices.data(), vertices.size() * sizeof(Vertex), MTL::ResourceStorageModeShared));
+  buffer_ = quacknado::metal::adopt(device->newBuffer(vertices.data(), vertices.size() * sizeof(Vertex), MTL::ResourceStorageModeShared));
 
   return true;
 }

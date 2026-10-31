@@ -1,0 +1,7 @@
+{
+  "steps": 360,
+  "population_every_step": 10003,
+  "pending_every_step": 0,
+  "respawns": 1063,
+  "initial_top": 16.25
+}

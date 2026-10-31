@@ -1,0 +1,4 @@
+backend,dataset,n,repeat,wall_ns,gpu_ns,checksum
+neon,mixed,10003,0,76822,0,112725.044
+neon,mixed,10003,1,59375,0,112725.044
+neon,mixed,10003,2,54870,0,112725.044

@@ -1,0 +1,106 @@
+{
+  "default": {
+    "cache": {
+      "CMAKE_BUILD_TYPE": "Release",
+      "QUACK_FLAT_OUTPUT": "ON"
+    },
+    "commands": [
+      {
+        "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/default",
+        "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/default/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_sim.dir/src/simulation/simulation.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/simulation.cpp",
+        "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/simulation.cpp",
+        "output": "/Users/hao20167/PROJ/cpp/quacknado/build/default/CMakeFiles/quack_sim.dir/src/simulation/simulation.cpp.o"
+      },
+      {
+        "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/default",
+        "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/default/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_sim.dir/src/simulation/physics/physics_world.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.cpp",
+        "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.cpp",
+        "output": "/Users/hao20167/PROJ/cpp/quacknado/build/default/CMakeFiles/quack_sim.dir/src/simulation/physics/physics_world.cpp.o"
+      },
+      {
+        "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/default",
+        "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=c++17 -Wall -Werror -g -fno-rtti -fno-exceptions -ffp-contract=on -faligned-allocation -pthread -Winvalid-pch -Xclang -include-pch -Xclang /Users/hao20167/PROJ/cpp/quacknado/build/default/jolt-build/CMakeFiles/Jolt.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/hao20167/PROJ/cpp/quacknado/build/default/jolt-build/CMakeFiles/Jolt.dir/cmake_pch.hxx -o jolt-build/CMakeFiles/Jolt.dir/__/Jolt/Physics/PhysicsSystem.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Jolt/Physics/PhysicsSystem.cpp",
+        "file": "/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Jolt/Physics/PhysicsSystem.cpp",
+        "output": "/Users/hao20167/PROJ/cpp/quacknado/build/default/jolt-build/CMakeFiles/Jolt.dir/__/Jolt/Physics/PhysicsSystem.cpp.o"
+      }
+    ]
+  },
+  "perf": {
+    "cache": {
+      "CMAKE_BUILD_TYPE": "Release",
+      "QUACK_FLAT_OUTPUT": "OFF"
+    },
+    "commands": [
+      {
+        "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+        "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_sim.dir/src/simulation/simulation.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/simulation.cpp",
+        "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/simulation.cpp",
+        "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quack_sim.dir/src/simulation/simulation.cpp.o"
+      },
+      {
+        "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+        "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/perf/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_sim.dir/src/simulation/physics/physics_world.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.cpp",
+        "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.cpp",
+        "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/CMakeFiles/quack_sim.dir/src/simulation/physics/physics_world.cpp.o"
+      },
+      {
+        "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/perf",
+        "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=c++17 -Wall -Werror -g -fno-rtti -fno-exceptions -ffp-contract=on -faligned-allocation -pthread -Winvalid-pch -Xclang -include-pch -Xclang /Users/hao20167/PROJ/cpp/quacknado/build/perf/jolt-build/CMakeFiles/Jolt.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/hao20167/PROJ/cpp/quacknado/build/perf/jolt-build/CMakeFiles/Jolt.dir/cmake_pch.hxx -o jolt-build/CMakeFiles/Jolt.dir/__/Jolt/Physics/PhysicsSystem.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Jolt/Physics/PhysicsSystem.cpp",
+        "file": "/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Jolt/Physics/PhysicsSystem.cpp",
+        "output": "/Users/hao20167/PROJ/cpp/quacknado/build/perf/jolt-build/CMakeFiles/Jolt.dir/__/Jolt/Physics/PhysicsSystem.cpp.o"
+      }
+    ]
+  },
+  "check": {
+    "cache": {
+      "CMAKE_BUILD_TYPE": "Debug",
+      "QUACK_FLAT_OUTPUT": "OFF"
+    },
+    "commands": [
+      {
+        "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/check",
+        "command": "/usr/bin/c++ -DJPH_DEBUG -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/check/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -g -std=gnu++20 -fsanitize=address,undefined -fno-sanitize=vptr -fno-omit-frame-pointer -pthread -o CMakeFiles/quack_sim.dir/src/simulation/simulation.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/simulation.cpp",
+        "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/simulation.cpp",
+        "output": "/Users/hao20167/PROJ/cpp/quacknado/build/check/CMakeFiles/quack_sim.dir/src/simulation/simulation.cpp.o"
+      },
+      {
+        "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/check",
+        "command": "/usr/bin/c++ -DJPH_DEBUG -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/check/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -g -std=gnu++20 -fsanitize=address,undefined -fno-sanitize=vptr -fno-omit-frame-pointer -pthread -o CMakeFiles/quack_sim.dir/src/simulation/physics/physics_world.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.cpp",
+        "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.cpp",
+        "output": "/Users/hao20167/PROJ/cpp/quacknado/build/check/CMakeFiles/quack_sim.dir/src/simulation/physics/physics_world.cpp.o"
+      },
+      {
+        "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/check",
+        "command": "/usr/bin/c++ -DJPH_DEBUG -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -g -std=c++17 -Wall -Werror -g -fno-rtti -fno-exceptions -ffp-contract=on -faligned-allocation -pthread -Winvalid-pch -Xclang -include-pch -Xclang /Users/hao20167/PROJ/cpp/quacknado/build/check/jolt-build/CMakeFiles/Jolt.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/hao20167/PROJ/cpp/quacknado/build/check/jolt-build/CMakeFiles/Jolt.dir/cmake_pch.hxx -o jolt-build/CMakeFiles/Jolt.dir/__/Jolt/Physics/PhysicsSystem.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Jolt/Physics/PhysicsSystem.cpp",
+        "file": "/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Jolt/Physics/PhysicsSystem.cpp",
+        "output": "/Users/hao20167/PROJ/cpp/quacknado/build/check/jolt-build/CMakeFiles/Jolt.dir/__/Jolt/Physics/PhysicsSystem.cpp.o"
+      }
+    ]
+  },
+  "buildtype-audit": {
+    "cache": {
+      "CMAKE_BUILD_TYPE": "Release",
+      "QUACK_FLAT_OUTPUT": "OFF"
+    },
+    "commands": [
+      {
+        "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/buildtype-audit",
+        "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/buildtype-audit/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_sim.dir/src/simulation/simulation.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/simulation.cpp",
+        "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/simulation.cpp",
+        "output": "/Users/hao20167/PROJ/cpp/quacknado/build/buildtype-audit/CMakeFiles/quack_sim.dir/src/simulation/simulation.cpp.o"
+      },
+      {
+        "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/buildtype-audit",
+        "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/src -I/Users/hao20167/PROJ/cpp/quacknado/build/buildtype-audit/external/SDL/include-revision -I/Users/hao20167/PROJ/cpp/quacknado/external/SDL/include -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=gnu++20 -pthread -o CMakeFiles/quack_sim.dir/src/simulation/physics/physics_world.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.cpp",
+        "file": "/Users/hao20167/PROJ/cpp/quacknado/src/simulation/physics/physics_world.cpp",
+        "output": "/Users/hao20167/PROJ/cpp/quacknado/build/buildtype-audit/CMakeFiles/quack_sim.dir/src/simulation/physics/physics_world.cpp.o"
+      },
+      {
+        "directory": "/Users/hao20167/PROJ/cpp/quacknado/build/buildtype-audit",
+        "command": "/usr/bin/c++ -DJPH_DEBUG_RENDERER -DJPH_OBJECT_LAYER_BITS=16 -DJPH_OBJECT_STREAM -DJPH_PROFILE_ENABLED -DJPH_USE_CPU_COMPUTE -DJPH_USE_MTL -I/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Build/.. -O3 -DNDEBUG -std=c++17 -Wall -Werror -g -fno-rtti -fno-exceptions -ffp-contract=on -faligned-allocation -pthread -Winvalid-pch -Xclang -include-pch -Xclang /Users/hao20167/PROJ/cpp/quacknado/build/buildtype-audit/jolt-build/CMakeFiles/Jolt.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/hao20167/PROJ/cpp/quacknado/build/buildtype-audit/jolt-build/CMakeFiles/Jolt.dir/cmake_pch.hxx -o jolt-build/CMakeFiles/Jolt.dir/__/Jolt/Physics/PhysicsSystem.cpp.o -c /Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Jolt/Physics/PhysicsSystem.cpp",
+        "file": "/Users/hao20167/PROJ/cpp/quacknado/external/JoltPhysics/Jolt/Physics/PhysicsSystem.cpp",
+        "output": "/Users/hao20167/PROJ/cpp/quacknado/build/buildtype-audit/jolt-build/CMakeFiles/Jolt.dir/__/Jolt/Physics/PhysicsSystem.cpp.o"
+      }
+    ]
+  }
+}

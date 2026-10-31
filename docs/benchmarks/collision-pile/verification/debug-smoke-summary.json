@@ -1,0 +1,11 @@
+{
+  "frames": 120,
+  "wind": false,
+  "clock": "fixed",
+  "workers": 6,
+  "all_frames_population": 10003,
+  "pending": 0,
+  "model_objects": 10002,
+  "primitive_instance_invocations": 22258,
+  "sanitizer_and_metal_error_scan": "passed"
+}

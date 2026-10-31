@@ -1,0 +1,2 @@
+2026-10-29 14:56:00.062 large_spawn_tests[96349:8974592]  >>> Number of objects: 16382
+FAIL: Scene count exceeds physics capacity after reserving props

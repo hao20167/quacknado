@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "cpu_trajectory_checksums_active_respawns_exact": true,
+  "all_frames_population_and_model_counts": true,
+  "gpu_commands_completed": true,
+  "sources_assets_binaries_unchanged": true
+}

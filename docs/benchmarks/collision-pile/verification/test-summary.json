@@ -1,0 +1,35 @@
+{
+  "default": {
+    "passed": 33,
+    "total": 37,
+    "pile_full_state": "passed",
+    "failures": [
+      "wind_neon",
+      "wind_neon_cull",
+      "wind_pool_neon4",
+      "calibrated_kernel"
+    ]
+  },
+  "perf": {
+    "passed": 33,
+    "total": 37,
+    "pile_full_state": "passed",
+    "failures": [
+      "wind_neon",
+      "wind_neon_cull",
+      "wind_pool_neon4",
+      "calibrated_kernel"
+    ]
+  },
+  "check": {
+    "passed": 33,
+    "total": 37,
+    "pile_full_state": "passed",
+    "failures": [
+      "wind_neon",
+      "wind_neon_cull",
+      "wind_pool_neon4",
+      "calibrated_kernel"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+PASS: baseline and candidate use identical binary and environment identity. Real control result INCONCLUSIVE, no regression verdict; synthetic +30% result REGRESSION. Nine policy tests cover corruption/noise/mismatch. Synthetic folder is NOT measured performance.

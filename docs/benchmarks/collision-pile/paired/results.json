@@ -1,0 +1,134 @@
+[
+  {
+    "campaign": 0,
+    "kind": "cpu",
+    "build": "before",
+    "median_ms": 20.522604,
+    "p99_ms": 25.415958
+  },
+  {
+    "campaign": 0,
+    "kind": "cpu",
+    "build": "after",
+    "median_ms": 11.169541500000001,
+    "p99_ms": 16.900875
+  },
+  {
+    "campaign": 0,
+    "kind": "game",
+    "build": "before",
+    "median_ms": 119.96295799999999,
+    "p99_ms": 185.620333,
+    "frames_over_33ms": 475,
+    "six_step_frames": 471,
+    "max_steps": 6,
+    "total_steps": 2907,
+    "gpu": {
+      "median_ms": 2.6914585,
+      "p99_ms": 3.375958
+    }
+  },
+  {
+    "campaign": 0,
+    "kind": "game",
+    "build": "after",
+    "median_ms": 8.709770500000001,
+    "p99_ms": 59.355292,
+    "frames_over_33ms": 17,
+    "six_step_frames": 1,
+    "max_steps": 6,
+    "total_steps": 370,
+    "gpu": {
+      "median_ms": 2.8056039999999998,
+      "p99_ms": 3.35075
+    }
+  },
+  {
+    "campaign": 1,
+    "kind": "cpu",
+    "build": "after",
+    "median_ms": 11.261708500000001,
+    "p99_ms": 19.170541
+  },
+  {
+    "campaign": 1,
+    "kind": "cpu",
+    "build": "before",
+    "median_ms": 21.686438000000003,
+    "p99_ms": 28.966
+  },
+  {
+    "campaign": 1,
+    "kind": "game",
+    "build": "after",
+    "median_ms": 8.6513125,
+    "p99_ms": 14.543375,
+    "frames_over_33ms": 2,
+    "six_step_frames": 0,
+    "max_steps": 2,
+    "total_steps": 307,
+    "gpu": {
+      "median_ms": 3.103042,
+      "p99_ms": 3.389125
+    }
+  },
+  {
+    "campaign": 1,
+    "kind": "game",
+    "build": "before",
+    "median_ms": 119.323771,
+    "p99_ms": 197.897583,
+    "frames_over_33ms": 466,
+    "six_step_frames": 461,
+    "max_steps": 6,
+    "total_steps": 2852,
+    "gpu": {
+      "median_ms": 2.6705,
+      "p99_ms": 3.275167
+    }
+  },
+  {
+    "campaign": 2,
+    "kind": "cpu",
+    "build": "before",
+    "median_ms": 18.015895999999998,
+    "p99_ms": 26.610291
+  },
+  {
+    "campaign": 2,
+    "kind": "cpu",
+    "build": "after",
+    "median_ms": 11.232271,
+    "p99_ms": 18.7365
+  },
+  {
+    "campaign": 2,
+    "kind": "game",
+    "build": "before",
+    "median_ms": 112.2561455,
+    "p99_ms": 145.669917,
+    "frames_over_33ms": 472,
+    "six_step_frames": 454,
+    "max_steps": 6,
+    "total_steps": 2866,
+    "gpu": {
+      "median_ms": 2.6685625,
+      "p99_ms": 3.268833
+    }
+  },
+  {
+    "campaign": 2,
+    "kind": "game",
+    "build": "after",
+    "median_ms": 8.6540625,
+    "p99_ms": 14.496875,
+    "frames_over_33ms": 1,
+    "six_step_frames": 0,
+    "max_steps": 3,
+    "total_steps": 305,
+    "gpu": {
+      "median_ms": 3.1427709999999998,
+      "p99_ms": 3.410458
+    }
+  }
+]

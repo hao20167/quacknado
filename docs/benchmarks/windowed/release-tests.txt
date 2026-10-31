@@ -1,0 +1,43 @@
+Test project /Users/hao20167/PROJ/cpp/quacknado/build/perf
+      Start  1: wind_reference
+ 1/19 Test  #1: wind_reference ......................   Passed    0.02 sec
+      Start  2: wind_aos
+ 2/19 Test  #2: wind_aos ............................   Passed    0.01 sec
+      Start  3: wind_soa
+ 3/19 Test  #3: wind_soa ............................   Passed    0.01 sec
+      Start  4: wind_neon
+ 4/19 Test  #4: wind_neon ...........................   Passed    0.01 sec
+      Start  5: wind_neon_cull
+ 5/19 Test  #5: wind_neon_cull ......................   Passed    0.01 sec
+      Start  6: wind_pool1
+ 6/19 Test  #6: wind_pool1 ..........................   Passed    0.01 sec
+      Start  7: wind_pool2
+ 7/19 Test  #7: wind_pool2 ..........................   Passed    0.01 sec
+      Start  8: wind_pool4
+ 8/19 Test  #8: wind_pool4 ..........................   Passed    0.01 sec
+      Start  9: wind_pool_neon4
+ 9/19 Test  #9: wind_pool_neon4 .....................   Passed    0.01 sec
+      Start 10: spawn_scene
+10/19 Test #10: spawn_scene .........................   Passed    0.37 sec
+      Start 11: wind_pool_lifecycle
+11/19 Test #11: wind_pool_lifecycle .................   Passed    0.02 sec
+      Start 12: benchmark_reject_unknown_backend
+12/19 Test #12: benchmark_reject_unknown_backend ....   Passed    0.01 sec
+      Start 13: allocation_counter_self_test
+13/19 Test #13: allocation_counter_self_test ........   Passed    0.02 sec
+      Start 14: allocation_direct_steady_state
+14/19 Test #14: allocation_direct_steady_state ......   Passed    0.05 sec
+      Start 15: allocation_pool_steady_state
+15/19 Test #15: allocation_pool_steady_state ........   Passed    0.07 sec
+      Start 16: metal_ownership
+16/19 Test #16: metal_ownership .....................   Passed    0.01 sec
+      Start 17: calibrated_kernel
+17/19 Test #17: calibrated_kernel ...................   Passed    0.05 sec
+      Start 18: calibrated_reject_gpu
+18/19 Test #18: calibrated_reject_gpu ...............   Passed    0.01 sec
+      Start 19: replay_reject_invalid_frame_count
+19/19 Test #19: replay_reject_invalid_frame_count ...   Passed    0.02 sec
+
+100% tests passed out of 19
+
+Total Test time (real) =   0.73 sec

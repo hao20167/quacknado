@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/Users/hao20167/PROJ/cpp/quacknado/docs/benchmarks/collision-pile/baseline-interaction-bench",
+    "10000",
+    "1",
+    "1",
+    "0",
+    "0",
+    "0",
+    "0",
+    "1200"
+  ],
+  "environment": {}
+}

@@ -1,0 +1,57 @@
+Test project /Users/hao20167/PROJ/cpp/quacknado/build/perf
+      Start  1: wind_reference
+ 1/26 Test  #1: wind_reference ......................   Passed    0.02 sec
+      Start  2: wind_aos
+ 2/26 Test  #2: wind_aos ............................   Passed    0.01 sec
+      Start  3: wind_soa
+ 3/26 Test  #3: wind_soa ............................   Passed    0.01 sec
+      Start  4: wind_neon
+ 4/26 Test  #4: wind_neon ...........................   Passed    0.01 sec
+      Start  5: wind_neon_cull
+ 5/26 Test  #5: wind_neon_cull ......................   Passed    0.01 sec
+      Start  6: wind_pool1
+ 6/26 Test  #6: wind_pool1 ..........................   Passed    0.01 sec
+      Start  7: wind_pool2
+ 7/26 Test  #7: wind_pool2 ..........................   Passed    0.01 sec
+      Start  8: wind_pool4
+ 8/26 Test  #8: wind_pool4 ..........................   Passed    0.01 sec
+      Start  9: wind_pool_neon4
+ 9/26 Test  #9: wind_pool_neon4 .....................   Passed    0.01 sec
+      Start 10: spawn_scene
+10/26 Test #10: spawn_scene .........................   Passed    0.37 sec
+      Start 11: wind_pool_lifecycle
+11/26 Test #11: wind_pool_lifecycle .................   Passed    0.02 sec
+      Start 12: benchmark_reject_unknown_backend
+12/26 Test #12: benchmark_reject_unknown_backend ....   Passed    0.01 sec
+      Start 13: allocation_counter_self_test
+13/26 Test #13: allocation_counter_self_test ........   Passed    0.01 sec
+      Start 14: allocation_direct_steady_state
+14/26 Test #14: allocation_direct_steady_state ......   Passed    0.05 sec
+      Start 15: allocation_pool_steady_state
+15/26 Test #15: allocation_pool_steady_state ........   Passed    0.07 sec
+      Start 16: metal_ownership
+16/26 Test #16: metal_ownership .....................   Passed    0.00 sec
+      Start 17: calibrated_kernel
+17/26 Test #17: calibrated_kernel ...................   Passed    0.05 sec
+      Start 18: calibrated_reject_gpu
+18/26 Test #18: calibrated_reject_gpu ...............   Passed    0.01 sec
+      Start 19: replay_reject_invalid_frame_count
+19/26 Test #19: replay_reject_invalid_frame_count ...   Passed    0.01 sec
+      Start 20: perf_gate_policy
+20/26 Test #20: perf_gate_policy ....................   Passed    0.40 sec
+      Start 21: source_evidence_inventory
+21/26 Test #21: source_evidence_inventory ...........   Passed    0.06 sec
+      Start 22: campaign_output_preservation
+22/26 Test #22: campaign_output_preservation ........   Passed    0.06 sec
+      Start 23: tornado_invariants
+23/26 Test #23: tornado_invariants ..................   Passed    0.01 sec
+      Start 24: benchmark_reject_unknown_dataset
+24/26 Test #24: benchmark_reject_unknown_dataset ....   Passed    0.01 sec
+      Start 25: physics_workers_correctness
+25/26 Test #25: physics_workers_correctness .........   Passed    0.88 sec
+      Start 26: reject_invalid_physics_workers
+26/26 Test #26: reject_invalid_physics_workers ......   Passed    0.01 sec
+
+100% tests passed out of 26
+
+Total Test time (real) =   2.15 sec
